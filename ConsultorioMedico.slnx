@@ -1,5 +1,5 @@
 <Solution>
-  <Project Path="BisnesLogic.cs/BisnesLogic.cs.csproj" Id="cbccb63f-b57d-4053-a014-b7c3051e7240" />
+  <Project Path="BisnesLogic.cs/BisnesLogic.csproj" Id="cbccb63f-b57d-4053-a014-b7c3051e7240" />
   <Project Path="ConsultorioMedico.csproj" Id="89ed468b-3e2e-47a0-8514-91d0ee4506e8" />
   <Project Path="DataConexion/DataConexion.csproj" Id="0e808e59-de8c-4294-acf8-98717b795ab3" />
 </Solution>

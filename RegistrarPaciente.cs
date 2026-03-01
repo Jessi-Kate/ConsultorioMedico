@@ -1,4 +1,5 @@
-﻿using BisnesLogic.cs;
+﻿using BisnesLogic;
+using BisnesLogic.cs;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,6 +19,7 @@ namespace ConsultorioMedico
         {
             InitializeComponent();
             List<TextBox> listaTextBoxPaciente = new List<TextBox>();
+            listaTextBoxPaciente.Add(txtID);
             listaTextBoxPaciente.Add(txtNombre);
             listaTextBoxPaciente.Add(txtPaterno);
             listaTextBoxPaciente.Add(txtMaterno);
@@ -26,6 +28,7 @@ namespace ConsultorioMedico
             listaTextBoxPaciente.Add(txtCorreo);
 
             List<Label> listaLabelPaciente = new List<Label>();
+            listaLabelPaciente.Add(lblID);
             listaLabelPaciente.Add(lblNombre);
             listaLabelPaciente.Add(lblPaterno);
             listaLabelPaciente.Add(lblMaterno);
@@ -107,6 +110,16 @@ namespace ConsultorioMedico
             {
                 lblCorreo.ForeColor = Color.Green;
             }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            logicaPaciente.subirImagen.CargarFotografia(pictureBox1);
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            logicaPaciente.ValidarCamposPaciente();
         }
     }
 }

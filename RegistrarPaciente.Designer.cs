@@ -51,6 +51,8 @@
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.lblID = new System.Windows.Forms.Label();
+            this.txtID = new System.Windows.Forms.TextBox();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudEdad)).BeginInit();
             this.groupBox3.SuspendLayout();
@@ -65,6 +67,8 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.BackgroundImage = global::ConsultorioMedico.Properties.Resources.pngtree_modern_simple_elegant_green_gradient_picture_image_1454963;
             this.groupBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.groupBox2.Controls.Add(this.lblID);
+            this.groupBox2.Controls.Add(this.txtID);
             this.groupBox2.Controls.Add(this.cboSexo);
             this.groupBox2.Controls.Add(this.nudEdad);
             this.groupBox2.Controls.Add(this.button1);
@@ -84,11 +88,11 @@
             this.groupBox2.Controls.Add(this.txtPaterno);
             this.groupBox2.Controls.Add(this.lblNombre);
             this.groupBox2.Controls.Add(this.txtNombre);
-            this.groupBox2.Location = new System.Drawing.Point(9, 96);
+            this.groupBox2.Location = new System.Drawing.Point(9, 95);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Size = new System.Drawing.Size(517, 458);
+            this.groupBox2.Size = new System.Drawing.Size(517, 540);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             // 
@@ -100,7 +104,7 @@
             "Masculino",
             "Femenino",
             "Otro"});
-            this.cboSexo.Location = new System.Drawing.Point(22, 273);
+            this.cboSexo.Location = new System.Drawing.Point(22, 340);
             this.cboSexo.Margin = new System.Windows.Forms.Padding(2);
             this.cboSexo.Name = "cboSexo";
             this.cboSexo.Size = new System.Drawing.Size(92, 21);
@@ -109,7 +113,7 @@
             // nudEdad
             // 
             this.nudEdad.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.nudEdad.Location = new System.Drawing.Point(22, 217);
+            this.nudEdad.Location = new System.Drawing.Point(22, 284);
             this.nudEdad.Margin = new System.Windows.Forms.Padding(2);
             this.nudEdad.Name = "nudEdad";
             this.nudEdad.Size = new System.Drawing.Size(90, 20);
@@ -121,7 +125,7 @@
             this.button1.BackgroundImage = global::ConsultorioMedico.Properties.Resources.izquierda;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Location = new System.Drawing.Point(364, 340);
+            this.button1.Location = new System.Drawing.Point(364, 381);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(62, 50);
@@ -135,19 +139,20 @@
             this.btnGuardar.BackgroundImage = global::ConsultorioMedico.Properties.Resources.guardar_archivo;
             this.btnGuardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnGuardar.Location = new System.Drawing.Point(364, 231);
+            this.btnGuardar.Location = new System.Drawing.Point(364, 272);
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(2);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(62, 50);
             this.btnGuardar.TabIndex = 29;
             this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // groupBox3
             // 
             this.groupBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox3.BackgroundImage = global::ConsultorioMedico.Properties.Resources.Green_Abstract_Webpage_Background_Graphics_3073334_1;
             this.groupBox3.Controls.Add(this.pictureBox1);
-            this.groupBox3.Location = new System.Drawing.Point(285, 24);
+            this.groupBox3.Location = new System.Drawing.Point(306, 106);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
@@ -163,15 +168,17 @@
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(209, 131);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // lblCorreo
             // 
             this.lblCorreo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblCorreo.AutoSize = true;
             this.lblCorreo.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCorreo.Location = new System.Drawing.Point(22, 407);
+            this.lblCorreo.Location = new System.Drawing.Point(22, 474);
             this.lblCorreo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCorreo.Name = "lblCorreo";
             this.lblCorreo.Size = new System.Drawing.Size(60, 19);
@@ -181,7 +188,7 @@
             // txtCorreo
             // 
             this.txtCorreo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtCorreo.Location = new System.Drawing.Point(22, 430);
+            this.txtCorreo.Location = new System.Drawing.Point(22, 497);
             this.txtCorreo.Margin = new System.Windows.Forms.Padding(2);
             this.txtCorreo.Multiline = true;
             this.txtCorreo.Name = "txtCorreo";
@@ -194,7 +201,7 @@
             this.lblDireccion.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblDireccion.AutoSize = true;
             this.lblDireccion.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDireccion.Location = new System.Drawing.Point(22, 354);
+            this.lblDireccion.Location = new System.Drawing.Point(22, 421);
             this.lblDireccion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDireccion.Name = "lblDireccion";
             this.lblDireccion.Size = new System.Drawing.Size(78, 19);
@@ -204,7 +211,7 @@
             // txtDireccion
             // 
             this.txtDireccion.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtDireccion.Location = new System.Drawing.Point(22, 377);
+            this.txtDireccion.Location = new System.Drawing.Point(22, 444);
             this.txtDireccion.Margin = new System.Windows.Forms.Padding(2);
             this.txtDireccion.Multiline = true;
             this.txtDireccion.Name = "txtDireccion";
@@ -217,7 +224,7 @@
             this.lblTelefono.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblTelefono.AutoSize = true;
             this.lblTelefono.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTelefono.Location = new System.Drawing.Point(22, 302);
+            this.lblTelefono.Location = new System.Drawing.Point(22, 369);
             this.lblTelefono.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTelefono.Name = "lblTelefono";
             this.lblTelefono.Size = new System.Drawing.Size(75, 19);
@@ -227,7 +234,7 @@
             // txtTelefono
             // 
             this.txtTelefono.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtTelefono.Location = new System.Drawing.Point(22, 325);
+            this.txtTelefono.Location = new System.Drawing.Point(22, 392);
             this.txtTelefono.Margin = new System.Windows.Forms.Padding(2);
             this.txtTelefono.Multiline = true;
             this.txtTelefono.Name = "txtTelefono";
@@ -240,7 +247,7 @@
             this.lblSexo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblSexo.AutoSize = true;
             this.lblSexo.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSexo.Location = new System.Drawing.Point(21, 245);
+            this.lblSexo.Location = new System.Drawing.Point(21, 312);
             this.lblSexo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSexo.Name = "lblSexo";
             this.lblSexo.Size = new System.Drawing.Size(46, 19);
@@ -252,7 +259,7 @@
             this.lblEdad.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblEdad.AutoSize = true;
             this.lblEdad.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEdad.Location = new System.Drawing.Point(21, 188);
+            this.lblEdad.Location = new System.Drawing.Point(21, 255);
             this.lblEdad.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblEdad.Name = "lblEdad";
             this.lblEdad.Size = new System.Drawing.Size(47, 19);
@@ -264,7 +271,7 @@
             this.lblMaterno.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblMaterno.AutoSize = true;
             this.lblMaterno.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMaterno.Location = new System.Drawing.Point(21, 135);
+            this.lblMaterno.Location = new System.Drawing.Point(21, 202);
             this.lblMaterno.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMaterno.Name = "lblMaterno";
             this.lblMaterno.Size = new System.Drawing.Size(135, 19);
@@ -274,7 +281,7 @@
             // txtMaterno
             // 
             this.txtMaterno.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtMaterno.Location = new System.Drawing.Point(22, 158);
+            this.txtMaterno.Location = new System.Drawing.Point(22, 225);
             this.txtMaterno.Margin = new System.Windows.Forms.Padding(2);
             this.txtMaterno.Multiline = true;
             this.txtMaterno.Name = "txtMaterno";
@@ -287,7 +294,7 @@
             this.lblPaterno.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblPaterno.AutoSize = true;
             this.lblPaterno.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPaterno.Location = new System.Drawing.Point(21, 79);
+            this.lblPaterno.Location = new System.Drawing.Point(21, 146);
             this.lblPaterno.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPaterno.Name = "lblPaterno";
             this.lblPaterno.Size = new System.Drawing.Size(130, 19);
@@ -297,7 +304,7 @@
             // txtPaterno
             // 
             this.txtPaterno.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtPaterno.Location = new System.Drawing.Point(22, 102);
+            this.txtPaterno.Location = new System.Drawing.Point(22, 169);
             this.txtPaterno.Margin = new System.Windows.Forms.Padding(2);
             this.txtPaterno.Multiline = true;
             this.txtPaterno.Name = "txtPaterno";
@@ -310,7 +317,7 @@
             this.lblNombre.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(21, 24);
+            this.lblNombre.Location = new System.Drawing.Point(21, 91);
             this.lblNombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(85, 19);
@@ -320,7 +327,7 @@
             // txtNombre
             // 
             this.txtNombre.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtNombre.Location = new System.Drawing.Point(22, 46);
+            this.txtNombre.Location = new System.Drawing.Point(22, 113);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombre.Multiline = true;
             this.txtNombre.Name = "txtNombre";
@@ -356,12 +363,34 @@
             this.label8.TabIndex = 27;
             this.label8.Text = "Detalles del Paciente";
             // 
+            // lblID
+            // 
+            this.lblID.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblID.AutoSize = true;
+            this.lblID.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblID.Location = new System.Drawing.Point(21, 34);
+            this.lblID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblID.Name = "lblID";
+            this.lblID.Size = new System.Drawing.Size(29, 19);
+            this.lblID.TabIndex = 34;
+            this.lblID.Text = "ID:";
+            // 
+            // txtID
+            // 
+            this.txtID.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtID.Location = new System.Drawing.Point(22, 56);
+            this.txtID.Margin = new System.Windows.Forms.Padding(2);
+            this.txtID.Multiline = true;
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(233, 19);
+            this.txtID.TabIndex = 33;
+            // 
             // frmRegistrarPaciente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FloralWhite;
-            this.ClientSize = new System.Drawing.Size(535, 564);
+            this.ClientSize = new System.Drawing.Size(535, 646);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -404,5 +433,7 @@
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.ComboBox cboSexo;
         private System.Windows.Forms.NumericUpDown nudEdad;
+        private System.Windows.Forms.Label lblID;
+        private System.Windows.Forms.TextBox txtID;
     }
 }
