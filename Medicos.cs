@@ -27,5 +27,10 @@ namespace ConsultorioMedico
                 lblBuscar.ForeColor = Color.Green;
             }
         }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
