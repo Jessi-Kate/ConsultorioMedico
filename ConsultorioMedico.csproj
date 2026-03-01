@@ -252,5 +252,23 @@
   <ItemGroup>
     <None Include="Resources\deshacer %281%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimal-geometric-background-orange-elements-with-fluid-gradient-for-posters-banners-and-website-landing-pages-free-vector.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\orange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\empty-orange-and-yellow-studio-room-background-orange-background-3d-with-yellow-podium-space-for-selling-products-on-the-website-empty-room-with-spotlight-effect-illustration-vector.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\radio.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\estudios.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -119,11 +119,11 @@
             this.groupBox2.Controls.Add(this.txtPaterno);
             this.groupBox2.Controls.Add(this.lblNombre);
             this.groupBox2.Controls.Add(this.txtNombre);
-            this.groupBox2.Location = new System.Drawing.Point(12, 117);
+            this.groupBox2.Location = new System.Drawing.Point(12, 105);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox2.Size = new System.Drawing.Size(705, 574);
+            this.groupBox2.Size = new System.Drawing.Size(705, 586);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             // 

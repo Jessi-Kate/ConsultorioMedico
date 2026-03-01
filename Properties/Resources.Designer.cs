@@ -293,6 +293,28 @@ namespace ConsultorioMedico.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap empty_orange_and_yellow_studio_room_background_orange_background_3d_with_yellow_podium_space_for_selling_products_on_the_website_empty_room_with_spotlight_effect_illustration_vector {
+            get {
+                object obj = ResourceManager.GetObject("empty-orange-and-yellow-studio-room-background-orange-background-3d-with-yellow-p" +
+                        "odium-space-for-selling-products-on-the-website-empty-room-with-spotlight-effect" +
+                        "-illustration-vector", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap estudios {
+            get {
+                object obj = ResourceManager.GetObject("estudios", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Green_Abstract_Webpage_Background_Graphics_3073334_1 {
             get {
                 object obj = ResourceManager.GetObject("Green-Abstract-Webpage-Background-Graphics-3073334-1", resourceCulture);
@@ -316,6 +338,16 @@ namespace ConsultorioMedico.Properties {
         internal static System.Drawing.Bitmap IMG_7148 {
             get {
                 object obj = ResourceManager.GetObject("IMG_7148", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ine {
+            get {
+                object obj = ResourceManager.GetObject("ine", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -353,6 +385,27 @@ namespace ConsultorioMedico.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap minimal_geometric_background_orange_elements_with_fluid_gradient_for_posters_banners_and_website_landing_pages_free_vector {
+            get {
+                object obj = ResourceManager.GetObject("minimal-geometric-background-orange-elements-with-fluid-gradient-for-posters-bann" +
+                        "ers-and-website-landing-pages-free-vector", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap orange {
+            get {
+                object obj = ResourceManager.GetObject("orange", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Paciente {
             get {
                 object obj = ResourceManager.GetObject("Paciente", resourceCulture);
@@ -366,6 +419,16 @@ namespace ConsultorioMedico.Properties {
         internal static System.Drawing.Bitmap pngtree_modern_simple_elegant_green_gradient_picture_image_1454963 {
             get {
                 object obj = ResourceManager.GetObject("pngtree-modern-simple-elegant-green-gradient-picture-image_1454963", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap radio {
+            get {
+                object obj = ResourceManager.GetObject("radio", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

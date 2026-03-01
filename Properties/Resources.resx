@@ -121,8 +121,11 @@
   <data name="148353-abstract-glowing-light-blue-wave-background-illustrator" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\148353-abstract-glowing-light-blue-wave-background-illustrator.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="deshacer" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\deshacer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="usuario" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\usuario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ine" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ine.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="buscar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\buscar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -132,6 +135,9 @@
   </data>
   <data name="Paciente" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Paciente.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="orange" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\orange.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="izquierda" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\izquierda.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -151,11 +157,20 @@
   <data name="editar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\editar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="empty-orange-and-yellow-studio-room-background-orange-background-3d-with-yellow-podium-space-for-selling-products-on-the-website-empty-room-with-spotlight-effect-illustration-vector" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\empty-orange-and-yellow-studio-room-background-orange-background-3d-with-yellow-podium-space-for-selling-products-on-the-website-empty-room-with-spotlight-effect-illustration-vector.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="deshacer (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\deshacer (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="buscar (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\buscar (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="agregar (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\agregar (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="radio" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\radio.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="agregar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\agregar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -181,9 +196,6 @@
   <data name="disco-flexible" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\disco-flexible.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="usuario" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\usuario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Captura de pantalla 2026-02-28 185354" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Captura de pantalla 2026-02-28 185354.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -196,8 +208,14 @@
   <data name="Captura de pantalla 2026-02-28 194049" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Captura de pantalla 2026-02-28 194049.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="minimal-geometric-background-orange-elements-with-fluid-gradient-for-posters-banners-and-website-landing-pages-free-vector" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\minimal-geometric-background-orange-elements-with-fluid-gradient-for-posters-banners-and-website-landing-pages-free-vector.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Captura de pantalla 2026-02-28 185327" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Captura de pantalla 2026-02-28 185327.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="deshacer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\deshacer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="regresa" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\regresa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -214,7 +232,7 @@
   <data name="pngtree-modern-simple-elegant-green-gradient-picture-image_1454963" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pngtree-modern-simple-elegant-green-gradient-picture-image_1454963.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="deshacer (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\deshacer (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="estudios" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\estudios.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
