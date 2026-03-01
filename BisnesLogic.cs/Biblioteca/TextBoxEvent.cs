@@ -47,5 +47,16 @@ namespace BisnesLogic.cs.Biblioteca
                 key.Handled = true; //Si no es numero, no se podra escribir
             }
         }
+
+        public void ValidarHora(KeyPressEventArgs key)
+        {
+            //Validacion del text box ID
+            if (!char.IsNumber(key.KeyChar) &&
+                key.KeyChar != '\b' &&
+                key.KeyChar != ':') //si es diferente de un backspace
+            {
+                key.Handled = true; //Si no es numero, no se podra escribir
+            }
+        }
     }
 }
