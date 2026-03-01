@@ -1,6 +1,6 @@
 ﻿namespace ConsultorioMedico
 {
-    partial class Citas
+    partial class frmCitas
     {
         /// <summary>
         /// Required designer variable.
@@ -133,6 +133,7 @@
             // 
             this.btnAgregar.BackgroundImage = global::ConsultorioMedico.Properties.Resources.agregar;
             this.btnAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAgregar.Location = new System.Drawing.Point(157, 13);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(82, 62);
@@ -143,6 +144,7 @@
             // 
             this.btnEliminar.BackgroundImage = global::ConsultorioMedico.Properties.Resources.borrar__1_;
             this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEliminar.Location = new System.Drawing.Point(692, 13);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(74, 62);
@@ -153,13 +155,14 @@
             // 
             this.btnEditar.BackgroundImage = global::ConsultorioMedico.Properties.Resources.editar__1_;
             this.btnEditar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEditar.Location = new System.Drawing.Point(420, 13);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(72, 62);
             this.btnEditar.TabIndex = 0;
             this.btnEditar.UseVisualStyleBackColor = true;
             // 
-            // Citas
+            // frmCitas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -168,7 +171,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox3);
-            this.Name = "Citas";
+            this.Name = "frmCitas";
             this.Text = "Citas";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

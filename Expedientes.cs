@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ConsultorioMedico
 {
-    public partial class Expedientes : Form
+    public partial class frmExpedientes : Form
     {
-        public Expedientes()
+        public frmExpedientes()
         {
             InitializeComponent();
         }

@@ -1,6 +1,6 @@
 ﻿namespace ConsultorioMedico
 {
-    partial class Expedientes
+    partial class frmExpedientes
     {
         /// <summary>
         /// Required designer variable.
@@ -30,12 +30,12 @@
         {
             this.SuspendLayout();
             // 
-            // Expedientes
+            // frmExpedientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(944, 599);
-            this.Name = "Expedientes";
+            this.Name = "frmExpedientes";
             this.Text = "Expedientes";
             this.ResumeLayout(false);
 
