@@ -138,7 +138,7 @@
             this.cboHorario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cboHorario.Name = "cboHorario";
             this.cboHorario.Size = new System.Drawing.Size(121, 24);
-            this.cboHorario.TabIndex = 40;
+            this.cboHorario.TabIndex = 9;
             // 
             // cboEspecialidad
             // 
@@ -153,7 +153,7 @@
             this.cboEspecialidad.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.cboEspecialidad.Name = "cboEspecialidad";
             this.cboEspecialidad.Size = new System.Drawing.Size(160, 24);
-            this.cboEspecialidad.TabIndex = 39;
+            this.cboEspecialidad.TabIndex = 8;
             // 
             // lblHorario
             // 
@@ -198,7 +198,7 @@
             this.txtID.Multiline = true;
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(309, 22);
-            this.txtID.TabIndex = 33;
+            this.txtID.TabIndex = 0;
             this.txtID.TextChanged += new System.EventHandler(this.TextChangedID);
             this.txtID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.KeyPressID);
             // 
@@ -214,7 +214,7 @@
             this.cboSexo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cboSexo.Name = "cboSexo";
             this.cboSexo.Size = new System.Drawing.Size(121, 24);
-            this.cboSexo.TabIndex = 32;
+            this.cboSexo.TabIndex = 5;
             // 
             // nudEdad
             // 
@@ -223,7 +223,7 @@
             this.nudEdad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.nudEdad.Name = "nudEdad";
             this.nudEdad.Size = new System.Drawing.Size(120, 22);
-            this.nudEdad.TabIndex = 31;
+            this.nudEdad.TabIndex = 4;
             // 
             // btnSalir
             // 
@@ -237,6 +237,7 @@
             this.btnSalir.Size = new System.Drawing.Size(74, 62);
             this.btnSalir.TabIndex = 30;
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnGuardar
             // 
@@ -298,7 +299,7 @@
             this.txtCorreo.Multiline = true;
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(309, 22);
-            this.txtCorreo.TabIndex = 25;
+            this.txtCorreo.TabIndex = 7;
             this.txtCorreo.TextChanged += new System.EventHandler(this.TextChangedCorreo);
             this.txtCorreo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.KeyPressCorreo);
             // 
@@ -321,7 +322,7 @@
             this.txtTelefono.Multiline = true;
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(309, 22);
-            this.txtTelefono.TabIndex = 21;
+            this.txtTelefono.TabIndex = 6;
             this.txtTelefono.TextChanged += new System.EventHandler(this.TextChangedTelefoono);
             this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.KeyPressTelefono);
             // 
@@ -366,7 +367,7 @@
             this.txtMaterno.Multiline = true;
             this.txtMaterno.Name = "txtMaterno";
             this.txtMaterno.Size = new System.Drawing.Size(309, 22);
-            this.txtMaterno.TabIndex = 15;
+            this.txtMaterno.TabIndex = 3;
             this.txtMaterno.TextChanged += new System.EventHandler(this.TextChangedMaterno);
             this.txtMaterno.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.KeyPressMaterno);
             // 
@@ -389,7 +390,7 @@
             this.txtPaterno.Multiline = true;
             this.txtPaterno.Name = "txtPaterno";
             this.txtPaterno.Size = new System.Drawing.Size(309, 22);
-            this.txtPaterno.TabIndex = 13;
+            this.txtPaterno.TabIndex = 2;
             this.txtPaterno.TextChanged += new System.EventHandler(this.TextChangedApellidoPaterno);
             this.txtPaterno.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.KeyPressMaterno);
             // 
@@ -412,7 +413,7 @@
             this.txtNombre.Multiline = true;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(309, 22);
-            this.txtNombre.TabIndex = 11;
+            this.txtNombre.TabIndex = 1;
             this.txtNombre.TextChanged += new System.EventHandler(this.TextChangedNombre);
             this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.KeyPressNombres);
             // 

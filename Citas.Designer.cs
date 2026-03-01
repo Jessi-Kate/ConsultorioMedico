@@ -155,6 +155,7 @@
             this.btnRegresar.Size = new System.Drawing.Size(45, 39);
             this.btnRegresar.TabIndex = 5;
             this.btnRegresar.UseVisualStyleBackColor = false;
+            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
             // 
             // btnAgregar
             // 

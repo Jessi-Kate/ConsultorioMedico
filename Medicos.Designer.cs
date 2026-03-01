@@ -122,6 +122,7 @@ namespace ConsultorioMedico
             this.btnRegresar.Size = new System.Drawing.Size(48, 47);
             this.btnRegresar.TabIndex = 8;
             this.btnRegresar.UseVisualStyleBackColor = false;
+            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
             // 
             // btnAgregar
             // 

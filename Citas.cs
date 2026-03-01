@@ -38,5 +38,10 @@ namespace ConsultorioMedico
             frmRegistrarCita frmRegistrarCita = new frmRegistrarCita();
             frmRegistrarCita.Show();
         }
+
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

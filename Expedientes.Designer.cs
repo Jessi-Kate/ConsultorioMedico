@@ -133,6 +133,7 @@
             this.btnRegresar.Size = new System.Drawing.Size(68, 58);
             this.btnRegresar.TabIndex = 47;
             this.btnRegresar.UseVisualStyleBackColor = false;
+            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
             // 
             // btnGuardar
             // 
@@ -197,7 +198,7 @@
             this.txtMedico.Multiline = true;
             this.txtMedico.Name = "txtMedico";
             this.txtMedico.Size = new System.Drawing.Size(227, 22);
-            this.txtMedico.TabIndex = 41;
+            this.txtMedico.TabIndex = 2;
             // 
             // lblFecha
             // 
@@ -218,7 +219,7 @@
             this.txtFecha.Multiline = true;
             this.txtFecha.Name = "txtFecha";
             this.txtFecha.Size = new System.Drawing.Size(227, 22);
-            this.txtFecha.TabIndex = 39;
+            this.txtFecha.TabIndex = 3;
             // 
             // lblPaciente
             // 
@@ -239,7 +240,7 @@
             this.txtPaciente.Multiline = true;
             this.txtPaciente.Name = "txtPaciente";
             this.txtPaciente.Size = new System.Drawing.Size(234, 22);
-            this.txtPaciente.TabIndex = 37;
+            this.txtPaciente.TabIndex = 1;
             // 
             // lblID
             // 
@@ -260,7 +261,7 @@
             this.txtidExpediente.Multiline = true;
             this.txtidExpediente.Name = "txtidExpediente";
             this.txtidExpediente.Size = new System.Drawing.Size(176, 22);
-            this.txtidExpediente.TabIndex = 35;
+            this.txtidExpediente.TabIndex = 0;
             // 
             // label2
             // 
