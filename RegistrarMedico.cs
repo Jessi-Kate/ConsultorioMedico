@@ -23,6 +23,15 @@ namespace ConsultorioMedico
             listaTexBoxMedico.Add(txtMaterno);
             listaTexBoxMedico.Add(txtTelefono);
             listaTexBoxMedico.Add(txtCorreo);
+
+            List<Label> listaLabelMedico = new List<Label>();
+            listaLabelMedico.Add(lblNombre);
+            listaLabelMedico.Add(lblPaterno);
+            listaLabelMedico.Add(lblMaterno);
+            listaLabelMedico.Add(lblTelefono);
+            listaLabelMedico.Add(lblCorreo);
+
+
         }
 
         private void frmRegistrarMedico_Load(object sender, EventArgs e)
