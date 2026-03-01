@@ -32,5 +32,11 @@ namespace ConsultorioMedico
         {
             // Permitir solo números, letras, espacios y teclas de control (como retroceso)
         }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            frmRegistrarCita frmRegistrarCita = new frmRegistrarCita();
+            frmRegistrarCita.Show();
+        }
     }
 }

@@ -33,13 +33,13 @@
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.lblBuscar = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btnRegresar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.lblLista = new System.Windows.Forms.Label();
             this.dgvMedicos = new System.Windows.Forms.DataGridView();
-            this.btnRegresar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -106,6 +106,20 @@
             this.groupBox3.TabIndex = 7;
             this.groupBox3.TabStop = false;
             // 
+            // btnRegresar
+            // 
+            this.btnRegresar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnRegresar.BackColor = System.Drawing.Color.Transparent;
+            this.btnRegresar.BackgroundImage = global::ConsultorioMedico.Properties.Resources.regresa;
+            this.btnRegresar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnRegresar.Location = new System.Drawing.Point(38, 26);
+            this.btnRegresar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnRegresar.Name = "btnRegresar";
+            this.btnRegresar.Size = new System.Drawing.Size(45, 39);
+            this.btnRegresar.TabIndex = 8;
+            this.btnRegresar.UseVisualStyleBackColor = false;
+            // 
             // btnAgregar
             // 
             this.btnAgregar.BackgroundImage = global::ConsultorioMedico.Properties.Resources.consulta_medica;
@@ -117,6 +131,7 @@
             this.btnAgregar.Size = new System.Drawing.Size(83, 62);
             this.btnAgregar.TabIndex = 2;
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // btnEliminar
             // 
@@ -176,20 +191,6 @@
             this.dgvMedicos.RowTemplate.Height = 24;
             this.dgvMedicos.Size = new System.Drawing.Size(879, 354);
             this.dgvMedicos.TabIndex = 0;
-            // 
-            // btnRegresar
-            // 
-            this.btnRegresar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnRegresar.BackColor = System.Drawing.Color.Transparent;
-            this.btnRegresar.BackgroundImage = global::ConsultorioMedico.Properties.Resources.regresa;
-            this.btnRegresar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnRegresar.Location = new System.Drawing.Point(38, 26);
-            this.btnRegresar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnRegresar.Name = "btnRegresar";
-            this.btnRegresar.Size = new System.Drawing.Size(45, 39);
-            this.btnRegresar.TabIndex = 8;
-            this.btnRegresar.UseVisualStyleBackColor = false;
             // 
             // frmMedicos
             // 

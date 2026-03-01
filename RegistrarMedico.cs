@@ -43,5 +43,10 @@ namespace ConsultorioMedico
         {
 
         }
+
+        private void txtID_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

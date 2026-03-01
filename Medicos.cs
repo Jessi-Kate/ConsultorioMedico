@@ -27,5 +27,11 @@ namespace ConsultorioMedico
                 lblBuscar.ForeColor = Color.Green;
             }
         }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            frmRegistrarMedico frmRegistrarMedico = new frmRegistrarMedico();
+            frmRegistrarMedico.Show();
+        }
     }
 }
