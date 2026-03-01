@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BisnesLogic.cs;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,135 @@ namespace ConsultorioMedico
 {
     public partial class frmRegistrarCita : Form
     {
+        LogicaCita logicaCita;
         public frmRegistrarCita()
         {
             InitializeComponent();
+            List<TextBox> listaTextBoxCita = new List<TextBox>();
+            listaTextBoxCita.Add(txtID);
+            listaTextBoxCita.Add(txtPaciente);
+            listaTextBoxCita.Add(txtMedico);
+            listaTextBoxCita.Add(txtFecha);
+            listaTextBoxCita.Add(txtHora);
+            listaTextBoxCita.Add(txtMotivo);
+
+            List<Label> listaLabelCita = new List<Label>();
+            listaLabelCita.Add(lblidCita);
+            listaLabelCita.Add(lblPaciente);
+            listaLabelCita.Add(lblMedico);
+            listaLabelCita.Add(lblFecha);
+            listaLabelCita.Add(lblHora);
+            listaLabelCita.Add(lblMotivo);
+
+            logicaCita = new LogicaCita(listaTextBoxCita, listaLabelCita);
+
+        }
+
+        private void frmRegistrarCita_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TextChangedID(object sender, EventArgs e)
+        {
+            if (txtID.Text.Equals(""))
+            {
+                lblidCita.ForeColor = Color.Red;
+            }
+            else
+            {
+                lblidCita.ForeColor = Color.Green;
+            }
+        }
+
+        private void TextChangedPaciente(object sender, EventArgs e)
+        {
+            if (txtPaciente.Text.Equals(""))
+            {
+                lblPaciente.ForeColor = Color.Red;
+            }
+            else
+            {
+                lblPaciente.ForeColor = Color.Green;
+            }
+        }
+
+        private void TextChangedMedico(object sender, EventArgs e)
+        {
+            if (txtMedico.Text.Equals(""))
+            {
+                lblMedico.ForeColor = Color.Red;
+            }
+            else
+            {
+                lblMedico.ForeColor = Color.Green;
+            }
+        }
+
+        private void TextChangedFecha(object sender, EventArgs e)
+        {
+            if (txtFecha.Text.Equals(""))
+            {
+                lblFecha.ForeColor = Color.Red;
+            }
+            else
+            {
+                lblFecha.ForeColor = Color.Green;
+            }
+        }
+
+        private void TextChangedHora(object sender, EventArgs e)
+        {
+            if (txtHora.Text.Equals(""))
+            {
+                lblHora.ForeColor = Color.Red;
+            }
+            else
+            {
+                lblHora.ForeColor = Color.Green;
+            }
+        }
+
+        private void TextChangedMotivo(object sender, EventArgs e)
+        {
+            if (txtMotivo.Text.Equals(""))
+            {
+                lblMotivo.ForeColor = Color.Red;
+            }
+            else
+            {
+                lblMotivo.ForeColor = Color.Green;
+            }
+        }
+
+        private void KeyPressID(object sender, KeyPressEventArgs e)
+        {
+            logicaCita.textBoxEvent.soloNumeros(e);
+        }
+
+        private void KeyPressPaciente(object sender, KeyPressEventArgs e)
+        {
+            logicaCita.textBoxEvent.SoloLetras(e);
+        }
+
+        private void KeyPressMedico(object sender, KeyPressEventArgs e)
+        {
+            logicaCita.textBoxEvent.SoloLetras(e);
+        }
+
+        private void KeyPressHora(object sender, KeyPressEventArgs e)
+        {
+            logicaCita.textBoxEvent.ValidarHora(e);
+        }
+
+        private void KeyPressMotivo(object sender, KeyPressEventArgs e)
+        {
+            logicaCita.textBoxEvent.SoloLetras(e);
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            logicaCita.ValidarDatosCita();
         }
     }
 }

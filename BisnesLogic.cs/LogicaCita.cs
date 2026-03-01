@@ -1,0 +1,78 @@
+﻿using BisnesLogic.cs.Biblioteca;
+using System;
+using System.Collections.Generic;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace BisnesLogic.cs
+{
+    public class LogicaCita : AccesoClases
+    {
+        private List<TextBox> listaTextBoxCita;
+        private List<Label> listaLabelCita;
+
+        public LogicaCita(List<TextBox> listaTextBoxCita, List<Label> listaLabelCita)
+        {
+            this.listaTextBoxCita = listaTextBoxCita;
+            this.listaLabelCita = listaLabelCita;
+        }
+
+        public void ValidarDatosCita()
+        {
+            if (listaTextBoxCita[0].Text == string.Empty)
+            {
+                listaLabelCita[0].Text = "El ID no puede estar vacio";
+                listaLabelCita[0].ForeColor = Color.Red;
+                listaTextBoxCita[0].Focus();
+            }
+            else
+            {
+                if (listaTextBoxCita[1].Text == string.Empty)
+                {
+                    listaLabelCita[1].Text = "El Paciente no puede estar vacio";
+                    listaLabelCita[1].ForeColor = Color.Red;
+                    listaTextBoxCita[1].Focus();
+                }
+                else
+                {
+                    if (listaTextBoxCita[2].Text == string.Empty)
+                    {
+                        listaLabelCita[2].Text = "El Medico no puede estar vacio";
+                        listaLabelCita[2].ForeColor = Color.Red;
+                        listaTextBoxCita[2].Focus();
+                    }
+                    else
+                    {
+                        if (listaTextBoxCita[3].Text == string.Empty)
+                        {
+                            listaLabelCita[3].Text = "La Fecha no puede estar vacia";
+                            listaLabelCita[3].ForeColor = Color.Red;
+                            listaTextBoxCita[3].Focus();
+                        }
+                        else
+                        {
+                            if (listaTextBoxCita[4].Text == string.Empty)
+                            {
+                                listaLabelCita[4].Text = "La Hora no puede estar vacia";
+                                listaLabelCita[4].ForeColor = Color.Red;
+                                listaTextBoxCita[4].Focus();
+                            }
+                            else
+                            {
+                                if (listaTextBoxCita[5].Text == string.Empty)
+                                {
+                                    listaLabelCita[5].Text = "El Motivo no puede estar vacio";
+                                    listaLabelCita[5].ForeColor = Color.Red;
+                                    listaTextBoxCita[5].Focus();
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
