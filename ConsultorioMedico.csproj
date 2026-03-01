@@ -230,5 +230,15 @@
   <ItemGroup>
     <None Include="Resources\IMG_7148.PNG" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="BisnesLogic.cs\BisnesLogic.cs.csproj">
+      <Project>{cbccb63f-b57d-4053-a014-b7c3051e7240}</Project>
+      <Name>BisnesLogic.cs</Name>
+    </ProjectReference>
+    <ProjectReference Include="DataConexion\DataConexion.csproj">
+      <Project>{0e808e59-de8c-4294-acf8-98717b795ab3}</Project>
+      <Name>DataConexion</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

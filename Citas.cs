@@ -16,5 +16,21 @@ namespace ConsultorioMedico
         {
             InitializeComponent();
         }
+
+        private void TextChangedBuscar(object sender, EventArgs e)
+        {
+            if (txtBuscar.Text.Equals(""))
+            {
+                lblBuscar.ForeColor = Color.Red;
+            }else
+            {
+                lblBuscar.ForeColor = Color.Green;
+            }
+        }
+
+        private void KeyPressBuscar(object sender, KeyPressEventArgs e)
+        {
+            // Permitir solo números, letras, espacios y teclas de control (como retroceso)
+        }
     }
 }

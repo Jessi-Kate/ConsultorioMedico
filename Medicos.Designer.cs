@@ -30,7 +30,7 @@
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnBuscar = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
             this.lblBuscar = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btnAgregar = new System.Windows.Forms.Button();
@@ -49,11 +49,13 @@
             // 
             this.groupBox1.BackgroundImage = global::ConsultorioMedico.Properties.Resources.Captura_de_pantalla_2026_02_28_194246;
             this.groupBox1.Controls.Add(this.btnBuscar);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txtBuscar);
             this.groupBox1.Controls.Add(this.lblBuscar);
-            this.groupBox1.Location = new System.Drawing.Point(12, 0);
+            this.groupBox1.Location = new System.Drawing.Point(9, 0);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(920, 81);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(690, 66);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             // 
@@ -61,27 +63,31 @@
             // 
             this.btnBuscar.BackgroundImage = global::ConsultorioMedico.Properties.Resources.buscar__1_;
             this.btnBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnBuscar.Location = new System.Drawing.Point(752, 11);
+            this.btnBuscar.Location = new System.Drawing.Point(564, 9);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(61, 58);
+            this.btnBuscar.Size = new System.Drawing.Size(46, 47);
             this.btnBuscar.TabIndex = 3;
             this.btnBuscar.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // txtBuscar
             // 
-            this.textBox1.Location = new System.Drawing.Point(159, 33);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(558, 22);
-            this.textBox1.TabIndex = 3;
+            this.txtBuscar.Location = new System.Drawing.Point(119, 27);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(420, 20);
+            this.txtBuscar.TabIndex = 3;
+            this.txtBuscar.TextChanged += new System.EventHandler(this.TextChangedBuscar);
             // 
             // lblBuscar
             // 
             this.lblBuscar.AutoSize = true;
             this.lblBuscar.BackColor = System.Drawing.Color.Transparent;
             this.lblBuscar.Font = new System.Drawing.Font("Times New Roman", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.lblBuscar.Location = new System.Drawing.Point(45, 30);
+            this.lblBuscar.Location = new System.Drawing.Point(34, 24);
+            this.lblBuscar.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblBuscar.Name = "lblBuscar";
-            this.lblBuscar.Size = new System.Drawing.Size(88, 26);
+            this.lblBuscar.Size = new System.Drawing.Size(72, 22);
             this.lblBuscar.TabIndex = 2;
             this.lblBuscar.Text = "Buscar:";
             // 
@@ -91,9 +97,11 @@
             this.groupBox3.Controls.Add(this.btnAgregar);
             this.groupBox3.Controls.Add(this.btnEliminar);
             this.groupBox3.Controls.Add(this.btnEditar);
-            this.groupBox3.Location = new System.Drawing.Point(12, 87);
+            this.groupBox3.Location = new System.Drawing.Point(9, 71);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(920, 88);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Size = new System.Drawing.Size(690, 72);
             this.groupBox3.TabIndex = 7;
             this.groupBox3.TabStop = false;
             // 
@@ -102,9 +110,10 @@
             this.btnAgregar.BackgroundImage = global::ConsultorioMedico.Properties.Resources.consulta_medica;
             this.btnAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAgregar.Location = new System.Drawing.Point(159, 13);
+            this.btnAgregar.Location = new System.Drawing.Point(119, 11);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(82, 62);
+            this.btnAgregar.Size = new System.Drawing.Size(62, 50);
             this.btnAgregar.TabIndex = 2;
             this.btnAgregar.UseVisualStyleBackColor = true;
             // 
@@ -113,9 +122,10 @@
             this.btnEliminar.BackgroundImage = global::ConsultorioMedico.Properties.Resources.borrar_archivo;
             this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnEliminar.Location = new System.Drawing.Point(692, 13);
+            this.btnEliminar.Location = new System.Drawing.Point(519, 11);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(82, 62);
+            this.btnEliminar.Size = new System.Drawing.Size(62, 50);
             this.btnEliminar.TabIndex = 1;
             this.btnEliminar.UseVisualStyleBackColor = true;
             // 
@@ -124,9 +134,10 @@
             this.btnEditar.BackgroundImage = global::ConsultorioMedico.Properties.Resources.carpeta;
             this.btnEditar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnEditar.Location = new System.Drawing.Point(418, 13);
+            this.btnEditar.Location = new System.Drawing.Point(314, 11);
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(82, 62);
+            this.btnEditar.Size = new System.Drawing.Size(62, 50);
             this.btnEditar.TabIndex = 0;
             this.btnEditar.UseVisualStyleBackColor = true;
             // 
@@ -135,9 +146,11 @@
             this.groupBox2.BackgroundImage = global::ConsultorioMedico.Properties.Resources.Captura_de_pantalla_2026_02_28_194246;
             this.groupBox2.Controls.Add(this.lblLista);
             this.groupBox2.Controls.Add(this.dgvMedicos);
-            this.groupBox2.Location = new System.Drawing.Point(12, 181);
+            this.groupBox2.Location = new System.Drawing.Point(9, 147);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(920, 418);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Size = new System.Drawing.Size(690, 340);
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
             // 
@@ -146,31 +159,34 @@
             this.lblLista.AutoSize = true;
             this.lblLista.BackColor = System.Drawing.Color.Transparent;
             this.lblLista.Font = new System.Drawing.Font("Times New Roman", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLista.Location = new System.Drawing.Point(359, 18);
+            this.lblLista.Location = new System.Drawing.Point(269, 15);
+            this.lblLista.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblLista.Name = "lblLista";
-            this.lblLista.Size = new System.Drawing.Size(208, 26);
+            this.lblLista.Size = new System.Drawing.Size(173, 22);
             this.lblLista.TabIndex = 1;
             this.lblLista.Text = "Medicos Disponibles";
             // 
             // dgvMedicos
             // 
             this.dgvMedicos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMedicos.Location = new System.Drawing.Point(20, 57);
+            this.dgvMedicos.Location = new System.Drawing.Point(15, 46);
+            this.dgvMedicos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvMedicos.Name = "dgvMedicos";
             this.dgvMedicos.RowHeadersWidth = 51;
             this.dgvMedicos.RowTemplate.Height = 24;
-            this.dgvMedicos.Size = new System.Drawing.Size(879, 354);
+            this.dgvMedicos.Size = new System.Drawing.Size(659, 288);
             this.dgvMedicos.TabIndex = 0;
             // 
             // frmMedicos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ConsultorioMedico.Properties.Resources.Captura_de_pantalla_2026_02_28_194049;
-            this.ClientSize = new System.Drawing.Size(944, 599);
+            this.ClientSize = new System.Drawing.Size(708, 487);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmMedicos";
             this.Text = "Medicos";
             this.groupBox1.ResumeLayout(false);
@@ -187,7 +203,7 @@
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Label lblBuscar;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button btnAgregar;

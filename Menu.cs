@@ -34,5 +34,12 @@ namespace ConsultorioMedico
             frmExpedientes frmExpedientes = new frmExpedientes();
             frmExpedientes.Show();
         }
+
+        private void btnMedicos_Click(object sender, EventArgs e)
+        {
+            frmMedicos frmMedicos= new frmMedicos();
+            frmMedicos.Show();
+            this.Hide();
+        }
     }
 }

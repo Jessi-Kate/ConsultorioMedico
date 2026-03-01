@@ -193,6 +193,7 @@
             this.btnMedicos.TabIndex = 2;
             this.btnMedicos.Text = "Medicos";
             this.btnMedicos.UseVisualStyleBackColor = false;
+            this.btnMedicos.Click += new System.EventHandler(this.btnMedicos_Click);
             // 
             // btnExpedientes
             // 
