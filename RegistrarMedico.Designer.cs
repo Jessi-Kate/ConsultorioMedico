@@ -188,6 +188,7 @@
             this.lblID.Size = new System.Drawing.Size(34, 24);
             this.lblID.TabIndex = 34;
             this.lblID.Text = "ID:";
+            this.lblID.Click += new System.EventHandler(this.lblID_Click);
             // 
             // txtID
             // 
@@ -257,7 +258,7 @@
             this.groupBox3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.groupBox3.BackgroundImage = global::ConsultorioMedico.Properties.Resources.Green_Abstract_Webpage_Background_Graphics_3073334_1;
             this.groupBox3.Controls.Add(this.picMedico);
-            this.groupBox3.Location = new System.Drawing.Point(283, 31);
+            this.groupBox3.Location = new System.Drawing.Point(385, 39);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -269,10 +270,10 @@
             // 
             this.picMedico.BackgroundImage = global::ConsultorioMedico.Properties.Resources._360_F_260040900_oO6YW1sHTnKxby4GcjCvtypUCWjnQRg5;
             this.picMedico.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picMedico.Location = new System.Drawing.Point(0, 0);
+            this.picMedico.Location = new System.Drawing.Point(-5, 0);
             this.picMedico.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picMedico.Name = "picMedico";
-            this.picMedico.Size = new System.Drawing.Size(209, 131);
+            this.picMedico.Size = new System.Drawing.Size(284, 161);
             this.picMedico.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picMedico.TabIndex = 0;
             this.picMedico.TabStop = false;

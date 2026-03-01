@@ -39,7 +39,6 @@ namespace ConsultorioMedico
         {
             frmMedicos frmMedicos= new frmMedicos();
             frmMedicos.Show();
-            this.Hide();
         }
     }
 }
