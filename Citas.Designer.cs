@@ -1,6 +1,6 @@
 ﻿namespace ConsultorioMedico
 {
-    partial class Citas
+    partial class frmCitas
     {
         /// <summary>
         /// Required designer variable.
@@ -159,7 +159,7 @@
             this.btnEditar.TabIndex = 0;
             this.btnEditar.UseVisualStyleBackColor = true;
             // 
-            // Citas
+            // frmCitas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -168,7 +168,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox3);
-            this.Name = "Citas";
+            this.Name = "frmCitas";
             this.Text = "Citas";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
