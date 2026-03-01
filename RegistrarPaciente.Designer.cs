@@ -311,6 +311,7 @@
             this.txtPaterno.Size = new System.Drawing.Size(233, 19);
             this.txtPaterno.TabIndex = 13;
             this.txtPaterno.TextChanged += new System.EventHandler(this.TextChangedApellidoPaterno);
+            this.txtPaterno.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.KeyPressApellidoPaterno);
             // 
             // lblNombre
             // 
@@ -334,6 +335,7 @@
             this.txtNombre.Size = new System.Drawing.Size(233, 19);
             this.txtNombre.TabIndex = 11;
             this.txtNombre.TextChanged += new System.EventHandler(this.TextChangedNombres);
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.KeyPressNombre);
             // 
             // groupBox1
             // 
@@ -384,6 +386,7 @@
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(233, 19);
             this.txtID.TabIndex = 33;
+            this.txtID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.KeyPressID);
             // 
             // frmRegistrarPaciente
             // 

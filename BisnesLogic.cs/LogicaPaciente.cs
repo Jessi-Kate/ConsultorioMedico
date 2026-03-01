@@ -20,7 +20,7 @@ namespace BisnesLogic
 
         public void ValidarCamposPaciente()
         {
-            if ()
+            
                 if (listaTextBoxPaciente[0].Text == string.Empty)
                 {
                     listaLabelPaciente[0].Text = "El ID no puede estar vacio";

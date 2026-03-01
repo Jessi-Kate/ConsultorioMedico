@@ -121,5 +121,20 @@ namespace ConsultorioMedico
         {
             logicaPaciente.ValidarCamposPaciente();
         }
+
+        private void KeyPressID(object sender, KeyPressEventArgs e)
+        {
+            logicaPaciente.textBoxEvent.soloNumeros(e);
+        }
+
+        private void KeyPressNombre(object sender, KeyPressEventArgs e)
+        {
+            logicaPaciente.textBoxEvent.SoloLetras(e);
+        }
+
+        private void KeyPressApellidoPaterno(object sender, KeyPressEventArgs e)
+        {
+            logicaPaciente.textBoxEvent.SoloLetras(e);
+        }
     }
 }
