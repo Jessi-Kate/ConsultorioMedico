@@ -36,7 +36,7 @@ namespace ConsultorioMedico
             listaLabelPaciente.Add(lblDireccion);
             listaLabelPaciente.Add(lblCorreo);
 
-            object[] objects = { pictureBox1 };
+            object[] objects = { picPaciente };
             logicaPaciente = new LogicaPaciente(listaTextBoxPaciente, listaLabelPaciente, objects);
         }
 
@@ -114,7 +114,7 @@ namespace ConsultorioMedico
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            logicaPaciente.subirImagen.CargarFotografia(pictureBox1);
+            logicaPaciente.subirImagen.CargarFotografia(picPaciente);
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -147,6 +147,43 @@ namespace ConsultorioMedico
             {
                 lblID.ForeColor = Color.Green;
             }
+        }
+
+        private void frmRegistrarPaciente_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TextChanged(object sender, EventArgs e)
+        {
+            if (txtID.Text.Equals(""))
+            {
+                lblID.ForeColor = Color.Red;
+            }
+            else
+            {
+                lblID.ForeColor = Color.Green;
+            }
+        }
+
+        private void KeyPressMaterno(object sender, KeyPressEventArgs e)
+        {
+            logicaPaciente.textBoxEvent.SoloLetras(e);
+        }
+
+        private void KeyPressTelefono(object sender, KeyPressEventArgs e)
+        {
+            logicaPaciente.textBoxEvent.soloNumeros(e);
+        }
+
+        private void KeyPressDireccion(object sender, KeyPressEventArgs e)
+        {
+            logicaPaciente.textBoxEvent.SoloLetras(e);
+        }
+
+        private void KeyPressCorreo(object sender, KeyPressEventArgs e)
+        {
+            logicaPaciente.textBoxEvent.validarCorreoElectronico(e);
         }
     }
 }

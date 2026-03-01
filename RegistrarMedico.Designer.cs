@@ -42,7 +42,7 @@
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.picMedico = new System.Windows.Forms.PictureBox();
             this.lblCorreo = new System.Windows.Forms.Label();
             this.txtCorreo = new System.Windows.Forms.TextBox();
             this.lblTelefono = new System.Windows.Forms.Label();
@@ -59,7 +59,7 @@
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudEdad)).BeginInit();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picMedico)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -198,7 +198,8 @@
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(309, 22);
             this.txtID.TabIndex = 33;
-            this.txtID.TextChanged += new System.EventHandler(this.txtID_TextChanged);
+            this.txtID.TextChanged += new System.EventHandler(this.TextChangedID);
+            this.txtID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.KeyPressID);
             // 
             // cboSexo
             // 
@@ -249,32 +250,33 @@
             this.btnGuardar.Size = new System.Drawing.Size(68, 58);
             this.btnGuardar.TabIndex = 29;
             this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // groupBox3
             // 
             this.groupBox3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.groupBox3.BackgroundImage = global::ConsultorioMedico.Properties.Resources.Green_Abstract_Webpage_Background_Graphics_3073334_1;
-            this.groupBox3.Controls.Add(this.pictureBox1);
-            this.groupBox3.Location = new System.Drawing.Point(385, 27);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox3.Controls.Add(this.picMedico);
+            this.groupBox3.Location = new System.Drawing.Point(283, 31);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox3.Size = new System.Drawing.Size(279, 161);
             this.groupBox3.TabIndex = 28;
             this.groupBox3.TabStop = false;
             // 
-            // pictureBox1
+            // picMedico
             // 
-            this.pictureBox1.BackgroundImage = global::ConsultorioMedico.Properties.Resources._360_F_260040900_oO6YW1sHTnKxby4GcjCvtypUCWjnQRg5;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(279, 161);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.picMedico.BackgroundImage = global::ConsultorioMedico.Properties.Resources._360_F_260040900_oO6YW1sHTnKxby4GcjCvtypUCWjnQRg5;
+            this.picMedico.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picMedico.Location = new System.Drawing.Point(0, 0);
+            this.picMedico.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.picMedico.Name = "picMedico";
+            this.picMedico.Size = new System.Drawing.Size(209, 131);
+            this.picMedico.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picMedico.TabIndex = 0;
+            this.picMedico.TabStop = false;
+            this.picMedico.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // lblCorreo
             // 
@@ -296,6 +298,8 @@
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(309, 22);
             this.txtCorreo.TabIndex = 25;
+            this.txtCorreo.TextChanged += new System.EventHandler(this.TextChangedCorreo);
+            this.txtCorreo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.KeyPressCorreo);
             // 
             // lblTelefono
             // 
@@ -317,6 +321,8 @@
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(309, 22);
             this.txtTelefono.TabIndex = 21;
+            this.txtTelefono.TextChanged += new System.EventHandler(this.TextChangedTelefoono);
+            this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.KeyPressTelefono);
             // 
             // lblSexo
             // 
@@ -360,6 +366,8 @@
             this.txtMaterno.Name = "txtMaterno";
             this.txtMaterno.Size = new System.Drawing.Size(309, 22);
             this.txtMaterno.TabIndex = 15;
+            this.txtMaterno.TextChanged += new System.EventHandler(this.TextChangedMaterno);
+            this.txtMaterno.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.KeyPressMaterno);
             // 
             // lblPaterno
             // 
@@ -381,6 +389,8 @@
             this.txtPaterno.Name = "txtPaterno";
             this.txtPaterno.Size = new System.Drawing.Size(309, 22);
             this.txtPaterno.TabIndex = 13;
+            this.txtPaterno.TextChanged += new System.EventHandler(this.TextChangedApellidoPaterno);
+            this.txtPaterno.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.KeyPressMaterno);
             // 
             // lblNombre
             // 
@@ -402,6 +412,8 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(309, 22);
             this.txtNombre.TabIndex = 11;
+            this.txtNombre.TextChanged += new System.EventHandler(this.TextChangedNombre);
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.KeyPressNombres);
             // 
             // frmRegistrarMedico
             // 
@@ -422,7 +434,7 @@
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudEdad)).EndInit();
             this.groupBox3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picMedico)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -437,7 +449,7 @@
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox picMedico;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label lblCorreo;
         private System.Windows.Forms.TextBox txtCorreo;
