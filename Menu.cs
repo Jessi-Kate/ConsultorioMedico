@@ -22,5 +22,17 @@ namespace ConsultorioMedico
             frmPacientes frmPacientes = new frmPacientes();
             frmPacientes.Show();
         }
+
+        private void btnCitas_Click(object sender, EventArgs e)
+        {
+            frmCitas frmCitas = new frmCitas();
+            frmCitas.Show();
+        }
+
+        private void btnExpedientes_Click(object sender, EventArgs e)
+        {
+            frmExpedientes frmExpedientes = new frmExpedientes();
+            frmExpedientes.Show();
+        }
     }
 }

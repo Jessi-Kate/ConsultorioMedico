@@ -194,6 +194,7 @@
             this.btnExpedientes.TabIndex = 1;
             this.btnExpedientes.Text = "Expedientes";
             this.btnExpedientes.UseVisualStyleBackColor = false;
+            this.btnExpedientes.Click += new System.EventHandler(this.btnExpedientes_Click);
             // 
             // btnCitas
             // 
@@ -210,6 +211,7 @@
             this.btnCitas.TabIndex = 1;
             this.btnCitas.Text = "Citas";
             this.btnCitas.UseVisualStyleBackColor = false;
+            this.btnCitas.Click += new System.EventHandler(this.btnCitas_Click);
             // 
             // btnPacientes
             // 
