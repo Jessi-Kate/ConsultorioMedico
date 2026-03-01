@@ -32,14 +32,14 @@
             this.lblTitulo = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.cboHorario = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.cboEspecialidad = new System.Windows.Forms.ComboBox();
+            this.lblHorario = new System.Windows.Forms.Label();
             this.lblEspecialidad = new System.Windows.Forms.Label();
             this.lblID = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
             this.cboSexo = new System.Windows.Forms.ComboBox();
             this.nudEdad = new System.Windows.Forms.NumericUpDown();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -97,14 +97,14 @@
             this.groupBox2.BackgroundImage = global::ConsultorioMedico.Properties.Resources.Captura_de_pantalla_2026_02_28_194246;
             this.groupBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.groupBox2.Controls.Add(this.cboHorario);
-            this.groupBox2.Controls.Add(this.comboBox1);
-            this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Controls.Add(this.cboEspecialidad);
+            this.groupBox2.Controls.Add(this.lblHorario);
             this.groupBox2.Controls.Add(this.lblEspecialidad);
             this.groupBox2.Controls.Add(this.lblID);
             this.groupBox2.Controls.Add(this.txtID);
             this.groupBox2.Controls.Add(this.cboSexo);
             this.groupBox2.Controls.Add(this.nudEdad);
-            this.groupBox2.Controls.Add(this.button1);
+            this.groupBox2.Controls.Add(this.btnSalir);
             this.groupBox2.Controls.Add(this.btnGuardar);
             this.groupBox2.Controls.Add(this.groupBox3);
             this.groupBox2.Controls.Add(this.lblCorreo);
@@ -140,31 +140,31 @@
             this.cboHorario.Size = new System.Drawing.Size(121, 24);
             this.cboHorario.TabIndex = 40;
             // 
-            // comboBox1
+            // cboEspecialidad
             // 
-            this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cboEspecialidad.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cboEspecialidad.FormattingEnabled = true;
+            this.cboEspecialidad.Items.AddRange(new object[] {
             "Medicina General",
             "Pediatría",
             "Ginecología",
             "Otro"});
-            this.comboBox1.Location = new System.Drawing.Point(371, 291);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 39;
+            this.cboEspecialidad.Location = new System.Drawing.Point(371, 291);
+            this.cboEspecialidad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cboEspecialidad.Name = "cboEspecialidad";
+            this.cboEspecialidad.Size = new System.Drawing.Size(121, 24);
+            this.cboEspecialidad.TabIndex = 39;
             // 
-            // label2
+            // lblHorario
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(373, 326);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 24);
-            this.label2.TabIndex = 38;
-            this.label2.Text = "Horario:";
+            this.lblHorario.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblHorario.AutoSize = true;
+            this.lblHorario.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHorario.Location = new System.Drawing.Point(373, 328);
+            this.lblHorario.Name = "lblHorario";
+            this.lblHorario.Size = new System.Drawing.Size(80, 24);
+            this.lblHorario.TabIndex = 38;
+            this.lblHorario.Text = "Horario:";
             // 
             // lblEspecialidad
             // 
@@ -221,18 +221,18 @@
             this.nudEdad.Size = new System.Drawing.Size(120, 22);
             this.nudEdad.TabIndex = 31;
             // 
-            // button1
+            // btnSalir
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button1.BackgroundImage = global::ConsultorioMedico.Properties.Resources.deshacer;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Location = new System.Drawing.Point(536, 462);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(71, 62);
-            this.button1.TabIndex = 30;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnSalir.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnSalir.BackgroundImage = global::ConsultorioMedico.Properties.Resources.deshacer;
+            this.btnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSalir.Location = new System.Drawing.Point(536, 462);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(71, 62);
+            this.btnSalir.TabIndex = 30;
+            this.btnSalir.UseVisualStyleBackColor = true;
             // 
             // btnGuardar
             // 
@@ -428,7 +428,7 @@
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.ComboBox cboSexo;
         private System.Windows.Forms.NumericUpDown nudEdad;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -446,8 +446,8 @@
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox cboEspecialidad;
+        private System.Windows.Forms.Label lblHorario;
         private System.Windows.Forms.Label lblEspecialidad;
         private System.Windows.Forms.ComboBox cboHorario;
     }
