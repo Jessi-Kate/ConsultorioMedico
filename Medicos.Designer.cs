@@ -1,4 +1,6 @@
-﻿namespace ConsultorioMedico
+﻿using System;
+
+namespace ConsultorioMedico
 {
     partial class frmMedicos
     {
@@ -216,6 +218,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvMedicos)).EndInit();
             this.ResumeLayout(false);
 
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         #endregion
