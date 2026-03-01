@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ConsultorioMedico
 {
-    public partial class frmCitas : Form
+    public partial class Citas : Form
     {
-        public frmCitas()
+        public Citas()
         {
             InitializeComponent();
         }
