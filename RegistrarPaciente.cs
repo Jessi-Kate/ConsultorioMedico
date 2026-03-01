@@ -19,6 +19,22 @@ namespace ConsultorioMedico
             InitializeComponent();
             List<TextBox> listaTextBoxPaciente = new List<TextBox>();
             listaTextBoxPaciente.Add(txtNombre);
+            listaTextBoxPaciente.Add(txtPaterno);
+            listaTextBoxPaciente.Add(txtMaterno);
+            listaTextBoxPaciente.Add(txtTelefono);
+            listaTextBoxPaciente.Add(txtDireccion);
+            listaTextBoxPaciente.Add(txtCorreo);
+
+            List<Label> listaLabelPaciente = new List<Label>();
+            listaLabelPaciente.Add(lblNombre);
+            listaLabelPaciente.Add(lblPaterno);
+            listaLabelPaciente.Add(lblMaterno);
+            listaLabelPaciente.Add(lblTelefono);
+            listaLabelPaciente.Add(lblDireccion);
+            listaLabelPaciente.Add(lblCorreo);
+
+            object[] objects = { pictureBox1 };
+            logicaPaciente = new LogicaPaciente(listaTextBoxPaciente,listaLabelPaciente, objects);
         }
 
         private void TextChangedNombres(object sender, EventArgs e)
