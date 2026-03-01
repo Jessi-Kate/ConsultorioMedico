@@ -37,7 +37,7 @@ namespace BisnesLogic
                     }
                     else
                     {
-                        if (listaTextBoxPaciente[1].Text == string.Empty)
+                        if (listaTextBoxPaciente[2].Text == string.Empty)
                         {
                             listaLabelPaciente[2].Text = "El Apellido Paterno no puede estar vacio";
                             listaLabelPaciente[2].ForeColor = Color.Red;
