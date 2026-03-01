@@ -386,6 +386,7 @@
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(233, 19);
             this.txtID.TabIndex = 33;
+            this.txtID.TextChanged += new System.EventHandler(this.textChangedID);
             this.txtID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.KeyPressID);
             // 
             // frmRegistrarPaciente

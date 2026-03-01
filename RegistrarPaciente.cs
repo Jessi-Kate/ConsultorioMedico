@@ -37,7 +37,7 @@ namespace ConsultorioMedico
             listaLabelPaciente.Add(lblCorreo);
 
             object[] objects = { pictureBox1 };
-            logicaPaciente = new LogicaPaciente(listaTextBoxPaciente,listaLabelPaciente, objects);
+            logicaPaciente = new LogicaPaciente(listaTextBoxPaciente, listaLabelPaciente, objects);
         }
 
         private void TextChangedNombres(object sender, EventArgs e)
@@ -135,6 +135,18 @@ namespace ConsultorioMedico
         private void KeyPressApellidoPaterno(object sender, KeyPressEventArgs e)
         {
             logicaPaciente.textBoxEvent.SoloLetras(e);
+        }
+
+        private void textChangedID(object sender, EventArgs e)
+        {
+            if (txtID.Text.Equals(""))
+            {
+                lblID.ForeColor = Color.Red;
+            }
+            else
+            {
+                lblID.ForeColor = Color.Green;
+            }
         }
     }
 }

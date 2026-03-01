@@ -47,6 +47,7 @@
     <Compile Include="Biblioteca\SubirImagen.cs" />
     <Compile Include="Biblioteca\TextBoxEvent.cs" />
     <Compile Include="Class1.cs" />
+    <Compile Include="LogicaMedico.cs" />
     <Compile Include="LogicaPaciente.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
