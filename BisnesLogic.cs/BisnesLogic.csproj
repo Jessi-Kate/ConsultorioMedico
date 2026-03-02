@@ -48,6 +48,7 @@
     <Compile Include="Biblioteca\TextBoxEvent.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="LogicaCita.cs" />
+    <Compile Include="LogicaExpediente.cs" />
     <Compile Include="LogicaMedico.cs" />
     <Compile Include="LogicaPaciente.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
