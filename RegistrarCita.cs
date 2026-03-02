@@ -141,6 +141,8 @@ namespace ConsultorioMedico
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+
+
             logicaCita.ValidarDatosCita();
         }
 

@@ -1,5 +1,6 @@
 ﻿using BisnesLogic;
 using BisnesLogic.cs;
+using DataConexion;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,10 +15,13 @@ namespace ConsultorioMedico
 {
     public partial class frmRegistrarPaciente : Form
     {
+        private frmPacientes frmPacientes;
         LogicaPaciente logicaPaciente;
-        public frmRegistrarPaciente()
+        public frmRegistrarPaciente(frmPacientes frmPacientes)
         {
             InitializeComponent();
+            //Guarmados el formulario principal en la varibale global para tener acceso a el desde cualquier parte del formulario de registro de pacientes
+            this.frmPacientes = frmPacientes;
             List<TextBox> listaTextBoxPaciente = new List<TextBox>();
             listaTextBoxPaciente.Add(txtID);
             listaTextBoxPaciente.Add(txtNombre);
@@ -39,6 +43,7 @@ namespace ConsultorioMedico
             object[] objects = { picPaciente };
             logicaPaciente = new LogicaPaciente(listaTextBoxPaciente, listaLabelPaciente, objects);
         }
+
 
         private void TextChangedNombres(object sender, EventArgs e)
         {
@@ -119,7 +124,30 @@ namespace ConsultorioMedico
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            //Creacion de un objeto paciente para almacenar los datos del paciente que se van a insertar en la base de datos
+            TblDetallesPaciente paciente = new TblDetallesPaciente()
+            {
+                //Establecemos los valores de las propiedades del objeto paciente con los datos ingresados en los campos de texto del formulario de registro de pacientes
+                IDPaciente = Convert.ToInt32(txtID.Text),
+                Nombre = txtNombre.Text,
+                ApellidoPaterno = txtPaterno.Text,
+                ApellidoMaterno = txtMaterno.Text,
+                Edad = (int)nudEdad.Value,
+                Sexo = cboSexo.Text,
+                Telefono = txtTelefono.Text,
+                Direccion = txtDireccion.Text,
+                Correo = txtCorreo.Text
+
+            };
+            //Tener acceso a la capa de la logica de negocio
             logicaPaciente.ValidarCamposPaciente();
+
+            //Una vez que se han validado los campos del paciente, podemos proceder a insertar los datos en la base de datos utilizando la clase InsercionDatos de la capa de acceso a datos. Esta clase se encargará de ejecutar la consulta SQL para insertar el nuevo registro del paciente en la tabla correspondiente de la base de datos.
+            InsercionDatos insercionDatos = new InsercionDatos();
+            insercionDatos.InsercionContacto(paciente);
+            frmPacientes.InsercionDGV(paciente);
+            
+
         }
 
         private void KeyPressID(object sender, KeyPressEventArgs e)

@@ -1,4 +1,5 @@
 ﻿using BisnesLogic.cs;
+using DataConexion;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,24 +14,33 @@ namespace ConsultorioMedico
 {
     public partial class frmRegistrarMedico : Form
     {
+        private frmMedicos frmMedicos;
         LogicaMedico logicaMedico;
-        public frmRegistrarMedico()
+        public frmRegistrarMedico(frmMedicos frmMedicos)
         {
             InitializeComponent();
+            //Guarmados el formulario principal en la varibale global para tener acceso a el desde cualquier parte del formulario de registro de pacientes
+            this.frmMedicos = frmMedicos;
+
+            //Lista de textBox para mandar a la logicaMedico y tener acceso a todos los textBox desde la logicaMedico
             List<TextBox> listaTexBoxMedico = new List<TextBox>();
+            listaTexBoxMedico.Add(txtID);
             listaTexBoxMedico.Add(txtNombre);
             listaTexBoxMedico.Add(txtPaterno);
             listaTexBoxMedico.Add(txtMaterno);
             listaTexBoxMedico.Add(txtTelefono);
             listaTexBoxMedico.Add(txtCorreo);
 
+            //Lista de label para mandar a la logicaMedico y tener acceso a todos los label desde la logicaMedico
             List<Label> listaLabelMedico = new List<Label>();
+            listaLabelMedico.Add(lblID);
             listaLabelMedico.Add(lblNombre);
             listaLabelMedico.Add(lblPaterno);
             listaLabelMedico.Add(lblMaterno);
             listaLabelMedico.Add(lblTelefono);
             listaLabelMedico.Add(lblCorreo);
 
+            //Objeto para mandar a la logicaMedico y tener acceso a el desde la logicaMedico
             object[] objects = { picMedico };
             logicaMedico = new LogicaMedico(listaTexBoxMedico, listaLabelMedico, objects);
 
@@ -49,8 +59,28 @@ namespace ConsultorioMedico
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            //Creacion del objeto medico para almacenar los datos del medico que se van a insertar en la base de datos
+            TblDetalleMedico medico = new TblDetalleMedico()
+            {
+                IDMedico = Convert.ToInt32(txtID.Text),
+                Nombre = txtNombre.Text,
+                ApellidoPaterno = txtPaterno.Text,
+                ApellidoMaterno = txtMaterno.Text,
+                Edad = (int)nudEdad.Value,
+                Sexo = cboSexo.SelectedItem.ToString(),
+                Telefono = txtTelefono.Text,
+                Correo = txtCorreo.Text,
+                Especialidad = cboEspecialidad.SelectedItem.ToString(),
+                Horario = cboHorario.SelectedItem.ToString()
+            };
 
+            //tener acceso a la capa de logica de negocio
             logicaMedico.ValidarDatosMedico();
+
+            //Insercion del medico en la base de datos y en el datagridview del formulario principal de medicos
+            InsercionDatos insercionDatos = new InsercionDatos();
+                insercionDatos.InsercionMedico(medico);
+                frmMedicos.InsercionDGV(medico);
         }
 
         private void TextChangedID(object sender, EventArgs e)

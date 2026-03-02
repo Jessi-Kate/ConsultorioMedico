@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataConexion;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -30,13 +31,30 @@ namespace ConsultorioMedico
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            frmRegistrarMedico frmRegistrarMedico = new frmRegistrarMedico();
+            frmRegistrarMedico frmRegistrarMedico = new frmRegistrarMedico(this);
             frmRegistrarMedico.Show();
         }
 
         private void btnRegresar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        public void InsercionDGV(TblDetalleMedico medico)
+        {
+            dgvMedicos.Rows.Add(
+                medico.IDMedico,
+                medico.Nombre,
+                medico.ApellidoPaterno,
+                medico.ApellidoMaterno,
+                medico.Edad,
+                medico.Sexo,
+                medico.Telefono,
+                medico.Correo,
+                medico.Especialidad,
+                medico.Horario
+
+                );
         }
     }
 }

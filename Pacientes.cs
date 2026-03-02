@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataConexion;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,11 +11,13 @@ using System.Windows.Forms;
 
 namespace ConsultorioMedico
 {
+    
     public partial class frmPacientes : Form
     {
         public frmPacientes()
         {
             InitializeComponent();
+
         }
 
         private void TextChangedBuscar(object sender, EventArgs e)
@@ -30,13 +33,29 @@ namespace ConsultorioMedico
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            frmRegistrarPaciente frmRegistrarPaciente = new frmRegistrarPaciente();
-            frmRegistrarPaciente.Show();
+            frmRegistrarPaciente frmRPaciente = new frmRegistrarPaciente(this);
+            frmRPaciente.Show();
+
         }
 
         private void btnRegresar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        public void InsercionDGV(TblDetallesPaciente paciente)
+        {
+            dgvPacientes.Rows.Add(
+                paciente.IDPaciente,
+                paciente.Nombre,
+                paciente.ApellidoPaterno,
+                paciente.ApellidoMaterno,
+                paciente.Edad,
+                paciente.Sexo,
+                paciente.Telefono,
+                paciente.Direccion,
+                paciente.Correo
+                );
         }
     }
 }
