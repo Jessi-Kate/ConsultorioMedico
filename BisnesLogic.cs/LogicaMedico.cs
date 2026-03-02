@@ -26,6 +26,7 @@ namespace BisnesLogic.cs
         {
             if (listaTexBoxMedico[0].Text == string.Empty)
             {
+                MessageBox.Show("Caja de texto vacia!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 listaLabelMedico[0].Text = "El ID no puede estar vacio";
                 listaLabelMedico[0].ForeColor = Color.Red;
                 listaTexBoxMedico[0].Focus();
@@ -35,6 +36,7 @@ namespace BisnesLogic.cs
             {
                 if (listaTexBoxMedico[1].Text == string.Empty)
                 {
+                    MessageBox.Show("Caja de texto vacia!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     listaLabelMedico[1].Text = "El Nombre no puede estar vacio";
                     listaLabelMedico[1].ForeColor = Color.Red;
                     listaTexBoxMedico[1].Focus();
@@ -43,6 +45,7 @@ namespace BisnesLogic.cs
                 {
                     if (listaTexBoxMedico[2].Text == string.Empty)
                     {
+                        MessageBox.Show("Caja de texto vacia!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         listaLabelMedico[2].Text = "El Apellido Paterno no puede estar vacio";
                         listaLabelMedico[2].ForeColor = Color.Red;
                         listaTexBoxMedico[2].Focus();
@@ -51,6 +54,7 @@ namespace BisnesLogic.cs
                     {
                         if (listaTexBoxMedico[3].Text == string.Empty)
                         {
+                            MessageBox.Show("Caja de texto vacia!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             listaLabelMedico[3].Text = "El Apellido Materno no puede estar vacio";
                             listaLabelMedico[3].ForeColor = Color.Red;
                             listaTexBoxMedico[3].Focus();
@@ -59,6 +63,7 @@ namespace BisnesLogic.cs
                         {
                             if (listaTexBoxMedico[4].Text == string.Empty)
                             {
+                                MessageBox.Show("Caja de texto vacia!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                 listaLabelMedico[4].Text = "El Telefono no puede estar vacio";
                                 listaLabelMedico[4].ForeColor = Color.Red;
                                 listaTexBoxMedico[4].Focus();
@@ -67,12 +72,14 @@ namespace BisnesLogic.cs
                             {
                                 if (listaTexBoxMedico[5].Text == string.Empty)
                                 {
+                                    MessageBox.Show("Caja de texto vacia!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                     listaLabelMedico[5].Text = "El Correo no puede estar vacio";
                                     listaLabelMedico[5].ForeColor = Color.Red;
                                     listaTexBoxMedico[5].Focus();
                                 }
                                 else
                                 {
+                                    MessageBox.Show("Datos Validados!", "Registro Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                     var ImgToByte = subirImagen.ImageAByte(pictureBox.Image);
 
                                 }

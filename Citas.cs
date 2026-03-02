@@ -38,15 +38,20 @@ namespace ConsultorioMedico
         {
             frmRegistrarCita frmRegistrarCita = new frmRegistrarCita(this);
             frmRegistrarCita.Show();
+            this.Hide();
         }
 
         private void btnRegresar_Click(object sender, EventArgs e)
         {
+            FrmMenu frmMenu = new FrmMenu();
+            frmMenu.Show();
+            this.Hide();
             this.Close();
         }
 
         public void InsercionDGV(TblDetalleCitas cita)
         {
+            dgvCitas.Rows.Clear();
             dgvCitas.Rows.Add(
                 cita.IDCita, 
                 cita.NombrePaciente, 
@@ -54,6 +59,11 @@ namespace ConsultorioMedico
                 cita.Fecha, 
                 cita.Hora, 
                 cita.Motivo);
+        }
+
+        private void frmCitas_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

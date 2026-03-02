@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ConsultorioMedico
 {
-    public partial class Menu : Form
+    public partial class FrmMenu : Form
     {
-        public Menu()
+        public FrmMenu()
         {
             InitializeComponent();
         }
@@ -21,24 +21,33 @@ namespace ConsultorioMedico
         {
             frmPacientes frmPacientes = new frmPacientes();
             frmPacientes.Show();
+            this.Hide();
         }
 
         private void btnCitas_Click(object sender, EventArgs e)
         {
             frmCitas frmCitas = new frmCitas();
             frmCitas.Show();
+            this.Hide();
         }
 
         private void btnExpedientes_Click(object sender, EventArgs e)
         {
             frmExpedientes frmExpedientes = new frmExpedientes();
             frmExpedientes.Show();
+            this.Hide();
         }
 
         private void btnMedicos_Click(object sender, EventArgs e)
         {
             frmMedicos frmMedicos= new frmMedicos();
             frmMedicos.Show();
+            this.Hide();
+        }
+
+        private void FrmMenu_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

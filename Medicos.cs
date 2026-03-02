@@ -33,15 +33,20 @@ namespace ConsultorioMedico
         {
             frmRegistrarMedico frmRegistrarMedico = new frmRegistrarMedico(this);
             frmRegistrarMedico.Show();
+            this.Hide();
         }
 
         private void btnRegresar_Click(object sender, EventArgs e)
         {
+            FrmMenu frmMenu = new FrmMenu();
+            frmMenu.Show();
+            this.Hide();
             this.Close();
         }
 
-        public void InsercionDGV(TblDetalleMedico medico)
+        public void InsercionDGGV(TblDetalleMedico medico)
         {
+            dgvMedicos.Rows.Clear();
             dgvMedicos.Rows.Add(
                 medico.IDMedico,
                 medico.Nombre,
@@ -53,8 +58,12 @@ namespace ConsultorioMedico
                 medico.Correo,
                 medico.Especialidad,
                 medico.Horario
-
                 );
+        }
+
+        private void frmMedicos_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

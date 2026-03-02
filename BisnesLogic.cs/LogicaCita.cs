@@ -24,6 +24,7 @@ namespace BisnesLogic.cs
         {
             if (listaTextBoxCita[0].Text == string.Empty)
             {
+                MessageBox.Show("Caja de texto vacia!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 listaLabelCita[0].Text = "El ID no puede estar vacio";
                 listaLabelCita[0].ForeColor = Color.Red;
                 listaTextBoxCita[0].Focus();
@@ -32,6 +33,7 @@ namespace BisnesLogic.cs
             {
                 if (listaTextBoxCita[1].Text == string.Empty)
                 {
+                    MessageBox.Show("Caja de texto vacia!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     listaLabelCita[1].Text = "El Paciente no puede estar vacio";
                     listaLabelCita[1].ForeColor = Color.Red;
                     listaTextBoxCita[1].Focus();
@@ -40,6 +42,7 @@ namespace BisnesLogic.cs
                 {
                     if (listaTextBoxCita[2].Text == string.Empty)
                     {
+                        MessageBox.Show("Caja de texto vacia!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         listaLabelCita[2].Text = "El Medico no puede estar vacio";
                         listaLabelCita[2].ForeColor = Color.Red;
                         listaTextBoxCita[2].Focus();
@@ -48,6 +51,7 @@ namespace BisnesLogic.cs
                     {
                         if (listaTextBoxCita[3].Text == string.Empty)
                         {
+                            MessageBox.Show("Caja de texto vacia!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             listaLabelCita[3].Text = "La Fecha no puede estar vacia";
                             listaLabelCita[3].ForeColor = Color.Red;
                             listaTextBoxCita[3].Focus();
@@ -56,6 +60,7 @@ namespace BisnesLogic.cs
                         {
                             if (listaTextBoxCita[4].Text == string.Empty)
                             {
+                                MessageBox.Show("Caja de texto vacia!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                 listaLabelCita[4].Text = "La Hora no puede estar vacia";
                                 listaLabelCita[4].ForeColor = Color.Red;
                                 listaTextBoxCita[4].Focus();
@@ -64,9 +69,13 @@ namespace BisnesLogic.cs
                             {
                                 if (listaTextBoxCita[5].Text == string.Empty)
                                 {
+                                    MessageBox.Show("Caja de texto vacia!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                     listaLabelCita[5].Text = "El Motivo no puede estar vacio";
                                     listaLabelCita[5].ForeColor = Color.Red;
                                     listaTextBoxCita[5].Focus();
+                                }else
+                                {
+                                    MessageBox.Show("Cita registrada con exito!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 }
                             }
                         }

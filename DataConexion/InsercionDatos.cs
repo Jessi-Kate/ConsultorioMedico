@@ -17,8 +17,6 @@ namespace DataConexion
             string query = $"INSERT INTO TblDetallesPaciente(nombre,aPterno,aMaterno,edad,sexo,telefono,direccion,correo) "
                 + $"VALUES('{paciente.Nombre}','{paciente.ApellidoPaterno}','{paciente.ApellidoMaterno}','{paciente.Edad}','{paciente.Sexo}','{paciente.Telefono}','{paciente.Direccion}','{paciente.Correo}')";
 
-            //ejecutariamos la consulta del query SQL
-            MessageBox.Show("El registro se ingreso de manera correcta a la base de datos.");
         }
 
         public void InsercionMedico(TblDetalleMedico medico)
@@ -26,8 +24,6 @@ namespace DataConexion
             //consulta a la BD
             string query = $"INSERT INTO TblDetalleMedico(Id,nombre,aPterno,aMaterno,edad,sexo,telefono,correo,especialidad,horario) "
                 + $"VALUES('{medico.IDMedico}','{medico.Nombre}','{medico.ApellidoPaterno}','{medico.ApellidoMaterno}','{medico.Edad}','{medico.Sexo}','{medico.Telefono}','{medico.Correo}','{medico.Especialidad}','{medico.Horario}')";
-            //ejecutariamos la consulta del query SQL
-            MessageBox.Show("El registro se ingreso de manera correcta a la base de datos.");
         }
 
         public void InsercionCitas(TblDetalleCitas cita)

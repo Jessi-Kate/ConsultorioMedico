@@ -38,7 +38,6 @@ namespace ConsultorioMedico
             listaLabelCita.Add(lblMotivo);
 
             logicaCita = new LogicaCita(listaTextBoxCita, listaLabelCita);
-            this.frmCitas = frmCitas;
         }
 
 
@@ -141,29 +140,44 @@ namespace ConsultorioMedico
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            // Creamos el objeto cita para almacenar los datos de la cita que se van a insertar en la base de datos
+            // Ejecuta tu validación (muestra mensajes si algo está mal)
+            logicaCita.ValidarDatosCita();
+
+            int idCita = 0;
+            int.TryParse(txtID.Text, out idCita);
+
+            DateTime fecha;
+            DateTime.TryParse(txtFecha.Text, out fecha);
+
+            DateTime hora;
+            DateTime.TryParse(txtHora.Text, out hora);
+
             TblDetalleCitas cita = new TblDetalleCitas()
             {
-                IDCita = Convert.ToInt32(txtID.Text),
+                IDCita = idCita,
                 NombrePaciente = txtPaciente.Text,
                 NombreMedico = txtMedico.Text,
-                Fecha = DateTime.Parse(txtFecha.Text), // Cambiado de string a DateTime
-                Hora = DateTime.Parse(txtHora.Text),   // Cambiado de int a DateTime
+                Fecha = fecha,
+                Hora = hora,
                 Motivo = txtMotivo.Text
             };
 
-            // Validar los datos de la cita antes de insertarlos en la base de datos
-            logicaCita.ValidarDatosCita();
-
-            // Insertar la cita en el datagridview del formulario de citas
             InsercionDatos insercionDatos = new InsercionDatos();
             insercionDatos.InsercionCitas(cita);
             frmCitas.InsercionDGV(cita);
+            
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
+            frmCitas.Show();
+            this.Hide();
             this.Close();
+        }
+
+        private void frmRegistrarCita_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

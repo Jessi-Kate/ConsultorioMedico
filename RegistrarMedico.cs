@@ -14,7 +14,7 @@ namespace ConsultorioMedico
 {
     public partial class frmRegistrarMedico : Form
     {
-        private frmMedicos frmMedicos;
+        frmMedicos frmMedicos;
         LogicaMedico logicaMedico;
         public frmRegistrarMedico(frmMedicos frmMedicos)
         {
@@ -59,28 +59,27 @@ namespace ConsultorioMedico
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            //Creacion del objeto medico para almacenar los datos del medico que se van a insertar en la base de datos
-            TblDetalleMedico medico = new TblDetalleMedico()
-            {
-                IDMedico = Convert.ToInt32(txtID.Text),
-                Nombre = txtNombre.Text,
-                ApellidoPaterno = txtPaterno.Text,
-                ApellidoMaterno = txtMaterno.Text,
-                Edad = (int)nudEdad.Value,
-                Sexo = cboSexo.SelectedItem.ToString(),
-                Telefono = txtTelefono.Text,
-                Correo = txtCorreo.Text,
-                Especialidad = cboEspecialidad.SelectedItem.ToString(),
-                Horario = cboHorario.SelectedItem.ToString()
-            };
-
-            //tener acceso a la capa de logica de negocio
+            // Ejecutar validación (aunque sea void)
             logicaMedico.ValidarDatosMedico();
 
-            //Insercion del medico en la base de datos y en el datagridview del formulario principal de medicos
+
+            TblDetalleMedico medicos = new TblDetalleMedico() 
+            { 
+                IDMedico = Convert.ToInt32(txtID.Text), 
+                Nombre = txtNombre.Text, 
+                ApellidoPaterno = txtPaterno.Text, 
+                ApellidoMaterno = txtMaterno.Text, 
+                Edad = (int)nudEdad.Value, 
+                Sexo = cboSexo.SelectedItem.ToString(), 
+                Telefono = txtTelefono.Text, 
+                Correo = txtCorreo.Text, 
+                Especialidad = cboEspecialidad.SelectedItem.ToString(),
+                Horario = cboHorario.SelectedItem.ToString() 
+            };
+
             InsercionDatos insercionDatos = new InsercionDatos();
-                insercionDatos.InsercionMedico(medico);
-                frmMedicos.InsercionDGV(medico);
+            insercionDatos.InsercionMedico(medicos);
+            frmMedicos.InsercionDGGV(medicos);
         }
 
         private void TextChangedID(object sender, EventArgs e)
@@ -192,6 +191,9 @@ namespace ConsultorioMedico
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
+            frmMedicos frmMedicos = new frmMedicos();
+            frmMedicos.Show();
+            this.Hide();
             this.Close();
         }
     }

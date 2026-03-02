@@ -55,11 +55,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.BackgroundImage = global::ConsultorioMedico.Properties.Resources.Captura_de_pantalla_2026_02_28_185327;
             this.groupBox1.Controls.Add(this.lblTitulo);
-            this.groupBox1.Location = new System.Drawing.Point(12, 11);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Location = new System.Drawing.Point(9, 9);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(789, 75);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(592, 61);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             // 
@@ -70,9 +70,10 @@
             this.lblTitulo.BackColor = System.Drawing.Color.Transparent;
             this.lblTitulo.Font = new System.Drawing.Font("Times New Roman", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblTitulo.Location = new System.Drawing.Point(261, 18);
+            this.lblTitulo.Location = new System.Drawing.Point(196, 15);
+            this.lblTitulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(243, 34);
+            this.lblTitulo.Size = new System.Drawing.Size(193, 28);
             this.lblTitulo.TabIndex = 27;
             this.lblTitulo.Text = "Agendar Una Cita";
             // 
@@ -96,11 +97,11 @@
             this.groupBox2.Controls.Add(this.txtPaciente);
             this.groupBox2.Controls.Add(this.lblidCita);
             this.groupBox2.Controls.Add(this.txtID);
-            this.groupBox2.Location = new System.Drawing.Point(12, 100);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox2.Location = new System.Drawing.Point(9, 81);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox2.Size = new System.Drawing.Size(789, 331);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Size = new System.Drawing.Size(592, 269);
             this.groupBox2.TabIndex = 28;
             this.groupBox2.TabStop = false;
             // 
@@ -111,10 +112,10 @@
             this.btnSalir.BackgroundImage = global::ConsultorioMedico.Properties.Resources.deshacer__1_;
             this.btnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSalir.Location = new System.Drawing.Point(655, 190);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSalir.Location = new System.Drawing.Point(491, 154);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(68, 58);
+            this.btnSalir.Size = new System.Drawing.Size(51, 47);
             this.btnSalir.TabIndex = 48;
             this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
@@ -126,10 +127,10 @@
             this.btnGuardar.BackgroundImage = global::ConsultorioMedico.Properties.Resources.agregar__1_;
             this.btnGuardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnGuardar.Location = new System.Drawing.Point(655, 80);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnGuardar.Location = new System.Drawing.Point(491, 65);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(68, 58);
+            this.btnGuardar.Size = new System.Drawing.Size(51, 47);
             this.btnGuardar.TabIndex = 47;
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
@@ -139,20 +140,21 @@
             this.lblMotivo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblMotivo.AutoSize = true;
             this.lblMotivo.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMotivo.Location = new System.Drawing.Point(340, 206);
+            this.lblMotivo.Location = new System.Drawing.Point(255, 167);
+            this.lblMotivo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMotivo.Name = "lblMotivo";
-            this.lblMotivo.Size = new System.Drawing.Size(76, 24);
+            this.lblMotivo.Size = new System.Drawing.Size(63, 19);
             this.lblMotivo.TabIndex = 46;
             this.lblMotivo.Text = "Motivo:";
             // 
             // txtMotivo
             // 
             this.txtMotivo.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtMotivo.Location = new System.Drawing.Point(340, 231);
-            this.txtMotivo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtMotivo.Location = new System.Drawing.Point(255, 188);
+            this.txtMotivo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtMotivo.Multiline = true;
             this.txtMotivo.Name = "txtMotivo";
-            this.txtMotivo.Size = new System.Drawing.Size(256, 75);
+            this.txtMotivo.Size = new System.Drawing.Size(193, 62);
             this.txtMotivo.TabIndex = 5;
             this.txtMotivo.TextChanged += new System.EventHandler(this.TextChangedMotivo);
             this.txtMotivo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.KeyPressMotivo);
@@ -162,20 +164,21 @@
             this.lblHora.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblHora.AutoSize = true;
             this.lblHora.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHora.Location = new System.Drawing.Point(340, 124);
+            this.lblHora.Location = new System.Drawing.Point(255, 101);
+            this.lblHora.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblHora.Name = "lblHora";
-            this.lblHora.Size = new System.Drawing.Size(141, 24);
+            this.lblHora.Size = new System.Drawing.Size(116, 19);
             this.lblHora.TabIndex = 44;
             this.lblHora.Text = "Hora de la Cita:";
             // 
             // txtHora
             // 
             this.txtHora.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtHora.Location = new System.Drawing.Point(340, 151);
-            this.txtHora.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtHora.Location = new System.Drawing.Point(255, 123);
+            this.txtHora.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtHora.Multiline = true;
             this.txtHora.Name = "txtHora";
-            this.txtHora.Size = new System.Drawing.Size(217, 22);
+            this.txtHora.Size = new System.Drawing.Size(164, 19);
             this.txtHora.TabIndex = 4;
             this.txtHora.TextChanged += new System.EventHandler(this.TextChangedHora);
             this.txtHora.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.KeyPressHora);
@@ -185,20 +188,21 @@
             this.lblFecha.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblFecha.AutoSize = true;
             this.lblFecha.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFecha.Location = new System.Drawing.Point(340, 43);
+            this.lblFecha.Location = new System.Drawing.Point(255, 35);
+            this.lblFecha.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(148, 24);
+            this.lblFecha.Size = new System.Drawing.Size(121, 19);
             this.lblFecha.TabIndex = 42;
             this.lblFecha.Text = "Fecha de la Cita:";
             // 
             // txtFecha
             // 
             this.txtFecha.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtFecha.Location = new System.Drawing.Point(340, 70);
-            this.txtFecha.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtFecha.Location = new System.Drawing.Point(255, 57);
+            this.txtFecha.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtFecha.Multiline = true;
             this.txtFecha.Name = "txtFecha";
-            this.txtFecha.Size = new System.Drawing.Size(217, 22);
+            this.txtFecha.Size = new System.Drawing.Size(164, 19);
             this.txtFecha.TabIndex = 3;
             this.txtFecha.TextChanged += new System.EventHandler(this.TextChangedFecha);
             // 
@@ -207,20 +211,21 @@
             this.lblMedico.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblMedico.AutoSize = true;
             this.lblMedico.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMedico.Location = new System.Drawing.Point(41, 206);
+            this.lblMedico.Location = new System.Drawing.Point(31, 167);
+            this.lblMedico.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMedico.Name = "lblMedico";
-            this.lblMedico.Size = new System.Drawing.Size(78, 24);
+            this.lblMedico.Size = new System.Drawing.Size(64, 19);
             this.lblMedico.TabIndex = 40;
             this.lblMedico.Text = "Medico:";
             // 
             // txtMedico
             // 
             this.txtMedico.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtMedico.Location = new System.Drawing.Point(41, 231);
-            this.txtMedico.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtMedico.Location = new System.Drawing.Point(31, 188);
+            this.txtMedico.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtMedico.Multiline = true;
             this.txtMedico.Name = "txtMedico";
-            this.txtMedico.Size = new System.Drawing.Size(217, 22);
+            this.txtMedico.Size = new System.Drawing.Size(164, 19);
             this.txtMedico.TabIndex = 2;
             this.txtMedico.TextChanged += new System.EventHandler(this.TextChangedMedico);
             this.txtMedico.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.KeyPressMedico);
@@ -230,20 +235,21 @@
             this.lblPaciente.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblPaciente.AutoSize = true;
             this.lblPaciente.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPaciente.Location = new System.Drawing.Point(41, 124);
+            this.lblPaciente.Location = new System.Drawing.Point(31, 101);
+            this.lblPaciente.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPaciente.Name = "lblPaciente";
-            this.lblPaciente.Size = new System.Drawing.Size(88, 24);
+            this.lblPaciente.Size = new System.Drawing.Size(72, 19);
             this.lblPaciente.TabIndex = 38;
             this.lblPaciente.Text = "Paciente:";
             // 
             // txtPaciente
             // 
             this.txtPaciente.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtPaciente.Location = new System.Drawing.Point(41, 151);
-            this.txtPaciente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtPaciente.Location = new System.Drawing.Point(31, 123);
+            this.txtPaciente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtPaciente.Multiline = true;
             this.txtPaciente.Name = "txtPaciente";
-            this.txtPaciente.Size = new System.Drawing.Size(217, 22);
+            this.txtPaciente.Size = new System.Drawing.Size(164, 19);
             this.txtPaciente.TabIndex = 1;
             this.txtPaciente.TextChanged += new System.EventHandler(this.TextChangedPaciente);
             this.txtPaciente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.KeyPressPaciente);
@@ -253,36 +259,38 @@
             this.lblidCita.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblidCita.AutoSize = true;
             this.lblidCita.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblidCita.Location = new System.Drawing.Point(41, 43);
+            this.lblidCita.Location = new System.Drawing.Point(31, 35);
+            this.lblidCita.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblidCita.Name = "lblidCita";
-            this.lblidCita.Size = new System.Drawing.Size(72, 24);
+            this.lblidCita.Size = new System.Drawing.Size(60, 19);
             this.lblidCita.TabIndex = 36;
             this.lblidCita.Text = "ID Cita:";
             // 
             // txtID
             // 
             this.txtID.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtID.Location = new System.Drawing.Point(41, 70);
-            this.txtID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtID.Location = new System.Drawing.Point(31, 57);
+            this.txtID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtID.Multiline = true;
             this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(217, 22);
+            this.txtID.Size = new System.Drawing.Size(164, 19);
             this.txtID.TabIndex = 0;
             this.txtID.TextChanged += new System.EventHandler(this.TextChangedID);
             this.txtID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.KeyPressID);
             // 
             // frmRegistrarCita
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ConsultorioMedico.Properties.Resources.Captura_de_pantalla_2026_02_28_185354;
-            this.ClientSize = new System.Drawing.Size(813, 442);
+            this.ClientSize = new System.Drawing.Size(610, 359);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmRegistrarCita";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RegistrarCita";
+            this.Load += new System.EventHandler(this.frmRegistrarCita_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
