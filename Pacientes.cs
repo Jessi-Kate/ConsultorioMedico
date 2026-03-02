@@ -35,6 +35,7 @@ namespace ConsultorioMedico
         {
             frmRegistrarPaciente frmRPaciente = new frmRegistrarPaciente(this);
             frmRPaciente.Show();
+            this.Hide();
 
         }
 
@@ -45,6 +46,7 @@ namespace ConsultorioMedico
 
         public void InsercionDGV(TblDetallesPaciente paciente)
         {
+            dgvPacientes.Rows.Clear();
             dgvPacientes.Rows.Add(
                 paciente.IDPaciente,
                 paciente.Nombre,
@@ -56,6 +58,11 @@ namespace ConsultorioMedico
                 paciente.Direccion,
                 paciente.Correo
                 );
+        }
+
+        private void frmPacientes_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

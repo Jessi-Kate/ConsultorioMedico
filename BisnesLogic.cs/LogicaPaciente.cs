@@ -77,13 +77,15 @@ namespace BisnesLogic
                                         }
                                         else
                                         {
+                                        
                                             var ImgToByte = subirImagen.ImageAByte(pictureBox.Image);
-
-                                        }
-
-
+                                        MessageBox.Show("Datos Validados!", "Registro Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                                     }
+
+
+
+                                }
                                 }
                             }
                         }

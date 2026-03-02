@@ -19,9 +19,10 @@ namespace ConsultorioMedico
         LogicaPaciente logicaPaciente;
         public frmRegistrarPaciente(frmPacientes frmPacientes)
         {
-            InitializeComponent();
             //Guarmados el formulario principal en la varibale global para tener acceso a el desde cualquier parte del formulario de registro de pacientes
             this.frmPacientes = frmPacientes;
+            InitializeComponent();
+            
             List<TextBox> listaTextBoxPaciente = new List<TextBox>();
             listaTextBoxPaciente.Add(txtID);
             listaTextBoxPaciente.Add(txtNombre);
@@ -216,6 +217,7 @@ namespace ConsultorioMedico
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
+            frmPacientes.Show();
             this.Close();
         }
     }

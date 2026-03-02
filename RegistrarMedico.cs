@@ -18,9 +18,10 @@ namespace ConsultorioMedico
         LogicaMedico logicaMedico;
         public frmRegistrarMedico(frmMedicos frmMedicos)
         {
-            InitializeComponent();
             //Guarmados el formulario principal en la varibale global para tener acceso a el desde cualquier parte del formulario de registro de pacientes
             this.frmMedicos = frmMedicos;
+            InitializeComponent();
+            
 
             //Lista de textBox para mandar a la logicaMedico y tener acceso a todos los textBox desde la logicaMedico
             List<TextBox> listaTexBoxMedico = new List<TextBox>();
@@ -191,9 +192,8 @@ namespace ConsultorioMedico
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            frmMedicos frmMedicos = new frmMedicos();
+            
             frmMedicos.Show();
-            this.Hide();
             this.Close();
         }
     }

@@ -170,8 +170,8 @@ namespace ConsultorioMedico
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
+           
             frmCitas.Show();
-            this.Hide();
             this.Close();
         }
 
