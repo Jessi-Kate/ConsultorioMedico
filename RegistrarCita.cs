@@ -140,25 +140,13 @@ namespace ConsultorioMedico
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            // Ejecuta tu validación (muestra mensajes si algo está mal)
-            logicaCita.ValidarDatosCita();
-
-            int idCita = 0;
-            int.TryParse(txtID.Text, out idCita);
-
-            DateTime fecha;
-            DateTime.TryParse(txtFecha.Text, out fecha);
-
-            DateTime hora;
-            DateTime.TryParse(txtHora.Text, out hora);
-
             TblDetalleCitas cita = new TblDetalleCitas()
             {
-                IDCita = idCita,
+                IDCita = txtID.Text,
                 NombrePaciente = txtPaciente.Text,
                 NombreMedico = txtMedico.Text,
-                Fecha = fecha,
-                Hora = hora,
+                Fecha = txtFecha.Text,
+                Hora = txtHora.Text,
                 Motivo = txtMotivo.Text
             };
 

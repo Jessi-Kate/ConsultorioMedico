@@ -22,7 +22,7 @@ namespace ConsultorioMedico
             //Guarmados el formulario principal en la varibale global para tener acceso a el desde cualquier parte del formulario de registro de pacientes
             this.frmPacientes = frmPacientes;
             InitializeComponent();
-            
+
             List<TextBox> listaTextBoxPaciente = new List<TextBox>();
             listaTextBoxPaciente.Add(txtID);
             listaTextBoxPaciente.Add(txtNombre);
@@ -129,11 +129,11 @@ namespace ConsultorioMedico
             TblDetallesPaciente paciente = new TblDetallesPaciente()
             {
                 //Establecemos los valores de las propiedades del objeto paciente con los datos ingresados en los campos de texto del formulario de registro de pacientes
-                IDPaciente = Convert.ToInt32(txtID.Text),
+                IDPaciente = txtID.Text,
                 Nombre = txtNombre.Text,
                 ApellidoPaterno = txtPaterno.Text,
                 ApellidoMaterno = txtMaterno.Text,
-                Edad = (int)nudEdad.Value,
+                Edad = nudEdad.Text,
                 Sexo = cboSexo.Text,
                 Telefono = txtTelefono.Text,
                 Direccion = txtDireccion.Text,
@@ -147,7 +147,7 @@ namespace ConsultorioMedico
             InsercionDatos insercionDatos = new InsercionDatos();
             insercionDatos.InsercionContacto(paciente);
             frmPacientes.InsercionDGV(paciente);
-            
+
 
         }
 
@@ -219,6 +219,30 @@ namespace ConsultorioMedico
         {
             frmPacientes.Show();
             this.Close();
+        }
+
+        private void nudEdad_ValueChanged(object sender, EventArgs e)
+        {
+            if (nudEdad.Value <= 0)
+            {
+                lblEdad.ForeColor = Color.Red;
+            }
+            else
+            {
+                lblEdad.ForeColor = Color.Green;
+            }
+        }
+
+        private void cboSexo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cboSexo.SelectedIndex == -1)
+            {
+                lblSexo.ForeColor = Color.Red;
+            }
+            else
+            {
+                lblSexo.ForeColor = Color.Green;
+            }
         }
     }
 }

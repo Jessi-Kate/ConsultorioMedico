@@ -66,16 +66,16 @@ namespace ConsultorioMedico
 
             TblDetalleMedico medicos = new TblDetalleMedico() 
             { 
-                IDMedico = Convert.ToInt32(txtID.Text), 
+                IDMedico = txtID.Text, 
                 Nombre = txtNombre.Text, 
                 ApellidoPaterno = txtPaterno.Text, 
                 ApellidoMaterno = txtMaterno.Text, 
-                Edad = (int)nudEdad.Value, 
-                Sexo = cboSexo.SelectedItem.ToString(), 
+                Edad = nudEdad.Text, 
+                Sexo = cboSexo.Text, 
                 Telefono = txtTelefono.Text, 
                 Correo = txtCorreo.Text, 
-                Especialidad = cboEspecialidad.SelectedItem.ToString(),
-                Horario = cboHorario.SelectedItem.ToString() 
+                Especialidad = cboEspecialidad.Text,
+                Horario = cboHorario.Text 
             };
 
             InsercionDatos insercionDatos = new InsercionDatos();
