@@ -79,11 +79,11 @@
             this.groupBox2.Controls.Add(this.txtidExpediente);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Location = new System.Drawing.Point(9, 80);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Location = new System.Drawing.Point(12, 98);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox2.Size = new System.Drawing.Size(690, 421);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox2.Size = new System.Drawing.Size(920, 518);
             this.groupBox2.TabIndex = 28;
             this.groupBox2.TabStop = false;
             // 
@@ -92,10 +92,9 @@
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(502, 302);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(669, 372);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(130, 19);
+            this.label5.Size = new System.Drawing.Size(157, 24);
             this.label5.TabIndex = 50;
             this.label5.Text = "Estudios Medicos";
             // 
@@ -104,10 +103,9 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(296, 302);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(395, 372);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(90, 19);
+            this.label4.Size = new System.Drawing.Size(109, 24);
             this.label4.TabIndex = 49;
             this.label4.Text = "Radiografia";
             // 
@@ -116,10 +114,9 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(110, 301);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(147, 370);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(34, 19);
+            this.label3.Size = new System.Drawing.Size(40, 24);
             this.label3.TabIndex = 48;
             this.label3.Text = "INE";
             // 
@@ -130,10 +127,10 @@
             this.btnRegresar.BackgroundImage = global::ConsultorioMedico.Properties.Resources.regresa;
             this.btnRegresar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnRegresar.Location = new System.Drawing.Point(387, 350);
-            this.btnRegresar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRegresar.Location = new System.Drawing.Point(516, 431);
+            this.btnRegresar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRegresar.Name = "btnRegresar";
-            this.btnRegresar.Size = new System.Drawing.Size(51, 47);
+            this.btnRegresar.Size = new System.Drawing.Size(68, 58);
             this.btnRegresar.TabIndex = 47;
             this.btnRegresar.UseVisualStyleBackColor = false;
             this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
@@ -145,10 +142,10 @@
             this.btnGuardar.BackgroundImage = global::ConsultorioMedico.Properties.Resources.disco_flexible;
             this.btnGuardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnGuardar.Location = new System.Drawing.Point(236, 350);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGuardar.Location = new System.Drawing.Point(315, 431);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(51, 47);
+            this.btnGuardar.Size = new System.Drawing.Size(68, 58);
             this.btnGuardar.TabIndex = 46;
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
@@ -157,10 +154,10 @@
             // 
             this.picEstudiosMedicos.BackgroundImage = global::ConsultorioMedico.Properties.Resources.estudios;
             this.picEstudiosMedicos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picEstudiosMedicos.Location = new System.Drawing.Point(500, 204);
-            this.picEstudiosMedicos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picEstudiosMedicos.Location = new System.Drawing.Point(667, 251);
+            this.picEstudiosMedicos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picEstudiosMedicos.Name = "picEstudiosMedicos";
-            this.picEstudiosMedicos.Size = new System.Drawing.Size(122, 89);
+            this.picEstudiosMedicos.Size = new System.Drawing.Size(163, 110);
             this.picEstudiosMedicos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picEstudiosMedicos.TabIndex = 45;
             this.picEstudiosMedicos.TabStop = false;
@@ -170,10 +167,10 @@
             // 
             this.picRadioGrafia.BackgroundImage = global::ConsultorioMedico.Properties.Resources.radio;
             this.picRadioGrafia.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picRadioGrafia.Location = new System.Drawing.Point(277, 204);
-            this.picRadioGrafia.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picRadioGrafia.Location = new System.Drawing.Point(369, 251);
+            this.picRadioGrafia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picRadioGrafia.Name = "picRadioGrafia";
-            this.picRadioGrafia.Size = new System.Drawing.Size(122, 89);
+            this.picRadioGrafia.Size = new System.Drawing.Size(163, 110);
             this.picRadioGrafia.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picRadioGrafia.TabIndex = 44;
             this.picRadioGrafia.TabStop = false;
@@ -183,10 +180,10 @@
             // 
             this.picIne.BackgroundImage = global::ConsultorioMedico.Properties.Resources.ine;
             this.picIne.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picIne.Location = new System.Drawing.Point(68, 204);
-            this.picIne.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picIne.Location = new System.Drawing.Point(91, 251);
+            this.picIne.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picIne.Name = "picIne";
-            this.picIne.Size = new System.Drawing.Size(122, 89);
+            this.picIne.Size = new System.Drawing.Size(163, 110);
             this.picIne.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picIne.TabIndex = 43;
             this.picIne.TabStop = false;
@@ -197,21 +194,20 @@
             this.lblMedico.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblMedico.AutoSize = true;
             this.lblMedico.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMedico.Location = new System.Drawing.Point(460, 59);
-            this.lblMedico.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblMedico.Location = new System.Drawing.Point(613, 73);
             this.lblMedico.Name = "lblMedico";
-            this.lblMedico.Size = new System.Drawing.Size(64, 19);
+            this.lblMedico.Size = new System.Drawing.Size(78, 24);
             this.lblMedico.TabIndex = 42;
             this.lblMedico.Text = "Medico:";
             // 
             // txtMedico
             // 
             this.txtMedico.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtMedico.Location = new System.Drawing.Point(460, 81);
-            this.txtMedico.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMedico.Location = new System.Drawing.Point(613, 100);
+            this.txtMedico.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtMedico.Multiline = true;
             this.txtMedico.Name = "txtMedico";
-            this.txtMedico.Size = new System.Drawing.Size(227, 22);
+            this.txtMedico.Size = new System.Drawing.Size(236, 26);
             this.txtMedico.TabIndex = 2;
             // 
             // lblFecha
@@ -219,21 +215,20 @@
             this.lblFecha.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblFecha.AutoSize = true;
             this.lblFecha.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFecha.Location = new System.Drawing.Point(254, 110);
-            this.lblFecha.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblFecha.Location = new System.Drawing.Point(339, 135);
             this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(53, 19);
+            this.lblFecha.Size = new System.Drawing.Size(64, 24);
             this.lblFecha.TabIndex = 40;
             this.lblFecha.Text = "Fecha:";
             // 
             // txtFecha
             // 
             this.txtFecha.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtFecha.Location = new System.Drawing.Point(254, 132);
-            this.txtFecha.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtFecha.Location = new System.Drawing.Point(339, 162);
+            this.txtFecha.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtFecha.Multiline = true;
             this.txtFecha.Name = "txtFecha";
-            this.txtFecha.Size = new System.Drawing.Size(227, 22);
+            this.txtFecha.Size = new System.Drawing.Size(221, 26);
             this.txtFecha.TabIndex = 3;
             // 
             // lblPaciente
@@ -241,21 +236,20 @@
             this.lblPaciente.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblPaciente.AutoSize = true;
             this.lblPaciente.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPaciente.Location = new System.Drawing.Point(236, 60);
-            this.lblPaciente.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPaciente.Location = new System.Drawing.Point(315, 74);
             this.lblPaciente.Name = "lblPaciente";
-            this.lblPaciente.Size = new System.Drawing.Size(72, 19);
+            this.lblPaciente.Size = new System.Drawing.Size(88, 24);
             this.lblPaciente.TabIndex = 38;
             this.lblPaciente.Text = "Paciente:";
             // 
             // txtPaciente
             // 
             this.txtPaciente.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtPaciente.Location = new System.Drawing.Point(236, 82);
-            this.txtPaciente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPaciente.Location = new System.Drawing.Point(315, 101);
+            this.txtPaciente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPaciente.Multiline = true;
             this.txtPaciente.Name = "txtPaciente";
-            this.txtPaciente.Size = new System.Drawing.Size(234, 22);
+            this.txtPaciente.Size = new System.Drawing.Size(245, 26);
             this.txtPaciente.TabIndex = 1;
             // 
             // lblID
@@ -263,21 +257,20 @@
             this.lblID.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblID.AutoSize = true;
             this.lblID.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblID.Location = new System.Drawing.Point(57, 60);
-            this.lblID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblID.Location = new System.Drawing.Point(76, 74);
             this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(110, 19);
+            this.lblID.Size = new System.Drawing.Size(134, 24);
             this.lblID.TabIndex = 36;
             this.lblID.Text = "ID Expediente:";
             // 
             // txtidExpediente
             // 
             this.txtidExpediente.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtidExpediente.Location = new System.Drawing.Point(57, 82);
-            this.txtidExpediente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtidExpediente.Location = new System.Drawing.Point(76, 101);
+            this.txtidExpediente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtidExpediente.Multiline = true;
             this.txtidExpediente.Name = "txtidExpediente";
-            this.txtidExpediente.Size = new System.Drawing.Size(176, 22);
+            this.txtidExpediente.Size = new System.Drawing.Size(178, 26);
             this.txtidExpediente.TabIndex = 0;
             // 
             // label2
@@ -287,10 +280,9 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(272, 175);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(363, 215);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(147, 25);
+            this.label2.Size = new System.Drawing.Size(186, 32);
             this.label2.TabIndex = 28;
             this.label2.Text = "Subir Archivos";
             // 
@@ -301,10 +293,9 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(245, 25);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(327, 31);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(229, 25);
+            this.label1.Size = new System.Drawing.Size(287, 32);
             this.label1.TabIndex = 27;
             this.label1.Text = "Registro del Expediente";
             // 
@@ -314,11 +305,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.BackgroundImage = global::ConsultorioMedico.Properties.Resources.empty_orange_and_yellow_studio_room_background_orange_background_3d_with_yellow_podium_space_for_selling_products_on_the_website_empty_room_with_spotlight_effect_illustration_vector;
             this.groupBox1.Controls.Add(this.lblTitulo);
-            this.groupBox1.Location = new System.Drawing.Point(9, 9);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Location = new System.Drawing.Point(12, 11);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox1.Size = new System.Drawing.Size(690, 61);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Size = new System.Drawing.Size(920, 75);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             // 
@@ -329,22 +320,21 @@
             this.lblTitulo.BackColor = System.Drawing.Color.Transparent;
             this.lblTitulo.Font = new System.Drawing.Font("Times New Roman", 19.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblTitulo.Location = new System.Drawing.Point(245, 15);
-            this.lblTitulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTitulo.Location = new System.Drawing.Point(327, 18);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(228, 31);
+            this.lblTitulo.Size = new System.Drawing.Size(273, 38);
             this.lblTitulo.TabIndex = 27;
             this.lblTitulo.Text = "Expediente Digital";
             // 
             // frmExpedientes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ConsultorioMedico.Properties.Resources.minimal_geometric_background_orange_elements_with_fluid_gradient_for_posters_banners_and_website_landing_pages_free_vector;
-            this.ClientSize = new System.Drawing.Size(708, 510);
+            this.ClientSize = new System.Drawing.Size(944, 628);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmExpedientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Expedientes";

@@ -129,6 +129,9 @@ namespace ConsultorioMedico
 
         private void btnRegresar_Click(object sender, EventArgs e)
         {
+            FrmMenu frmMenu = new FrmMenu();
+            frmMenu.Show();
+            this.Hide();
             this.Close();
         }
     }
