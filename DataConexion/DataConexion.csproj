@@ -45,6 +45,7 @@
     <Compile Include="Class1.cs" />
     <Compile Include="InsercionDatos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TblDetalleCitas.cs" />
     <Compile Include="TblDetalleMedico.cs" />
     <Compile Include="TblDetallesPaciente.cs" />
   </ItemGroup>

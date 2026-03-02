@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataConexion;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -35,13 +36,24 @@ namespace ConsultorioMedico
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            frmRegistrarCita frmRegistrarCita = new frmRegistrarCita();
+            frmRegistrarCita frmRegistrarCita = new frmRegistrarCita(this);
             frmRegistrarCita.Show();
         }
 
         private void btnRegresar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        public void InsercionDGV(TblDetalleCitas cita)
+        {
+            dgvCitas.Rows.Add(
+                cita.IDCita, 
+                cita.NombrePaciente, 
+                cita.NombreMedico, 
+                cita.Fecha, 
+                cita.Hora, 
+                cita.Motivo);
         }
     }
 }

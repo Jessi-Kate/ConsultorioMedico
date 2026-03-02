@@ -29,5 +29,12 @@ namespace DataConexion
             //ejecutariamos la consulta del query SQL
             MessageBox.Show("El registro se ingreso de manera correcta a la base de datos.");
         }
+
+        public void InsercionCitas(TblDetalleCitas cita)
+        {
+            //consulta a la BD
+            string query = $"INSERT INTO TblDetalleCitas(IdCita,nombrePaciente,nombreMedico,fecha,hora,motivo) "
+                + $"VALUES('{cita.IDCita}','{cita.NombrePaciente}','{cita.NombreMedico}','{cita.Fecha}','{cita.Hora}','{cita.Motivo}')";
+        }
     }
 }

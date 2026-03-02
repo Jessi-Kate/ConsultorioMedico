@@ -283,7 +283,6 @@
             this.Name = "frmRegistrarCita";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RegistrarCita";
-            this.Load += new System.EventHandler(this.frmRegistrarCita_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

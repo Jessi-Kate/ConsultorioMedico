@@ -1,4 +1,5 @@
 ﻿using BisnesLogic.cs;
+using DataConexion;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,9 +14,12 @@ namespace ConsultorioMedico
 {
     public partial class frmRegistrarCita : Form
     {
+        frmCitas frmCitas;
         LogicaCita logicaCita;
-        public frmRegistrarCita()
+        public frmRegistrarCita(frmCitas frmCitas)
         {
+            //creamos el formulario de registro de citas y le mandamos el formulario de citas para tener acceso a el desde el formulario de registro de citas y poder insertar los datos en el datagridview del formulario de citas
+            this.frmCitas = frmCitas;
             InitializeComponent();
             List<TextBox> listaTextBoxCita = new List<TextBox>();
             listaTextBoxCita.Add(txtID);
@@ -34,13 +38,9 @@ namespace ConsultorioMedico
             listaLabelCita.Add(lblMotivo);
 
             logicaCita = new LogicaCita(listaTextBoxCita, listaLabelCita);
-
+            this.frmCitas = frmCitas;
         }
 
-        private void frmRegistrarCita_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private void TextChangedID(object sender, EventArgs e)
         {
@@ -141,9 +141,24 @@ namespace ConsultorioMedico
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            // Creamos el objeto cita para almacenar los datos de la cita que se van a insertar en la base de datos
+            TblDetalleCitas cita = new TblDetalleCitas()
+            {
+                IDCita = Convert.ToInt32(txtID.Text),
+                NombrePaciente = txtPaciente.Text,
+                NombreMedico = txtMedico.Text,
+                Fecha = DateTime.Parse(txtFecha.Text), // Cambiado de string a DateTime
+                Hora = DateTime.Parse(txtHora.Text),   // Cambiado de int a DateTime
+                Motivo = txtMotivo.Text
+            };
 
-
+            // Validar los datos de la cita antes de insertarlos en la base de datos
             logicaCita.ValidarDatosCita();
+
+            // Insertar la cita en el datagridview del formulario de citas
+            InsercionDatos insercionDatos = new InsercionDatos();
+            insercionDatos.InsercionCitas(cita);
+            frmCitas.InsercionDGV(cita);
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
