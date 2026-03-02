@@ -24,22 +24,22 @@ namespace ConsultorioMedico
             InitializeComponent();
 
             List<TextBox> listaTextBoxPaciente = new List<TextBox>();
-            listaTextBoxPaciente.Add(txtID);
-            listaTextBoxPaciente.Add(txtNombre);
-            listaTextBoxPaciente.Add(txtPaterno);
-            listaTextBoxPaciente.Add(txtMaterno);
-            listaTextBoxPaciente.Add(txtTelefono);
-            listaTextBoxPaciente.Add(txtDireccion);
-            listaTextBoxPaciente.Add(txtCorreo);
+            listaTextBoxPaciente.Add(txtID); //[0]
+            listaTextBoxPaciente.Add(txtNombre);//[1]
+            listaTextBoxPaciente.Add(txtPaterno);//[2]
+            listaTextBoxPaciente.Add(txtMaterno);//[3]
+            listaTextBoxPaciente.Add(txtTelefono);//[4]
+            listaTextBoxPaciente.Add(txtDireccion);//[5]
+            listaTextBoxPaciente.Add(txtCorreo);//[6]
 
             List<Label> listaLabelPaciente = new List<Label>();
-            listaLabelPaciente.Add(lblID);
-            listaLabelPaciente.Add(lblNombre);
-            listaLabelPaciente.Add(lblPaterno);
-            listaLabelPaciente.Add(lblMaterno);
-            listaLabelPaciente.Add(lblTelefono);
-            listaLabelPaciente.Add(lblDireccion);
-            listaLabelPaciente.Add(lblCorreo);
+            listaLabelPaciente.Add(lblID); //[0]
+            listaLabelPaciente.Add(lblNombre);//[1]
+            listaLabelPaciente.Add(lblPaterno);//[2]
+            listaLabelPaciente.Add(lblMaterno);//[3]
+            listaLabelPaciente.Add(lblTelefono);//[4]
+            listaLabelPaciente.Add(lblDireccion);//[5]
+            listaLabelPaciente.Add(lblCorreo);//[6]
 
             object[] objects = { picPaciente };
             logicaPaciente = new LogicaPaciente(listaTextBoxPaciente, listaLabelPaciente, objects);
