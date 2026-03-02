@@ -32,7 +32,11 @@ namespace ConsultorioMedico
         {
             frmRegistrarPaciente frmRegistrarPaciente = new frmRegistrarPaciente();
             frmRegistrarPaciente.Show();
-            this.Hide();
+        }
+
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -126,5 +126,10 @@ namespace ConsultorioMedico
         {
             logicaExpediente.ValidarCampoExpediente();
         }
+
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

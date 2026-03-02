@@ -136,6 +136,7 @@
             this.btnRegresar.Size = new System.Drawing.Size(51, 47);
             this.btnRegresar.TabIndex = 47;
             this.btnRegresar.UseVisualStyleBackColor = false;
+            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
             // 
             // btnGuardar
             // 
@@ -210,10 +211,8 @@
             this.txtMedico.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtMedico.Multiline = true;
             this.txtMedico.Name = "txtMedico";
-            this.txtMedico.Size = new System.Drawing.Size(171, 19);
-            this.txtMedico.TabIndex = 41;
-            this.txtMedico.TextChanged += new System.EventHandler(this.TextChangedMedico);
-            this.txtMedico.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.KeyPressMedico);
+            this.txtMedico.Size = new System.Drawing.Size(227, 22);
+            this.txtMedico.TabIndex = 2;
             // 
             // lblFecha
             // 
@@ -234,10 +233,8 @@
             this.txtFecha.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtFecha.Multiline = true;
             this.txtFecha.Name = "txtFecha";
-            this.txtFecha.Size = new System.Drawing.Size(171, 19);
-            this.txtFecha.TabIndex = 39;
-            this.txtFecha.TextChanged += new System.EventHandler(this.TextChangedFecha);
-            this.txtFecha.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.KeyPressFecha);
+            this.txtFecha.Size = new System.Drawing.Size(227, 22);
+            this.txtFecha.TabIndex = 3;
             // 
             // lblPaciente
             // 
@@ -258,10 +255,8 @@
             this.txtPaciente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtPaciente.Multiline = true;
             this.txtPaciente.Name = "txtPaciente";
-            this.txtPaciente.Size = new System.Drawing.Size(176, 19);
-            this.txtPaciente.TabIndex = 37;
-            this.txtPaciente.TextChanged += new System.EventHandler(this.TextChangedPaciente);
-            this.txtPaciente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.KeyPressPaciente);
+            this.txtPaciente.Size = new System.Drawing.Size(234, 22);
+            this.txtPaciente.TabIndex = 1;
             // 
             // lblID
             // 
@@ -282,10 +277,8 @@
             this.txtidExpediente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtidExpediente.Multiline = true;
             this.txtidExpediente.Name = "txtidExpediente";
-            this.txtidExpediente.Size = new System.Drawing.Size(133, 19);
-            this.txtidExpediente.TabIndex = 35;
-            this.txtidExpediente.TextChanged += new System.EventHandler(this.TextCangedID);
-            this.txtidExpediente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.KeyPress);
+            this.txtidExpediente.Size = new System.Drawing.Size(176, 22);
+            this.txtidExpediente.TabIndex = 0;
             // 
             // label2
             // 
