@@ -75,7 +75,7 @@ namespace ConsultorioMedico
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            // Ejecutar validación (aunque sea void)
+            // Ejecutar logica de validación 
             logicaMedico.ValidarDatosMedico();
 
 

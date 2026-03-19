@@ -148,7 +148,9 @@ namespace ConsultorioMedico
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            // Ejecutar logica de validación 
             logicaCita.ValidarDatosCita();
+
             TblDetalleCitas cita = new TblDetalleCitas()
             {
                 //IDCita = txtID.Text,

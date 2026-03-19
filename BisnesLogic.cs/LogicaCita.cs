@@ -75,7 +75,8 @@ namespace BisnesLogic.cs
                                     listaLabelCita[5].Text = "El Motivo no puede estar vacio";
                                     listaLabelCita[5].ForeColor = Color.Red;
                                     listaTextBoxCita[5].Focus();
-                                }else
+                                }
+                                else
                                 {
 
                                     ConexionBD conexion = new ConexionBD();

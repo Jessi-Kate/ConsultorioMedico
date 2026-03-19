@@ -66,5 +66,10 @@ namespace ConsultorioMedico
         {
 
         }
+
+        private void dgvPacientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

@@ -60,6 +60,7 @@ namespace BisnesLogic.cs
                         }
                         else
                         {
+                            MessageBox.Show("Datos Validados!", "Registro Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             var ImgToByte = subirImagen.ImageAByte(picIne.Image);
                             var ImgToByte2 = subirImagen.ImageAByte(picRadioGrafia.Image);
                             var ImgToByte3 = subirImagen.ImageAByte(picEstudiosMedicos.Image);
