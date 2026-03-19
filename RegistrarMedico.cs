@@ -211,5 +211,53 @@ namespace ConsultorioMedico
             frmMedicos.Show();
             this.Close();
         }
+
+        private void nudEdad_ValueChanged(object sender, EventArgs e)
+        {
+            if (nudEdad.Value <= 0)
+            {
+                lblEdad.ForeColor = Color.Red;
+            }
+            else
+            {
+                lblEdad.ForeColor = Color.Green;
+            }
+        }
+
+        private void cboSexo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cboSexo.SelectedIndex == -1)
+            {
+                lblSexo.ForeColor = Color.Red;
+            }
+            else
+            {
+                lblSexo.ForeColor = Color.Green;
+            }
+        }
+
+        private void cboEspecialidad_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cboEspecialidad.SelectedIndex == -1)
+            {
+                lblEspecialidad.ForeColor = Color.Red;
+            }
+            else
+            {
+                lblEspecialidad.ForeColor = Color.Green;
+            }
+        }
+
+        private void cboHorario_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cboHorario.SelectedIndex == -1)
+            {
+                lblHorario.ForeColor = Color.Red;
+            }
+            else
+            {
+                lblHorario.ForeColor = Color.Green;
+            }
+        }
     }
 }
