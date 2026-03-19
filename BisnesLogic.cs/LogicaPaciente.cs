@@ -1,4 +1,6 @@
 ﻿using BisnesLogic.cs.Biblioteca;
+using DataConexion;
+using LinqToDB;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
@@ -10,87 +12,128 @@ namespace BisnesLogic
         private List<TextBox> listaTextBoxPaciente;
         private List<Label> listaLabelPaciente;
         PictureBox pictureBox;
+        private List<ComboBox> listaComboBoxPaciente;
+        private List<NumericUpDown> listaNumericPaciente;
 
-        public LogicaPaciente(List<TextBox> listaTextBoxPaciente, List<Label> listaLabelPaciente, object[] objects)
+        public LogicaPaciente(List<TextBox> listaTextBoxPaciente, List<Label> listaLabelPaciente, object[] objects, List<ComboBox> listaComboBoxPaciente, List<NumericUpDown> listaNumericPaciente)
         {
             this.listaTextBoxPaciente = listaTextBoxPaciente;
             this.listaLabelPaciente = listaLabelPaciente;
             this.pictureBox = (PictureBox)objects[0];
+            this.listaComboBoxPaciente = listaComboBoxPaciente;
+            this.listaNumericPaciente = listaNumericPaciente;
         }
+
 
         public void ValidarCamposPaciente()
         {
-            
-                if (listaTextBoxPaciente[0].Text == string.Empty)
+
+            if (listaTextBoxPaciente[0].Text == string.Empty)
+            {
+                listaLabelPaciente[0].Text = "El ID no puede estar vacio";
+                listaLabelPaciente[0].ForeColor = Color.Red;
+                listaTextBoxPaciente[0].Focus();
+            }
+            else
+            {
+                if (listaTextBoxPaciente[1].Text == string.Empty)
                 {
-                    listaLabelPaciente[0].Text = "El ID no puede estar vacio";
-                    listaLabelPaciente[0].ForeColor = Color.Red;
-                    listaTextBoxPaciente[0].Focus();
+                    listaLabelPaciente[1].Text = "El Nombre no puede estar vacio";
+                    listaLabelPaciente[1].ForeColor = Color.Red;
+                    listaTextBoxPaciente[1].Focus();
                 }
                 else
                 {
-                    if (listaTextBoxPaciente[1].Text == string.Empty)
+                    if (listaTextBoxPaciente[2].Text == string.Empty)
                     {
-                        listaLabelPaciente[1].Text = "El Nombre no puede estar vacio";
-                        listaLabelPaciente[1].ForeColor = Color.Red;
-                        listaTextBoxPaciente[1].Focus();
+                        listaLabelPaciente[2].Text = "El Apellido Paterno no puede estar vacio";
+                        listaLabelPaciente[2].ForeColor = Color.Red;
+                        listaTextBoxPaciente[2].Focus();
                     }
                     else
                     {
-                        if (listaTextBoxPaciente[2].Text == string.Empty)
+                        if (listaTextBoxPaciente[3].Text == string.Empty)
                         {
-                            listaLabelPaciente[2].Text = "El Apellido Paterno no puede estar vacio";
-                            listaLabelPaciente[2].ForeColor = Color.Red;
-                            listaTextBoxPaciente[2].Focus();
+                            listaLabelPaciente[3].Text = "El Apellido Materno no puede estar vacio";
+                            listaLabelPaciente[3].ForeColor = Color.Red;
+                            listaTextBoxPaciente[3].Focus();
                         }
                         else
                         {
-                            if (listaTextBoxPaciente[3].Text == string.Empty)
+                            if (listaNumericPaciente[0].Value == 0)
                             {
-                                listaLabelPaciente[3].Text = "El Apellido Paterno no puede estar vacio";
-                                listaLabelPaciente[3].ForeColor = Color.Red;
-                                listaTextBoxPaciente[3].Focus();
+                                listaLabelPaciente[4].Text = "La edad no puede estar vacia";
+                                listaLabelPaciente[4].ForeColor = Color.Red;
+                                listaNumericPaciente[0].Focus();
                             }
                             else
                             {
-                                if (listaTextBoxPaciente[4].Text == string.Empty)
+                                if (listaComboBoxPaciente[0].SelectedIndex == -1)
                                 {
-                                    listaLabelPaciente[4].Text = "El Telefono no puede estar vacio";
-                                    listaLabelPaciente[4].ForeColor = Color.Red;
-                                    listaTextBoxPaciente[4].Focus();
+                                    listaLabelPaciente[5].Text = "El sexo no puede estar vacio"; 
+                                    listaLabelPaciente[5].ForeColor = Color.Red;
+                                    listaComboBoxPaciente[0].Focus();
                                 }
+
+
                                 else
                                 {
-                                    if (listaTextBoxPaciente[5].Text == string.Empty)
+                                    if (listaTextBoxPaciente[4].Text == string.Empty)
                                     {
-                                        listaLabelPaciente[5].Text = "La Direccion no puede estar vacio";
-                                        listaLabelPaciente[5].ForeColor = Color.Red;
-                                        listaTextBoxPaciente[5].Focus();
+                                        listaLabelPaciente[6].Text = "El Telefono no puede estar vacio";
+                                        listaLabelPaciente[6].ForeColor = Color.Red;
+                                        listaTextBoxPaciente[4].Focus();
                                     }
                                     else
                                     {
-                                        if (listaTextBoxPaciente[6].Text == string.Empty)
+                                        if (listaTextBoxPaciente[5].Text == string.Empty)
                                         {
-                                            listaLabelPaciente[6].Text = "El Correo no puede estar vacio";
-                                            listaLabelPaciente[6].ForeColor = Color.Red;
-                                            listaTextBoxPaciente[6].Focus();
+                                            listaLabelPaciente[7].Text = "La Direccion no puede estar vacio";
+                                            listaLabelPaciente[7].ForeColor = Color.Red;
+                                            listaTextBoxPaciente[5].Focus();
                                         }
                                         else
                                         {
-                                        
-                                            var ImgToByte = subirImagen.ImageAByte(pictureBox.Image);
-                                        MessageBox.Show("Datos Validados!", "Registro Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                            if (listaTextBoxPaciente[6].Text == string.Empty)
+                                            {
+                                                listaLabelPaciente[8].Text = "El Correo no puede estar vacio";
+                                                listaLabelPaciente[8].ForeColor = Color.Red;
+                                                listaTextBoxPaciente[6].Focus();
+                                            }
+                                            else
+                                            {
 
+                                                var ImgToByte = subirImagen.ImageAByte(pictureBox.Image);
+                                                MessageBox.Show("Datos Validados!", "Registro Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                                                ConexionBD conexion = new ConexionBD();
+
+                                                conexion.Insert(new TblDetallesPaciente
+                                                {
+                                                    IDPaciente = int.Parse(listaTextBoxPaciente[0].Text),
+                                                    Nombre = listaTextBoxPaciente[1].Text,
+                                                    ApellidoPaterno = listaTextBoxPaciente[2].Text,
+                                                    ApellidoMaterno = listaTextBoxPaciente[3].Text,
+                                                    Edad = int.Parse(listaNumericPaciente[0].Text),
+                                                    Sexo = listaComboBoxPaciente[0].Text,
+                                                    Telefono = listaTextBoxPaciente[4].Text,
+                                                    Direccion = listaTextBoxPaciente[5].Text,
+                                                    Correo = listaTextBoxPaciente[6].Text,
+                                                    Imagen = ImgToByte
+                                                });
+
+                                            }
+
+
+
+                                        }
                                     }
-
-
-
-                                }
                                 }
                             }
                         }
                     }
                 }
+            }
         }
     }
 }

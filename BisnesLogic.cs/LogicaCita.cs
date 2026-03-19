@@ -1,4 +1,6 @@
 ﻿using BisnesLogic.cs.Biblioteca;
+using DataConexion;
+using LinqToDB;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -75,6 +77,18 @@ namespace BisnesLogic.cs
                                     listaTextBoxCita[5].Focus();
                                 }else
                                 {
+
+                                    ConexionBD conexion = new ConexionBD();
+
+                                    conexion.Insert(new TblDetalleCitas
+                                    {
+                                        IDCita = int.Parse(listaTextBoxCita[0].Text),
+                                        NombrePaciente = listaTextBoxCita[1].Text,
+                                        NombreMedico = listaTextBoxCita[2].Text,
+                                        Fecha = listaTextBoxCita[3].Text,
+                                        Hora = listaTextBoxCita[4].Text,
+                                        Motivo = listaTextBoxCita[5].Text
+                                    });
                                     MessageBox.Show("Cita registrada con exito!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 }
                             }

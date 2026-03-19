@@ -8,16 +8,17 @@ namespace DataConexion
 {
     public class TblDetalleMedico
     {
-        public string IDMedico { get; set; }
+        public int IDMedico { get; set; }
         public string Nombre { get; set; }
         public string ApellidoPaterno { get; set; }
         public string ApellidoMaterno { get; set; }
-        public string Edad { get; set; }
+        public int Edad { get; set; }
         public string Sexo { get; set; }
         public string Telefono { get; set; }
         public string Correo { get; set; }
         public string Especialidad { get; set; }
         public string Horario { get; set; }
+        public byte[] Imagen { get; set; }
 
     }
 }

@@ -14,11 +14,19 @@ namespace ConsultorioMedico
 {
     public partial class frmRegistrarCita : Form
     {
+        // Declaración de una variable de tipo frmCitas.
+        // Esta variable permitirá acceder al formulario principal de citas.
         frmCitas frmCitas;
         LogicaCita logicaCita;
+
+        // Constructor del formulario.
+        // Este constructor recibe como parámetro una instancia ya creada de frmCitas.
         public frmRegistrarCita(frmCitas frmCitas)
         {
-            //creamos el formulario de registro de citas y le mandamos el formulario de citas para tener acceso a el desde el formulario de registro de citas y poder insertar los datos en el datagridview del formulario de citas
+            // Guardamos la referencia que recibimos en el atributo de la clase.
+            // "this.frmCitas" es el atributo (variable de la clase).
+            // "frmCitas" es el parámetro que llegó al constructor.
+            // Con esto, este formulario puede usar el frmCitas original.
             this.frmCitas = frmCitas;
             InitializeComponent();
             List<TextBox> listaTextBoxCita = new List<TextBox>();
@@ -143,7 +151,7 @@ namespace ConsultorioMedico
             logicaCita.ValidarDatosCita();
             TblDetalleCitas cita = new TblDetalleCitas()
             {
-                IDCita = txtID.Text,
+                //IDCita = txtID.Text,
                 NombrePaciente = txtPaciente.Text,
                 NombreMedico = txtMedico.Text,
                 Fecha = txtFecha.Text,

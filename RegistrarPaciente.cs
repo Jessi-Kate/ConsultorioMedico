@@ -37,12 +37,19 @@ namespace ConsultorioMedico
             listaLabelPaciente.Add(lblNombre);//[1]
             listaLabelPaciente.Add(lblPaterno);//[2]
             listaLabelPaciente.Add(lblMaterno);//[3]
-            listaLabelPaciente.Add(lblTelefono);//[4]
-            listaLabelPaciente.Add(lblDireccion);//[5]
-            listaLabelPaciente.Add(lblCorreo);//[6]
+            listaLabelPaciente.Add(lblEdad);//[4]
+            listaLabelPaciente.Add(lblSexo);//[5]
+            listaLabelPaciente.Add(lblTelefono);//[6]
+            listaLabelPaciente.Add(lblDireccion);//[7]
+            listaLabelPaciente.Add(lblCorreo);//[8]
 
             object[] objects = { picPaciente };
-            logicaPaciente = new LogicaPaciente(listaTextBoxPaciente, listaLabelPaciente, objects);
+
+            List<ComboBox> listaComboBoxPaciente = new List<ComboBox>();
+            listaComboBoxPaciente.Add(cboSexo);
+            List<NumericUpDown> listaNumericPaciente = new List<NumericUpDown>();
+            listaNumericPaciente.Add(nudEdad);
+            logicaPaciente = new LogicaPaciente(listaTextBoxPaciente, listaLabelPaciente, objects,listaComboBoxPaciente,listaNumericPaciente);
         }
 
 
@@ -129,11 +136,11 @@ namespace ConsultorioMedico
             TblDetallesPaciente paciente = new TblDetallesPaciente()
             {
                 //Establecemos los valores de las propiedades del objeto paciente con los datos ingresados en los campos de texto del formulario de registro de pacientes
-                IDPaciente = txtID.Text,
+                //IDPaciente = int.Parse(txtID.Text),
                 Nombre = txtNombre.Text,
                 ApellidoPaterno = txtPaterno.Text,
                 ApellidoMaterno = txtMaterno.Text,
-                Edad = nudEdad.Text,
+                //Edad = int.Parse(nudEdad.Text),
                 Sexo = cboSexo.Text,
                 Telefono = txtTelefono.Text,
                 Direccion = txtDireccion.Text,
