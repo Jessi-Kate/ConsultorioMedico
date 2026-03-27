@@ -25,8 +25,6 @@ namespace BisnesLogic
         }
 
 
-        public void ValidarCamposPaciente()
-        {
 
             if (listaTextBoxPaciente[0].Text == string.Empty)
             {
@@ -100,13 +98,6 @@ namespace BisnesLogic
                                                 listaLabelPaciente[8].ForeColor = Color.Red;
                                                 listaTextBoxPaciente[6].Focus();
                                             }
-                                            else
-                                            {
-
-                                                var ImgToByte = subirImagen.ImageAByte(pictureBox.Image);
-                                                MessageBox.Show("Datos Validados!", "Registro Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                                                ConexionBD conexion = new ConexionBD();
 
                                                 conexion.Insert(new TblDetallesPaciente
                                                 {
