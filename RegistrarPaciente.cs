@@ -149,8 +149,6 @@ namespace ConsultorioMedico
 
             };
             //Tener acceso a la capa de la logica de negocio
-            
-           
 
             //Una vez que se han validado los campos del paciente, podemos proceder a insertar los datos en la base de datos utilizando la clase InsercionDatos de la capa de acceso a datos. Esta clase se encargará de ejecutar la consulta SQL para insertar el nuevo registro del paciente en la tabla correspondiente de la base de datos.
             InsercionDatos insercionDatos = new InsercionDatos();
