@@ -122,7 +122,7 @@ namespace BisnesLogic.cs
                                                 {
                                                     var ImgToByte = subirImagen.ImageAByte(pictureBox.Image);
 
-                                                    ConexionBD conexion = new ConexionBD();
+                                                   
 
                                                     conexion.Insert(new TblDetalleMedico
                                                     {

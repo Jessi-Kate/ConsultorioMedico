@@ -19,7 +19,7 @@ namespace BisnesLogic
         private List<NumericUpDown> listaNumericPaciente;
         public DataGridView dgvPaciente;
         private ConexionBD conexion = new ConexionBD();
-        private String action = "Insert";
+       
 
         public LogicaPaciente(object[] objects)
         {
@@ -117,7 +117,7 @@ namespace BisnesLogic
                                                 var ImgToByte = subirImagen.ImageAByte(pictureBox.Image);
                                                 MessageBox.Show("Datos Validados!", "Registro Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                                                ConexionBD conexion = new ConexionBD();
+                                                
 
                                                 conexion.Insert(new TblDetallesPaciente
                                                 {

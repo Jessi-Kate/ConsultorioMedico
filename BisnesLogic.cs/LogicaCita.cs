@@ -87,7 +87,7 @@ namespace BisnesLogic.cs
                                 else
                                 {
 
-                                    ConexionBD conexion = new ConexionBD();
+                                    
 
                                     conexion.Insert(new TblDetalleCitas
                                     {
