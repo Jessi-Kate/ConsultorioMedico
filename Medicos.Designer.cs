@@ -31,7 +31,7 @@ namespace ConsultorioMedico
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnBuscar = new System.Windows.Forms.Button();
+            this.btnBusca = new System.Windows.Forms.Button();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.lblBuscar = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -42,16 +42,6 @@ namespace ConsultorioMedico
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvMedicos = new System.Windows.Forms.DataGridView();
             this.lblLista = new System.Windows.Forms.Label();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -63,7 +53,7 @@ namespace ConsultorioMedico
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.BackgroundImage = global::ConsultorioMedico.Properties.Resources.Captura_de_pantalla_2026_02_28_194246;
-            this.groupBox1.Controls.Add(this.btnBuscar);
+            this.groupBox1.Controls.Add(this.btnBusca);
             this.groupBox1.Controls.Add(this.txtBuscar);
             this.groupBox1.Controls.Add(this.lblBuscar);
             this.groupBox1.Location = new System.Drawing.Point(9, 0);
@@ -74,18 +64,18 @@ namespace ConsultorioMedico
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             // 
-            // btnBuscar
+            // btnBusca
             // 
-            this.btnBuscar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnBuscar.BackgroundImage = global::ConsultorioMedico.Properties.Resources.buscar__1_;
-            this.btnBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnBuscar.Location = new System.Drawing.Point(564, 9);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(46, 47);
-            this.btnBuscar.TabIndex = 3;
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            this.btnBusca.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnBusca.BackgroundImage = global::ConsultorioMedico.Properties.Resources.buscar__1_;
+            this.btnBusca.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnBusca.Location = new System.Drawing.Point(564, 9);
+            this.btnBusca.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBusca.Name = "btnBusca";
+            this.btnBusca.Size = new System.Drawing.Size(46, 47);
+            this.btnBusca.TabIndex = 3;
+            this.btnBusca.UseVisualStyleBackColor = true;
+            this.btnBusca.Click += new System.EventHandler(this.btnBusca_Click);
             // 
             // txtBuscar
             // 
@@ -204,17 +194,6 @@ namespace ConsultorioMedico
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvMedicos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMedicos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6,
-            this.Column7,
-            this.Column8,
-            this.Column9,
-            this.Column10});
             this.dgvMedicos.Location = new System.Drawing.Point(15, 43);
             this.dgvMedicos.Margin = new System.Windows.Forms.Padding(2);
             this.dgvMedicos.Name = "dgvMedicos";
@@ -235,56 +214,6 @@ namespace ConsultorioMedico
             this.lblLista.Size = new System.Drawing.Size(173, 22);
             this.lblLista.TabIndex = 1;
             this.lblLista.Text = "Medicos Disponibles";
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "ID";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Nombre";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "ApellidoP";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "ApellidoM";
-            this.Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Edad";
-            this.Column5.Name = "Column5";
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Sexo";
-            this.Column6.Name = "Column6";
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "Telefono";
-            this.Column7.Name = "Column7";
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "Correo";
-            this.Column8.Name = "Column8";
-            // 
-            // Column9
-            // 
-            this.Column9.HeaderText = "Especialidad";
-            this.Column9.Name = "Column9";
-            // 
-            // Column10
-            // 
-            this.Column10.HeaderText = "Horario";
-            this.Column10.Name = "Column10";
             // 
             // frmMedicos
             // 
@@ -310,15 +239,11 @@ namespace ConsultorioMedico
 
         }
 
-        private void btnBuscar_Click(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
+       
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.Button btnBusca;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Label lblBuscar;
         private System.Windows.Forms.GroupBox groupBox3;

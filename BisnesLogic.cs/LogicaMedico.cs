@@ -4,6 +4,7 @@ using LinqToDB;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,6 +19,12 @@ namespace BisnesLogic.cs
         PictureBox pictureBox;
         private List<ComboBox> listaComboBoxMedico;
         private List<NumericUpDown> listaNumericMedico;
+        DataGridView dgvMedico;
+
+        public LogicaMedico(object[] objects)
+        {
+           this.dgvMedico = (DataGridView)objects[0];
+        }
 
         public LogicaMedico(List<TextBox> listaTexBoxMedico, List<Label> listaLabelMedico, object[] objects, List<ComboBox> listaComboBoxMedico, List<NumericUpDown> listaNumericMedico)
         {
@@ -145,6 +152,40 @@ namespace BisnesLogic.cs
                 }
             }
         }
+
+        public void ListarMedicos()
+        {
+            //instanciar la clase xonexion
+
+            ConexionBD conexion = new ConexionBD();
+
+            var listaMedicos = conexion.GetTable<TblDetalleMedico>().Select(e => new
+            {
+                e.IDMedico,
+                e.Nombre,
+                e.ApellidoPaterno,
+                e.ApellidoMaterno,
+                e.Edad,
+                e.Sexo,
+                e.Telefono,
+                e.Correo,
+                e.Especialidad,
+                e.Horario,
+                Image = ArrayToImagen(e.Imagen)
+            }).ToList();
+            dgvMedico.DataSource = listaMedicos;
+        }
+
+        public Image ArrayToImagen(byte[] bytes)
+        {
+            if (bytes == null || bytes.Length == 0) return null; // O una imagen por defecto
+
+            using (MemoryStream ms = new MemoryStream(bytes))
+            {
+                return Image.FromStream(ms);
+            }
+        }
+
     }
 }
 

@@ -1,4 +1,6 @@
-﻿using DataConexion;
+﻿using BisnesLogic;
+using BisnesLogic.cs;
+using DataConexion;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,9 +16,12 @@ namespace ConsultorioMedico
     
     public partial class frmPacientes : Form
     {
+        LogicaPaciente logicaPaciente;
         public frmPacientes()
         {
             InitializeComponent();
+            object[] objects = { dgvPacientes };
+            logicaPaciente = new LogicaPaciente(objects);
 
         }
 
@@ -44,11 +49,16 @@ namespace ConsultorioMedico
             FrmMenu frmMenu= new FrmMenu();
             frmMenu.Show();
             this.Close();
+
+            //limpiar el DataGridView 
+            dgvPacientes.DataSource = null;
+            dgvPacientes.Rows.Clear();
+            dgvPacientes.Refresh();
         }
 
         public void InsercionDGV(TblDetallesPaciente paciente)
         {
-            dgvPacientes.Rows.Clear();
+           /* dgvPacientes.Rows.Clear();
             dgvPacientes.Rows.Add(
                 paciente.IDPaciente,
                 paciente.Nombre,
@@ -60,6 +70,7 @@ namespace ConsultorioMedico
                 paciente.Direccion,
                 paciente.Correo
                 );
+           */
         }
 
         private void frmPacientes_Load(object sender, EventArgs e)
@@ -70,6 +81,11 @@ namespace ConsultorioMedico
         private void dgvPacientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            logicaPaciente.ListarPaciente();
         }
     }
 }

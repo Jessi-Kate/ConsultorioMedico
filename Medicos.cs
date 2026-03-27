@@ -1,4 +1,5 @@
-﻿using DataConexion;
+﻿using BisnesLogic.cs;
+using DataConexion;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,9 +14,12 @@ namespace ConsultorioMedico
 {
     public partial class frmMedicos : Form
     {
+        LogicaMedico logicaMedico;
         public frmMedicos()
         {
             InitializeComponent();
+            object[] objects = { dgvMedicos };
+            logicaMedico = new LogicaMedico(objects);
         }
 
         private void TextChangedBuscar(object sender, EventArgs e)
@@ -34,6 +38,11 @@ namespace ConsultorioMedico
             frmRegistrarMedico frmRegistrarMedico = new frmRegistrarMedico(this);
             frmRegistrarMedico.Show();
             this.Hide();
+
+            //limpiar el DataGridView 
+            dgvMedicos.DataSource = null;
+            dgvMedicos.Rows.Clear();
+            dgvMedicos.Refresh();
         }
 
         private void btnRegresar_Click(object sender, EventArgs e)
@@ -46,7 +55,7 @@ namespace ConsultorioMedico
 
         public void InsercionDGGV(TblDetalleMedico medico)
         {
-            dgvMedicos.Rows.Clear();
+           /* dgvMedicos.Rows.Clear();
             dgvMedicos.Rows.Add(
                 medico.IDMedico,
                 medico.Nombre,
@@ -59,11 +68,17 @@ namespace ConsultorioMedico
                 medico.Especialidad,
                 medico.Horario
                 );
+           */
         }
 
         private void frmMedicos_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnBusca_Click(object sender, EventArgs e)
+        {
+            logicaMedico.ListarMedicos();
         }
     }
 }

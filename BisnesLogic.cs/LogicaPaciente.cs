@@ -3,6 +3,8 @@ using DataConexion;
 using LinqToDB;
 using System.Collections.Generic;
 using System.Drawing;
+using System.IO;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace BisnesLogic
@@ -14,6 +16,12 @@ namespace BisnesLogic
         PictureBox pictureBox;
         private List<ComboBox> listaComboBoxPaciente;
         private List<NumericUpDown> listaNumericPaciente;
+        public DataGridView dgvPaciente;
+
+        public LogicaPaciente(object[] objects)
+        {
+            this.dgvPaciente = (DataGridView)objects[0];
+        }
 
         public LogicaPaciente(List<TextBox> listaTextBoxPaciente, List<Label> listaLabelPaciente, object[] objects, List<ComboBox> listaComboBoxPaciente, List<NumericUpDown> listaNumericPaciente)
         {
@@ -70,7 +78,7 @@ namespace BisnesLogic
                             {
                                 if (listaComboBoxPaciente[0].SelectedIndex == -1)
                                 {
-                                    listaLabelPaciente[5].Text = "El sexo no puede estar vacio"; 
+                                    listaLabelPaciente[5].Text = "El sexo no puede estar vacio";
                                     listaLabelPaciente[5].ForeColor = Color.Red;
                                     listaComboBoxPaciente[0].Focus();
                                 }
@@ -123,9 +131,6 @@ namespace BisnesLogic
                                                 });
 
                                             }
-
-
-
                                         }
                                     }
                                 }
@@ -133,6 +138,39 @@ namespace BisnesLogic
                         }
                     }
                 }
+            }
+        }
+
+                                     
+        public void ListarPaciente()
+        {
+            //instanciar la clase xonexion
+
+            ConexionBD conexion = new ConexionBD();
+
+            var listaPaciente = conexion.GetTable<TblDetallesPaciente>().Select(e => new
+            {
+                e.IDPaciente,
+                e.Nombre,
+                e.ApellidoPaterno,
+                e.ApellidoMaterno,
+                e.Edad,
+                e.Sexo,
+                e.Telefono,
+                e.Direccion,
+                e.Correo,
+                Image = ArrayToImagen(e.Imagen)
+            }).ToList();
+            dgvPaciente.DataSource = listaPaciente;
+        }
+
+        public Image ArrayToImagen(byte[] bytes)
+        {
+            if (bytes == null || bytes.Length == 0) return null; // O una imagen por defecto
+
+            using (MemoryStream ms = new MemoryStream(bytes))
+            {
+                return Image.FromStream(ms);
             }
         }
     }

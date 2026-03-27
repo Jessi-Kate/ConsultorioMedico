@@ -1,4 +1,5 @@
-﻿using DataConexion;
+﻿using BisnesLogic.cs;
+using DataConexion;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,9 +14,12 @@ namespace ConsultorioMedico
 {
     public partial class frmCitas : Form
     {
+        LogicaCita logicaCita;
         public frmCitas()
         {
             InitializeComponent();
+            object[] objects = { dgvCitas };
+            logicaCita = new LogicaCita(objects);
         }
 
         private void TextChangedBuscar(object sender, EventArgs e)
@@ -39,6 +43,11 @@ namespace ConsultorioMedico
             frmRegistrarCita frmRegistrarCita = new frmRegistrarCita(this);
             frmRegistrarCita.Show();
             this.Hide();
+
+            //limpiar el DataGridView 
+            dgvCitas.DataSource = null;
+            dgvCitas.Rows.Clear();
+            dgvCitas.Refresh();
         }
 
         private void btnRegresar_Click(object sender, EventArgs e)
@@ -51,7 +60,7 @@ namespace ConsultorioMedico
 
         public void InsercionDGV(TblDetalleCitas cita)
         {
-            dgvCitas.Rows.Clear();
+           /* dgvCitas.Rows.Clear();
             dgvCitas.Rows.Add(
                 cita.IDCita, 
                 cita.NombrePaciente, 
@@ -59,11 +68,17 @@ namespace ConsultorioMedico
                 cita.Fecha, 
                 cita.Hora, 
                 cita.Motivo);
+           */
         }
 
         private void frmCitas_Load(object sender, EventArgs e)
         {
             
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            logicaCita.ListarCitas();
         }
     }
 }

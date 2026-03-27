@@ -4,6 +4,7 @@ using LinqToDB;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,6 +16,12 @@ namespace BisnesLogic.cs
     {
         private List<TextBox> listaTextBoxCita;
         private List<Label> listaLabelCita;
+       public DataGridView dgvCitas;
+
+        public LogicaCita(Object[] objects)
+        {
+            this.dgvCitas = (DataGridView)objects[0];
+        }
 
         public LogicaCita(List<TextBox> listaTextBoxCita, List<Label> listaLabelCita)
         {
@@ -97,6 +104,25 @@ namespace BisnesLogic.cs
                     }
                 }
             }
+        }
+
+        public void ListarCitas()
+        {
+            //instanciar la clase Conexion
+
+            ConexionBD conexion = new ConexionBD();
+
+            var listaCitas = conexion.GetTable<TblDetalleCitas>().Select(e => new
+            {
+                e.IDCita, 
+                e.NombrePaciente,
+                e.NombreMedico,
+                e.Fecha,
+                e.Hora,
+                e.Motivo
+
+            }).ToList();
+            dgvCitas.DataSource = listaCitas;
         }
     }
 }

@@ -151,7 +151,7 @@ namespace ConsultorioMedico
             // Ejecutar logica de validación 
             logicaCita.ValidarDatosCita();
 
-            TblDetalleCitas cita = new TblDetalleCitas()
+           /* TblDetalleCitas cita = new TblDetalleCitas()
             {
                 //IDCita = txtID.Text,
                 NombrePaciente = txtPaciente.Text,
@@ -159,11 +159,13 @@ namespace ConsultorioMedico
                 Fecha = txtFecha.Text,
                 Hora = txtHora.Text,
                 Motivo = txtMotivo.Text
+           
             };
 
             InsercionDatos insercionDatos = new InsercionDatos();
             insercionDatos.InsercionCitas(cita);
             frmCitas.InsercionDGV(cita);
+           */
             
         }
 
