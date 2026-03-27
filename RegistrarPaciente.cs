@@ -133,7 +133,8 @@ namespace ConsultorioMedico
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             //Creacion de un objeto paciente para almacenar los datos del paciente que se van a insertar en la base de datos
-            TblDetallesPaciente paciente = new TblDetallesPaciente()
+            /*
+             TblDetallesPaciente paciente = new TblDetallesPaciente()
             {
                 //Establecemos los valores de las propiedades del objeto paciente con los datos ingresados en los campos de texto del formulario de registro de pacientes
                 //IDPaciente = int.Parse(txtID.Text),
@@ -148,14 +149,15 @@ namespace ConsultorioMedico
 
             };
             //Tener acceso a la capa de la logica de negocio
-            logicaPaciente.ValidarCamposPaciente();
+            
+           
 
             //Una vez que se han validado los campos del paciente, podemos proceder a insertar los datos en la base de datos utilizando la clase InsercionDatos de la capa de acceso a datos. Esta clase se encargará de ejecutar la consulta SQL para insertar el nuevo registro del paciente en la tabla correspondiente de la base de datos.
             InsercionDatos insercionDatos = new InsercionDatos();
             insercionDatos.InsercionContacto(paciente);
-            frmPacientes.InsercionDGV(paciente);
+            frmPacientes.InsercionDGV(paciente);*/
 
-
+                logicaPaciente.ValidarCamposPaciente();
         }
 
         private void KeyPressID(object sender, KeyPressEventArgs e)

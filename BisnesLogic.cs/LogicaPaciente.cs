@@ -1,6 +1,7 @@
 ﻿using BisnesLogic.cs.Biblioteca;
 using DataConexion;
 using LinqToDB;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
@@ -17,6 +18,8 @@ namespace BisnesLogic
         private List<ComboBox> listaComboBoxPaciente;
         private List<NumericUpDown> listaNumericPaciente;
         public DataGridView dgvPaciente;
+        private ConexionBD conexion = new ConexionBD();
+        private String action = "Insert";
 
         public LogicaPaciente(object[] objects)
         {
@@ -118,7 +121,7 @@ namespace BisnesLogic
 
                                                 conexion.Insert(new TblDetallesPaciente
                                                 {
-                                                    IDPaciente = int.Parse(listaTextBoxPaciente[0].Text),
+                                                    IDPaciente = listaTextBoxPaciente[0].Text,
                                                     Nombre = listaTextBoxPaciente[1].Text,
                                                     ApellidoPaterno = listaTextBoxPaciente[2].Text,
                                                     ApellidoMaterno = listaTextBoxPaciente[3].Text,
@@ -141,12 +144,12 @@ namespace BisnesLogic
             }
         }
 
-                                     
+
         public void ListarPaciente()
         {
             //instanciar la clase xonexion
 
-            ConexionBD conexion = new ConexionBD();
+            
 
             var listaPaciente = conexion.GetTable<TblDetallesPaciente>().Select(e => new
             {
@@ -173,5 +176,40 @@ namespace BisnesLogic
                 return Image.FromStream(ms);
             }
         }
+
+        //Metodo para eliminar registro
+        public void EliminarRegistro(string idPaciente)
+        {
+            try
+            {
+                //Buscamos el registro directamente en la BD usando el ID que viene del Grid
+                var pacienteRegistrado = conexion.GetTable<TblDetallesPaciente>()
+                                        .FirstOrDefault(e => e.IDPaciente == idPaciente);
+
+                if (pacienteRegistrado != null)
+                {
+                    if (MessageBox.Show($"¿Desea eliminar al paciente con ID: {idPaciente}?", "Confirmar",
+                        MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                    {
+                        // Eliminamos el objeto encontrado
+                        conexion.Delete(pacienteRegistrado);
+
+                        MessageBox.Show("Registro eliminado con éxito.");
+
+                        //Actualizamos la tabla con el metodo listarPacientes para reflejar los cambios
+                        ListarPaciente();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("No se encontró el registro en la base de datos.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al eliminar: " + ex.Message);
+            }
+        }
+
     }
 }

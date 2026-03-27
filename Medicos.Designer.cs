@@ -158,6 +158,7 @@ namespace ConsultorioMedico
             this.btnEliminar.Size = new System.Drawing.Size(62, 50);
             this.btnEliminar.TabIndex = 1;
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnEditar
             // 

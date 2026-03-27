@@ -1,4 +1,5 @@
-﻿using BisnesLogic.cs;
+﻿using BisnesLogic;
+using BisnesLogic.cs;
 using DataConexion;
 using System;
 using System.Collections.Generic;
@@ -79,6 +80,22 @@ namespace ConsultorioMedico
         private void btnBusca_Click(object sender, EventArgs e)
         {
             logicaMedico.ListarMedicos();
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (dgvMedicos.SelectedRows.Count > 0)
+            {
+                // Obtenemos el ID de la celda correspondiente (ajusta el nombre de la columna)
+                string idSeleccionado = dgvMedicos.CurrentRow.Cells["IDMedico"].Value.ToString();
+
+                // Llamamos al método pasándole el ID
+                logicaMedico.EliminarRegistro(idSeleccionado);
+            }
+            else
+            {
+                MessageBox.Show("Por favor, seleccione una fila de la tabla.");
+            }
         }
     }
 }

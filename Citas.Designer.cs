@@ -197,6 +197,7 @@
             this.btnEliminar.Size = new System.Drawing.Size(56, 50);
             this.btnEliminar.TabIndex = 1;
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnEditar
             // 

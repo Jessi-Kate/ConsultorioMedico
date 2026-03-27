@@ -8,7 +8,7 @@ namespace DataConexion
 {
     public class TblDetallesPaciente
     {
-        public int IDPaciente { get; set; }
+        public string IDPaciente { get; set; }
         public string Nombre { get; set; }
         public string ApellidoPaterno { get; set; }
         public string ApellidoMaterno { get; set; }

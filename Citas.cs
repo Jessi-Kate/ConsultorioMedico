@@ -1,4 +1,5 @@
-﻿using BisnesLogic.cs;
+﻿using BisnesLogic;
+using BisnesLogic.cs;
 using DataConexion;
 using System;
 using System.Collections.Generic;
@@ -79,6 +80,22 @@ namespace ConsultorioMedico
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             logicaCita.ListarCitas();
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (dgvCitas.SelectedRows.Count > 0)
+            {
+                // Obtenemos el ID de la celda correspondiente (ajusta el nombre de la columna)
+                string idSeleccionado = dgvCitas.CurrentRow.Cells["IDCita"].Value.ToString();
+
+                // Llamamos al método pasándole el ID
+                logicaCita.EliminarRegistro(idSeleccionado);
+            }
+            else
+            {
+                MessageBox.Show("Por favor, seleccione una fila de la tabla.");
+            }
         }
     }
 }

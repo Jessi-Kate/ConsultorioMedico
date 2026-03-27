@@ -20,6 +20,7 @@ namespace BisnesLogic.cs
         private List<ComboBox> listaComboBoxMedico;
         private List<NumericUpDown> listaNumericMedico;
         DataGridView dgvMedico;
+        private ConexionBD conexion = new ConexionBD();
 
         public LogicaMedico(object[] objects)
         {
@@ -125,7 +126,7 @@ namespace BisnesLogic.cs
 
                                                     conexion.Insert(new TblDetalleMedico
                                                     {
-                                                        IDMedico = int.Parse(listaTexBoxMedico[0].Text),
+                                                        IDMedico = listaTexBoxMedico[0].Text,
                                                         Nombre = listaTexBoxMedico[1].Text,
                                                         ApellidoPaterno = listaTexBoxMedico[2].Text,
                                                         ApellidoMaterno = listaTexBoxMedico[3].Text,
@@ -155,9 +156,7 @@ namespace BisnesLogic.cs
 
         public void ListarMedicos()
         {
-            //instanciar la clase xonexion
-
-            ConexionBD conexion = new ConexionBD();
+           
 
             var listaMedicos = conexion.GetTable<TblDetalleMedico>().Select(e => new
             {
@@ -183,6 +182,40 @@ namespace BisnesLogic.cs
             using (MemoryStream ms = new MemoryStream(bytes))
             {
                 return Image.FromStream(ms);
+            }
+        }
+
+        //Metodo para eliminar registro
+        public void EliminarRegistro(string idMedico)
+        {
+            try
+            {
+                //Buscamos el registro directamente en la BD usando el ID que viene del Grid
+                var MedicoRegistrado = conexion.GetTable<TblDetalleMedico>()
+                                        .FirstOrDefault(e => e.IDMedico == idMedico);
+
+                if (MedicoRegistrado != null)
+                {
+                    if (MessageBox.Show($"¿Desea eliminar el Medico con ID: {idMedico}?", "Confirmar",
+                        MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                    {
+                        // Eliminamos el objeto encontrado
+                        conexion.Delete(MedicoRegistrado);
+
+                        MessageBox.Show("Registro eliminado con éxito.");
+
+                        //Actualizamos la tabla con el metodo listarMedicos para reflejar los cambios
+                        ListarMedicos();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("No se encontró el registro en la base de datos.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al eliminar: " + ex.Message);
             }
         }
 

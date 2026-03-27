@@ -87,5 +87,21 @@ namespace ConsultorioMedico
         {
             logicaPaciente.ListarPaciente();
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (dgvPacientes.SelectedRows.Count > 0)
+            {
+                // Obtenemos el ID de la celda correspondiente (ajusta el nombre de la columna)
+                string idSeleccionado = dgvPacientes.CurrentRow.Cells["IDPaciente"].Value.ToString();
+
+                // Llamamos al método pasándole el ID
+                logicaPaciente.EliminarRegistro(idSeleccionado);
+            }
+            else
+            {
+                MessageBox.Show("Por favor, seleccione una fila de la tabla.");
+            }
+        }
     }
 }
