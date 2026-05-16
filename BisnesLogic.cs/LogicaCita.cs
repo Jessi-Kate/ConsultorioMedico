@@ -205,6 +205,7 @@ namespace BisnesLogic.cs
                     conexion.Delete(detalleRegistrado);
 
                     MessageBox.Show("Se ha eliminado correctamente");
+                    ListarCitas();
                 }
             }
             else
