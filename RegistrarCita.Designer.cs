@@ -56,9 +56,9 @@
             this.groupBox1.BackgroundImage = global::ConsultorioMedico.Properties.Resources.Captura_de_pantalla_2026_02_28_185327;
             this.groupBox1.Controls.Add(this.lblTitulo);
             this.groupBox1.Location = new System.Drawing.Point(9, 9);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(592, 61);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
@@ -98,9 +98,9 @@
             this.groupBox2.Controls.Add(this.lblidCita);
             this.groupBox2.Controls.Add(this.txtID);
             this.groupBox2.Location = new System.Drawing.Point(9, 81);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(592, 269);
             this.groupBox2.TabIndex = 28;
             this.groupBox2.TabStop = false;
@@ -113,7 +113,7 @@
             this.btnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSalir.Location = new System.Drawing.Point(491, 154);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(2);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(51, 47);
             this.btnSalir.TabIndex = 48;
@@ -128,7 +128,7 @@
             this.btnGuardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnGuardar.Location = new System.Drawing.Point(491, 65);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(51, 47);
             this.btnGuardar.TabIndex = 47;
@@ -151,7 +151,7 @@
             // 
             this.txtMotivo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtMotivo.Location = new System.Drawing.Point(255, 188);
-            this.txtMotivo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMotivo.Margin = new System.Windows.Forms.Padding(2);
             this.txtMotivo.Multiline = true;
             this.txtMotivo.Name = "txtMotivo";
             this.txtMotivo.Size = new System.Drawing.Size(193, 62);
@@ -175,7 +175,7 @@
             // 
             this.txtHora.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtHora.Location = new System.Drawing.Point(255, 123);
-            this.txtHora.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtHora.Margin = new System.Windows.Forms.Padding(2);
             this.txtHora.Multiline = true;
             this.txtHora.Name = "txtHora";
             this.txtHora.Size = new System.Drawing.Size(164, 19);
@@ -199,7 +199,7 @@
             // 
             this.txtFecha.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtFecha.Location = new System.Drawing.Point(255, 57);
-            this.txtFecha.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtFecha.Margin = new System.Windows.Forms.Padding(2);
             this.txtFecha.Multiline = true;
             this.txtFecha.Name = "txtFecha";
             this.txtFecha.Size = new System.Drawing.Size(164, 19);
@@ -222,7 +222,7 @@
             // 
             this.txtMedico.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtMedico.Location = new System.Drawing.Point(31, 188);
-            this.txtMedico.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMedico.Margin = new System.Windows.Forms.Padding(2);
             this.txtMedico.Multiline = true;
             this.txtMedico.Name = "txtMedico";
             this.txtMedico.Size = new System.Drawing.Size(164, 19);
@@ -246,7 +246,7 @@
             // 
             this.txtPaciente.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtPaciente.Location = new System.Drawing.Point(31, 123);
-            this.txtPaciente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPaciente.Margin = new System.Windows.Forms.Padding(2);
             this.txtPaciente.Multiline = true;
             this.txtPaciente.Name = "txtPaciente";
             this.txtPaciente.Size = new System.Drawing.Size(164, 19);
@@ -270,7 +270,7 @@
             // 
             this.txtID.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtID.Location = new System.Drawing.Point(31, 57);
-            this.txtID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtID.Margin = new System.Windows.Forms.Padding(2);
             this.txtID.Multiline = true;
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(164, 19);
@@ -286,7 +286,7 @@
             this.ClientSize = new System.Drawing.Size(610, 359);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmRegistrarCita";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RegistrarCita";
@@ -305,18 +305,18 @@
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label lblMedico;
-        private System.Windows.Forms.TextBox txtMedico;
         private System.Windows.Forms.Label lblPaciente;
-        private System.Windows.Forms.TextBox txtPaciente;
         private System.Windows.Forms.Label lblidCita;
-        private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label lblMotivo;
-        private System.Windows.Forms.TextBox txtMotivo;
         private System.Windows.Forms.Label lblHora;
         private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.TextBox txtHora;
-        private System.Windows.Forms.TextBox txtFecha;
+        public System.Windows.Forms.TextBox txtMedico;
+        public System.Windows.Forms.TextBox txtPaciente;
+        public System.Windows.Forms.TextBox txtID;
+        public System.Windows.Forms.TextBox txtMotivo;
+        public System.Windows.Forms.TextBox txtHora;
+        public System.Windows.Forms.TextBox txtFecha;
     }
 }

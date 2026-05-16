@@ -17,7 +17,10 @@ namespace ConsultorioMedico
         // Declaración de una variable de tipo frmCitas.
         // Esta variable permitirá acceder al formulario principal de citas.
         frmCitas frmCitas;
-        LogicaCita logicaCita;
+       public LogicaCita logicaCita;
+
+        //variable accion para determinar si se va a insertar o actualizar un registro
+        public string Accion { get; set; }
 
         // Constructor del formulario.
         // Este constructor recibe como parámetro una instancia ya creada de frmCitas.
@@ -48,7 +51,7 @@ namespace ConsultorioMedico
             logicaCita = new LogicaCita(listaTextBoxCita, listaLabelCita);
         }
 
-
+       
         private void TextChangedID(object sender, EventArgs e)
         {
             if (txtID.Text.Equals(""))
@@ -149,7 +152,13 @@ namespace ConsultorioMedico
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             // Ejecutar logica de validación 
+            if (!string.IsNullOrEmpty(Accion))
+            {
+                logicaCita._accion = Accion;
+            }
             logicaCita.ValidarDatosCita();
+
+
 
            /* TblDetalleCitas cita = new TblDetalleCitas()
             {
@@ -173,12 +182,18 @@ namespace ConsultorioMedico
         {
            
             frmCitas.Show();
-            this.Close();
+              this.Close();
+            
         }
 
         private void frmRegistrarCita_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

@@ -84,18 +84,47 @@ namespace ConsultorioMedico
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            if (dgvCitas.SelectedRows.Count > 0)
-            {
-                // Obtenemos el ID de la celda correspondiente (ajusta el nombre de la columna)
-                string idSeleccionado = dgvCitas.CurrentRow.Cells["IDCita"].Value.ToString();
+            logicaCita._id = dgvCitas.CurrentRow.Cells[0].Value.ToString();
+            logicaCita.EliminarRegistro();
+        }
 
-                // Llamamos al método pasándole el ID
-                logicaCita.EliminarRegistro(idSeleccionado);
-            }
-            else
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvCitas_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
             {
-                MessageBox.Show("Por favor, seleccione una fila de la tabla.");
+                frmRegistrarCita frmEditar = new frmRegistrarCita(this);
+
+                
+                frmEditar.txtID.Text = dgvCitas.CurrentRow.Cells[0].Value.ToString();
+                frmEditar.txtPaciente.Text = dgvCitas.CurrentRow.Cells[1].Value.ToString();
+                frmEditar.txtMedico.Text = dgvCitas.CurrentRow.Cells[2].Value.ToString();
+                frmEditar.txtFecha.Text = dgvCitas.CurrentRow.Cells[3].Value.ToString();
+                frmEditar.txtHora.Text = dgvCitas.CurrentRow.Cells[4].Value.ToString();
+                frmEditar.txtMotivo.Text = dgvCitas.CurrentRow.Cells[5].Value.ToString();
+
+                frmEditar.logicaCita._id =dgvCitas.CurrentRow.Cells[0].Value.ToString();
+
+                frmEditar.logicaCita._accion = "update";
+
+                frmEditar.ShowDialog();
             }
+        }
+
+        private void dgvCitas_SelectionChanged(object sender, EventArgs e)
+        {
+            /*Haremos una validacion para verificar que no este vacio
+            if (dgvCitas.CurrentRow != null && dgvCitas.CurrentRow.Index >= 0)
+            {
+                //Haremos el llamado al metodo en LogicaEstudiante
+
+                logicaCita.obtenerSeleccionCitas();
+            }
+            */
         }
     }
 }

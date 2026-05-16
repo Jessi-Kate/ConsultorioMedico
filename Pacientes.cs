@@ -78,10 +78,7 @@ namespace ConsultorioMedico
 
         }
 
-        private void dgvPacientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+      
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
@@ -90,17 +87,34 @@ namespace ConsultorioMedico
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            if (dgvPacientes.SelectedRows.Count > 0)
-            {
-                // Obtenemos el ID de la celda correspondiente (ajusta el nombre de la columna)
-                string idSeleccionado = dgvPacientes.CurrentRow.Cells["IDPaciente"].Value.ToString();
+            logicaPaciente._id = dgvPacientes.CurrentRow.Cells[0].Value.ToString();
+            logicaPaciente.EliminarRegistro();
+        }
 
-                // Llamamos al método pasándole el ID
-                logicaPaciente.EliminarRegistro(idSeleccionado);
-            }
-            else
+        
+
+        private void dgvPacientes_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
             {
-                MessageBox.Show("Por favor, seleccione una fila de la tabla.");
+                frmRegistrarPaciente frmEditar = new frmRegistrarPaciente(this);
+                // Obtener los datos de la fila seleccionada
+                frmEditar.txtID.Text = dgvPacientes.CurrentRow.Cells[0].Value.ToString();
+                frmEditar.txtNombre.Text = dgvPacientes.CurrentRow.Cells[1].Value.ToString();
+                frmEditar.txtPaterno.Text = dgvPacientes.CurrentRow.Cells[2].Value.ToString();
+                frmEditar.txtMaterno.Text = dgvPacientes.CurrentRow.Cells[3].Value.ToString();
+                frmEditar.nudEdad.Value = Convert.ToDecimal(dgvPacientes.CurrentRow.Cells[4].Value);
+                frmEditar.cboSexo.SelectedItem = dgvPacientes.CurrentRow.Cells[5].Value.ToString();
+                frmEditar.txtTelefono.Text = dgvPacientes.CurrentRow.Cells[6].Value.ToString();
+                frmEditar.txtDireccion.Text = dgvPacientes.CurrentRow.Cells[7].Value.ToString();
+                frmEditar.txtCorreo.Text = dgvPacientes.CurrentRow.Cells[8].Value.ToString();
+
+                frmEditar.picPaciente.Image = (Image)dgvPacientes.CurrentRow.Cells[9].Value;
+
+                frmEditar.logicaPaciente._id = dgvPacientes.CurrentRow.Cells[0].Value.ToString();
+                frmEditar.logicaPaciente._accion = "update";
+                frmEditar.ShowDialog();
+
             }
         }
     }

@@ -458,30 +458,30 @@
 
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Label lblID;
-        private System.Windows.Forms.TextBox txtID;
-        private System.Windows.Forms.ComboBox cboSexo;
-        private System.Windows.Forms.NumericUpDown nudEdad;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.PictureBox picMedico;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label lblCorreo;
-        private System.Windows.Forms.TextBox txtCorreo;
         private System.Windows.Forms.Label lblTelefono;
-        private System.Windows.Forms.TextBox txtTelefono;
         private System.Windows.Forms.Label lblSexo;
         private System.Windows.Forms.Label lblEdad;
         private System.Windows.Forms.Label lblMaterno;
-        private System.Windows.Forms.TextBox txtMaterno;
         private System.Windows.Forms.Label lblPaterno;
-        private System.Windows.Forms.TextBox txtPaterno;
         private System.Windows.Forms.Label lblNombre;
-        private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.ComboBox cboEspecialidad;
         private System.Windows.Forms.Label lblHorario;
         private System.Windows.Forms.Label lblEspecialidad;
-        private System.Windows.Forms.ComboBox cboHorario;
+        public System.Windows.Forms.TextBox txtID;
+        public System.Windows.Forms.ComboBox cboSexo;
+        public System.Windows.Forms.NumericUpDown nudEdad;
+        public System.Windows.Forms.TextBox txtCorreo;
+        public System.Windows.Forms.TextBox txtTelefono;
+        public System.Windows.Forms.TextBox txtMaterno;
+        public System.Windows.Forms.TextBox txtPaterno;
+        public System.Windows.Forms.TextBox txtNombre;
+        public System.Windows.Forms.ComboBox cboEspecialidad;
+        public System.Windows.Forms.ComboBox cboHorario;
+        public System.Windows.Forms.PictureBox picMedico;
     }
 }

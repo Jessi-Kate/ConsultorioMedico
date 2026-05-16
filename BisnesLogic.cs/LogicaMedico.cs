@@ -21,6 +21,8 @@ namespace BisnesLogic.cs
         private List<NumericUpDown> listaNumericMedico;
         DataGridView dgvMedico;
         private ConexionBD conexion = new ConexionBD();
+        public string _accion = "insert";
+        public string _id = "0";
 
         public LogicaMedico(object[] objects)
         {
@@ -120,26 +122,7 @@ namespace BisnesLogic.cs
 
                                                 else
                                                 {
-                                                    var ImgToByte = subirImagen.ImageAByte(pictureBox.Image);
-
-                                                   
-
-                                                    conexion.Insert(new TblDetalleMedico
-                                                    {
-                                                        IDMedico = listaTexBoxMedico[0].Text,
-                                                        Nombre = listaTexBoxMedico[1].Text,
-                                                        ApellidoPaterno = listaTexBoxMedico[2].Text,
-                                                        ApellidoMaterno = listaTexBoxMedico[3].Text,
-                                                        Edad = int.Parse(listaNumericMedico[0].Text),
-                                                        Sexo = listaComboBoxMedico[0].Text,
-                                                        Telefono = listaTexBoxMedico[4].Text,
-                                                        Correo = listaTexBoxMedico[5].Text,
-                                                        Especialidad = listaComboBoxMedico[1].Text,
-                                                        Horario = listaComboBoxMedico[2].Text,
-                                                        Imagen = ImgToByte
-                                                    });
-
-                                                    MessageBox.Show("Datos Validados!", "Registro Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                                    guardarEditar();
                                                     
 
                                                 }
@@ -185,37 +168,85 @@ namespace BisnesLogic.cs
             }
         }
 
-        //Metodo para eliminar registro
-        public void EliminarRegistro(string idMedico)
+
+        //Metodo guardar editar
+        public void guardarEditar()
         {
-            try
+            MessageBox.Show(_accion);
+            MessageBox.Show(_id);
+
+            switch (_accion)
             {
-                //Buscamos el registro directamente en la BD usando el ID que viene del Grid
-                var MedicoRegistrado = conexion.GetTable<TblDetalleMedico>()
-                                        .FirstOrDefault(e => e.IDMedico == idMedico);
+                case "insert":
 
-                if (MedicoRegistrado != null)
-                {
-                    if (MessageBox.Show($"¿Desea eliminar el Medico con ID: {idMedico}?", "Confirmar",
-                        MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                    var ImgToByte = subirImagen.ImageAByte(pictureBox.Image);
+
+                    conexion.Insert(new TblDetalleMedico
                     {
-                        // Eliminamos el objeto encontrado
-                        conexion.Delete(MedicoRegistrado);
+                        IDMedico = listaTexBoxMedico[0].Text,
+                        Nombre = listaTexBoxMedico[1].Text,
+                        ApellidoPaterno = listaTexBoxMedico[2].Text,
+                        ApellidoMaterno = listaTexBoxMedico[3].Text,
+                        Edad = int.Parse(listaNumericMedico[0].Text),
+                        Sexo = listaComboBoxMedico[0].Text,
+                        Telefono = listaTexBoxMedico[4].Text,
+                        Correo = listaTexBoxMedico[5].Text,
+                        Especialidad = listaComboBoxMedico[1].Text,
+                        Horario = listaComboBoxMedico[2].Text,
+                        Imagen = ImgToByte
+                    });
 
-                        MessageBox.Show("Registro eliminado con éxito.");
+                    MessageBox.Show("Datos Validados!", "Registro Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    break;
 
-                        //Actualizamos la tabla con el metodo listarMedicos para reflejar los cambios
-                        ListarMedicos();
+                case "update":
+
+                    var medicoRegistrado = conexion.GetTable<TblDetalleMedico>()
+                        .FirstOrDefault(e => e.IDMedico == _id);
+
+                    if (medicoRegistrado != null)
+                    {
+                        medicoRegistrado.Nombre = listaTexBoxMedico[1].Text;
+                        medicoRegistrado.ApellidoPaterno = listaTexBoxMedico[2].Text;
+                        medicoRegistrado.ApellidoMaterno = listaTexBoxMedico[3].Text;
+                        medicoRegistrado.Edad = int.Parse(listaNumericMedico[0].Text);
+                        medicoRegistrado.Sexo = listaComboBoxMedico[0].Text;
+                        medicoRegistrado.Telefono = listaTexBoxMedico[4].Text;
+                        medicoRegistrado.Correo = listaTexBoxMedico[5].Text;
+                        medicoRegistrado.Especialidad = listaComboBoxMedico[1].Text;
+                        medicoRegistrado.Horario = listaComboBoxMedico[2].Text;
+                        medicoRegistrado.Imagen = subirImagen.ImageAByte(pictureBox.Image);
+                        conexion.Update(medicoRegistrado);
+                        MessageBox.Show("Datos actualizados con éxito!!");
                     }
-                }
-                else
+
+                    break;
+            }
+        }
+
+        //Metodo para eliminar registro
+        public void EliminarRegistro()
+        {
+            var detalleRegistrado = conexion.GetTable<TblDetalleMedico>()
+                .FirstOrDefault(e => e.IDMedico == _id);
+
+            if (detalleRegistrado != null)
+            {
+                if (MessageBox.Show(
+                    "Desea eliminarlo?",
+                    "Eliminar",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    MessageBox.Show("No se encontró el registro en la base de datos.");
+                    conexion.Delete(detalleRegistrado);
+
+                    MessageBox.Show("Se ha eliminado correctamente");
+                    ListarMedicos();
                 }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("Error al eliminar: " + ex.Message);
+                MessageBox.Show("No se encontró el registro");
             }
         }
 

@@ -15,8 +15,12 @@ namespace ConsultorioMedico
 {
     public partial class frmRegistrarPaciente : Form
     {
-        private frmPacientes frmPacientes;
-        LogicaPaciente logicaPaciente;
+         frmPacientes frmPacientes;
+        //volvemos global la logicaPaciente para tener acceso a ella desde cualquier parte del formulario de registro de pacientes
+        public LogicaPaciente logicaPaciente;
+
+        //variable accion para determinar si se va a insertar o actualizar un registro
+        public string Accion { get; set; }
         public frmRegistrarPaciente(frmPacientes frmPacientes)
         {
             //Guarmados el formulario principal en la varibale global para tener acceso a el desde cualquier parte del formulario de registro de pacientes
@@ -132,6 +136,18 @@ namespace ConsultorioMedico
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            // Ejecutar logica de validación 
+            if (!string.IsNullOrEmpty(Accion))
+            {
+                logicaPaciente._accion = Accion;
+            }
+            logicaPaciente.ValidarCamposPaciente();
+        }
+
+
+
+
+
             //Creacion de un objeto paciente para almacenar los datos del paciente que se van a insertar en la base de datos
             /*
              TblDetallesPaciente paciente = new TblDetallesPaciente()
@@ -155,8 +171,6 @@ namespace ConsultorioMedico
             insercionDatos.InsercionContacto(paciente);
             frmPacientes.InsercionDGV(paciente);*/
 
-                logicaPaciente.ValidarCamposPaciente();
-        }
 
         private void KeyPressID(object sender, KeyPressEventArgs e)
         {

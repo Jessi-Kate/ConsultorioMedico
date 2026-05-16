@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LinqToDB.Mapping;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,7 @@ namespace DataConexion
 {
     public class TblDetallesPaciente
     {
+        [PrimaryKey]
         public string IDPaciente { get; set; }
         public string Nombre { get; set; }
         public string ApellidoPaterno { get; set; }

@@ -202,6 +202,7 @@ namespace ConsultorioMedico
             this.dgvMedicos.RowTemplate.Height = 24;
             this.dgvMedicos.Size = new System.Drawing.Size(659, 288);
             this.dgvMedicos.TabIndex = 2;
+            this.dgvMedicos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMedicos_CellDoubleClick);
             // 
             // lblLista
             // 

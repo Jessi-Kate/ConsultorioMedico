@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Windows.Forms;
 
 namespace BisnesLogic
@@ -18,6 +19,9 @@ namespace BisnesLogic
         private List<ComboBox> listaComboBoxPaciente;
         private List<NumericUpDown> listaNumericPaciente;
         public DataGridView dgvPaciente;
+        public string _accion = "insert";
+        public string _id = "0";
+
         private ConexionBD conexion = new ConexionBD();
        
 
@@ -114,24 +118,7 @@ namespace BisnesLogic
                                             else
                                             {
 
-                                                var ImgToByte = subirImagen.ImageAByte(pictureBox.Image);
-                                                MessageBox.Show("Datos Validados!", "Registro Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                                                
-
-                                                conexion.Insert(new TblDetallesPaciente
-                                                {
-                                                    IDPaciente = listaTextBoxPaciente[0].Text,
-                                                    Nombre = listaTextBoxPaciente[1].Text,
-                                                    ApellidoPaterno = listaTextBoxPaciente[2].Text,
-                                                    ApellidoMaterno = listaTextBoxPaciente[3].Text,
-                                                    Edad = int.Parse(listaNumericPaciente[0].Text),
-                                                    Sexo = listaComboBoxPaciente[0].Text,
-                                                    Telefono = listaTextBoxPaciente[4].Text,
-                                                    Direccion = listaTextBoxPaciente[5].Text,
-                                                    Correo = listaTextBoxPaciente[6].Text,
-                                                    Imagen = ImgToByte
-                                                });
+                                                guardarEditar();
 
                                             }
                                         }
@@ -148,8 +135,6 @@ namespace BisnesLogic
         public void ListarPaciente()
         {
             //instanciar la clase xonexion
-
-            
 
             var listaPaciente = conexion.GetTable<TblDetallesPaciente>().Select(e => new
             {
@@ -177,37 +162,80 @@ namespace BisnesLogic
             }
         }
 
-        //Metodo para eliminar registro
-        public void EliminarRegistro(string idPaciente)
+        //Metodo guardar editar
+        public void guardarEditar()
         {
-            try
+            MessageBox.Show(_accion);
+            MessageBox.Show(_id);
+
+            switch (_accion)
             {
-                //Buscamos el registro directamente en la BD usando el ID que viene del Grid
-                var pacienteRegistrado = conexion.GetTable<TblDetallesPaciente>()
-                                        .FirstOrDefault(e => e.IDPaciente == idPaciente);
+                case "insert":
 
-                if (pacienteRegistrado != null)
-                {
-                    if (MessageBox.Show($"¿Desea eliminar al paciente con ID: {idPaciente}?", "Confirmar",
-                        MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                    var ImgToByte = subirImagen.ImageAByte(pictureBox.Image);
+
+                    conexion.Insert(new TblDetallesPaciente
                     {
-                        // Eliminamos el objeto encontrado
-                        conexion.Delete(pacienteRegistrado);
+                        IDPaciente = listaTextBoxPaciente[0].Text,
+                        Nombre = listaTextBoxPaciente[1].Text,
+                        ApellidoPaterno = listaTextBoxPaciente[2].Text,
+                        ApellidoMaterno = listaTextBoxPaciente[3].Text,
+                        Edad = int.Parse(listaNumericPaciente[0].Text),
+                        Sexo = listaComboBoxPaciente[0].Text,
+                        Telefono = listaTextBoxPaciente[4].Text,
+                        Direccion = listaTextBoxPaciente[5].Text,
+                        Correo = listaTextBoxPaciente[6].Text,
+                        Imagen = ImgToByte
+                    });
+                    MessageBox.Show("Datos Validados!", "Registro Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    break;
 
-                        MessageBox.Show("Registro eliminado con éxito.");
+                case "update":
 
-                        //Actualizamos la tabla con el metodo listarPacientes para reflejar los cambios
-                        ListarPaciente();
+                    var pacienteRegistrado = conexion.GetTable<TblDetallesPaciente>()
+                        .FirstOrDefault(e => e.IDPaciente == _id);
+
+                    if (pacienteRegistrado != null)
+                    {
+                        pacienteRegistrado.Nombre = listaTextBoxPaciente[1].Text;
+                        pacienteRegistrado.ApellidoPaterno = listaTextBoxPaciente[2].Text;
+                        pacienteRegistrado.ApellidoMaterno = listaTextBoxPaciente[3].Text;
+                        pacienteRegistrado.Edad = int.Parse(listaNumericPaciente[0].Text);
+                        pacienteRegistrado.Sexo = listaComboBoxPaciente[0].Text;
+                        pacienteRegistrado.Telefono = listaTextBoxPaciente[4].Text;
+                        pacienteRegistrado.Direccion = listaTextBoxPaciente[5].Text;
+                        pacienteRegistrado.Correo = listaTextBoxPaciente[6].Text;
+                        pacienteRegistrado.Imagen = subirImagen.ImageAByte(pictureBox.Image);
+                        conexion.Update(pacienteRegistrado);
+                        MessageBox.Show("Datos actualizados con éxito!!");
                     }
-                }
-                else
+
+                    break;
+            }
+        }
+        //Metodo para eliminar registro
+        public void EliminarRegistro()
+        {
+            var detalleRegistrado = conexion.GetTable<TblDetallesPaciente>()
+                .FirstOrDefault(e => e.IDPaciente == _id);
+
+            if (detalleRegistrado != null)
+            {
+                if (MessageBox.Show(
+                    "Desea eliminarlo?",
+                    "Eliminar",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    MessageBox.Show("No se encontró el registro en la base de datos.");
+                    conexion.Delete(detalleRegistrado);
+
+                    MessageBox.Show("Se ha eliminado correctamente");
+                    ListarPaciente();
                 }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("Error al eliminar: " + ex.Message);
+                MessageBox.Show("No se encontró el registro");
             }
         }
 

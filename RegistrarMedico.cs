@@ -15,7 +15,11 @@ namespace ConsultorioMedico
     public partial class frmRegistrarMedico : Form
     {
         frmMedicos frmMedicos;
-        LogicaMedico logicaMedico;
+        //volvemos global la logicaMedico para tener acceso a ella desde cualquier parte del formulario de registro de pacientes
+        public LogicaMedico logicaMedico;
+
+        //variable accion para determinar si se va a insertar o actualizar un registro
+        public string Accion { get; set; }
         public frmRegistrarMedico(frmMedicos frmMedicos)
         {
             //Guarmados el formulario principal en la varibale global para tener acceso a el desde cualquier parte del formulario de registro de pacientes
@@ -76,26 +80,32 @@ namespace ConsultorioMedico
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             // Ejecutar logica de validación 
+            if (!string.IsNullOrEmpty(Accion))
+            {
+                logicaMedico._accion = Accion;
+            }
             logicaMedico.ValidarDatosMedico();
 
 
-            TblDetalleMedico medicos = new TblDetalleMedico() 
-            { 
-                //IDMedico = int.Parse(txtID.Text), 
-                Nombre = txtNombre.Text, 
-                ApellidoPaterno = txtPaterno.Text, 
-                ApellidoMaterno = txtMaterno.Text, 
-               // Edad = int.Parse(nudEdad.Text), 
-                Sexo = cboSexo.Text, 
-                Telefono = txtTelefono.Text, 
-                Correo = txtCorreo.Text, 
-                Especialidad = cboEspecialidad.Text,
-                Horario = cboHorario.Text 
-            };
+            /* metodo para simular la insercion de datos en la base de datos y mostrarlo en el DataGridView del formulario principal, este metodo se debe eliminar cuando se tenga la logica de insercion de datos en la base de datos, se deja comentado para que sirva como guia de como se deben mandar los datos a la logica de insercion de datos en la base de datos
+             * 
+             * TblDetalleMedico medicos = new TblDetalleMedico() 
+             { 
+                 //IDMedico = int.Parse(txtID.Text), 
+                 Nombre = txtNombre.Text, 
+                 ApellidoPaterno = txtPaterno.Text, 
+                 ApellidoMaterno = txtMaterno.Text, 
+                // Edad = int.Parse(nudEdad.Text), 
+                 Sexo = cboSexo.Text, 
+                 Telefono = txtTelefono.Text, 
+                 Correo = txtCorreo.Text, 
+                 Especialidad = cboEspecialidad.Text,
+                 Horario = cboHorario.Text 
+             };
 
-            InsercionDatos insercionDatos = new InsercionDatos();
-            insercionDatos.InsercionMedico(medicos);
-            frmMedicos.InsercionDGGV(medicos);
+             InsercionDatos insercionDatos = new InsercionDatos();
+             insercionDatos.InsercionMedico(medicos);
+             frmMedicos.InsercionDGGV(medicos);*/
         }
 
         private void TextChangedID(object sender, EventArgs e)

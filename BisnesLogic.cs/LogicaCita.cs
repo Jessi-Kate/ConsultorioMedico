@@ -16,18 +16,26 @@ namespace BisnesLogic.cs
     {
         private List<TextBox> listaTextBoxCita;
         private List<Label> listaLabelCita;
-       public DataGridView dgvCitas;
+        public DataGridView dgvCitas;
+        public string _accion = "insert";
+        public string _id = "0";
         private ConexionBD conexion = new ConexionBD();
 
+        //Constructor de la clase cita
         public LogicaCita(Object[] objects)
         {
             this.dgvCitas = (DataGridView)objects[0];
         }
 
+        //Constructor de la clase Regstrarcta cita
         public LogicaCita(List<TextBox> listaTextBoxCita, List<Label> listaLabelCita)
         {
             this.listaTextBoxCita = listaTextBoxCita;
             this.listaLabelCita = listaLabelCita;
+        }
+
+        public LogicaCita()
+        {
         }
 
         public void ValidarDatosCita()
@@ -87,9 +95,9 @@ namespace BisnesLogic.cs
                                 else
                                 {
 
-                                    
 
-                                    conexion.Insert(new TblDetalleCitas
+
+                                    /*conexion.Insert(new TblDetalleCitas
                                     {
                                         IDCita = listaTextBoxCita[0].Text,
                                         NombrePaciente = listaTextBoxCita[1].Text,
@@ -98,7 +106,10 @@ namespace BisnesLogic.cs
                                         Hora = listaTextBoxCita[4].Text,
                                         Motivo = listaTextBoxCita[5].Text
                                     });
-                                    MessageBox.Show("Cita registrada con exito!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    MessageBox.Show("Cita registrada con exito!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);*/
+                                    guardarEditar();
+
+
                                 }
                             }
                         }
@@ -113,48 +124,93 @@ namespace BisnesLogic.cs
 
             var listaCitas = conexion.GetTable<TblDetalleCitas>().Select(e => new
             {
-                e.IDCita, 
-                e.NombrePaciente,
-                e.NombreMedico,
-                e.Fecha,
-                e.Hora,
-                e.Motivo
+                e.IDCita,//[0]
+                e.NombrePaciente,//[1]
+                e.NombreMedico,//[2]
+                e.Fecha,//[3]
+                e.Hora,//[4]
+                e.Motivo//[5]
 
             }).ToList();
             dgvCitas.DataSource = listaCitas;
         }
 
-        //Metodo para eliminar registro
-        public void EliminarRegistro(string idCita)
+        public void guardarEditar()
         {
-            try
+            MessageBox.Show(_accion);
+            MessageBox.Show(_id);
+
+            switch (_accion)
             {
-                //Buscamos el registro directamente en la BD usando el ID que viene del Grid
-                var citaRegistrado = conexion.GetTable<TblDetalleCitas>()
-                                        .FirstOrDefault(e => e.IDCita == idCita);
-
-                if (citaRegistrado != null)
-                {
-                    if (MessageBox.Show($"¿Desea eliminar la cita con ID: {idCita}?", "Confirmar",
-                        MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                case "insert":
+                    conexion.Insert(new TblDetalleCitas
                     {
-                        // Eliminamos el objeto encontrado
-                        conexion.Delete(citaRegistrado);
+                        IDCita = listaTextBoxCita[0].Text,
+                        NombrePaciente = listaTextBoxCita[1].Text,
+                        NombreMedico = listaTextBoxCita[2].Text,
+                        Fecha = listaTextBoxCita[3].Text,
+                        Hora = listaTextBoxCita[4].Text,
+                        Motivo = listaTextBoxCita[5].Text
+                    });
+                    MessageBox.Show("Cita registrada con exito!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    break;
 
-                        MessageBox.Show("Registro eliminado con éxito.");
+                case "update":
 
-                        //Actualizamos la tabla con el metodo listarPacientes para reflejar los cambios
-                        ListarCitas();
+                    var citaRegistrada = conexion.GetTable<TblDetalleCitas>()
+                        .FirstOrDefault(e => e.IDCita == _id);
+
+                    if (citaRegistrada != null)
+                    {
+                        citaRegistrada.NombrePaciente = listaTextBoxCita[1].Text;
+                        citaRegistrada.NombreMedico = listaTextBoxCita[2].Text;
+                        citaRegistrada.Fecha = listaTextBoxCita[3].Text;
+                        citaRegistrada.Hora = listaTextBoxCita[4].Text;
+                        citaRegistrada.Motivo = listaTextBoxCita[5].Text;
+
+                        conexion.Update(citaRegistrada);
+
+                        MessageBox.Show("Datos actualizados con éxito!!");
+
+
                     }
-                }
-                else
+                    break;
+            }
+        }
+
+        public void LimpiarFormulario()
+        {
+            _accion = "insert";
+            for (int i = 0; i <= 4; i++)
+            {
+                if (listaTextBoxCita[i] != null) listaTextBoxCita[i].Text = "";
+                if (listaLabelCita[i] != null) listaLabelCita[i].ForeColor = Color.Black;
+
+            }
+        }
+
+        public void EliminarRegistro()
+        {
+            var detalleRegistrado = conexion.GetTable<TblDetalleCitas>()
+                .FirstOrDefault(e => e.IDCita == _id);
+
+            if (detalleRegistrado != null)
+            {
+                if (MessageBox.Show(
+                    "Desea eliminarlo?",
+                    "Eliminar",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    MessageBox.Show("No se encontró el registro en la base de datos.");
+                    conexion.Delete(detalleRegistrado);
+
+                    MessageBox.Show("Se ha eliminado correctamente");
+                    ListarCitas();
                 }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("Error al eliminar: " + ex.Message);
+                MessageBox.Show("No se encontró el registro");
             }
         }
     }

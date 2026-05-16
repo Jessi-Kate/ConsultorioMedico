@@ -140,6 +140,8 @@
             this.dgvCitas.RowTemplate.Height = 24;
             this.dgvCitas.Size = new System.Drawing.Size(659, 288);
             this.dgvCitas.TabIndex = 0;
+            this.dgvCitas.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCitas_CellDoubleClick);
+            this.dgvCitas.SelectionChanged += new System.EventHandler(this.dgvCitas_SelectionChanged);
             // 
             // groupBox3
             // 
@@ -210,6 +212,7 @@
             this.btnEditar.Size = new System.Drawing.Size(54, 50);
             this.btnEditar.TabIndex = 0;
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // frmCitas
             // 
@@ -223,7 +226,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmCitas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Citas";
+            this.Text = " ";
             this.Load += new System.EventHandler(this.frmCitas_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

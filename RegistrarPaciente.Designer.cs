@@ -89,9 +89,9 @@
             this.groupBox2.Controls.Add(this.lblNombre);
             this.groupBox2.Controls.Add(this.txtNombre);
             this.groupBox2.Location = new System.Drawing.Point(9, 95);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(517, 503);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
@@ -112,7 +112,7 @@
             // 
             this.txtID.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtID.Location = new System.Drawing.Point(22, 37);
-            this.txtID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtID.Margin = new System.Windows.Forms.Padding(2);
             this.txtID.Multiline = true;
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(233, 19);
@@ -129,7 +129,7 @@
             "Femenino",
             "Otro"});
             this.cboSexo.Location = new System.Drawing.Point(22, 321);
-            this.cboSexo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboSexo.Margin = new System.Windows.Forms.Padding(2);
             this.cboSexo.Name = "cboSexo";
             this.cboSexo.Size = new System.Drawing.Size(92, 21);
             this.cboSexo.TabIndex = 5;
@@ -139,7 +139,7 @@
             // 
             this.nudEdad.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.nudEdad.Location = new System.Drawing.Point(22, 266);
-            this.nudEdad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.nudEdad.Margin = new System.Windows.Forms.Padding(2);
             this.nudEdad.Name = "nudEdad";
             this.nudEdad.Size = new System.Drawing.Size(90, 20);
             this.nudEdad.TabIndex = 4;
@@ -152,7 +152,7 @@
             this.btnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSalir.Location = new System.Drawing.Point(364, 362);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(2);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(62, 50);
             this.btnSalir.TabIndex = 30;
@@ -167,7 +167,7 @@
             this.btnGuardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnGuardar.Location = new System.Drawing.Point(364, 254);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(62, 50);
             this.btnGuardar.TabIndex = 29;
@@ -180,9 +180,9 @@
             this.groupBox3.BackgroundImage = global::ConsultorioMedico.Properties.Resources.Green_Abstract_Webpage_Background_Graphics_3073334_1;
             this.groupBox3.Controls.Add(this.picPaciente);
             this.groupBox3.Location = new System.Drawing.Point(292, 37);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox3.Size = new System.Drawing.Size(209, 131);
             this.groupBox3.TabIndex = 28;
             this.groupBox3.TabStop = false;
@@ -192,7 +192,7 @@
             this.picPaciente.BackgroundImage = global::ConsultorioMedico.Properties.Resources.Paciente;
             this.picPaciente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picPaciente.Location = new System.Drawing.Point(0, 0);
-            this.picPaciente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picPaciente.Margin = new System.Windows.Forms.Padding(2);
             this.picPaciente.Name = "picPaciente";
             this.picPaciente.Size = new System.Drawing.Size(209, 131);
             this.picPaciente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -216,7 +216,7 @@
             // 
             this.txtCorreo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtCorreo.Location = new System.Drawing.Point(22, 479);
-            this.txtCorreo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCorreo.Margin = new System.Windows.Forms.Padding(2);
             this.txtCorreo.Multiline = true;
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(233, 19);
@@ -240,7 +240,7 @@
             // 
             this.txtDireccion.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtDireccion.Location = new System.Drawing.Point(22, 425);
-            this.txtDireccion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDireccion.Margin = new System.Windows.Forms.Padding(2);
             this.txtDireccion.Multiline = true;
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(233, 19);
@@ -264,7 +264,7 @@
             // 
             this.txtTelefono.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtTelefono.Location = new System.Drawing.Point(22, 373);
-            this.txtTelefono.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTelefono.Margin = new System.Windows.Forms.Padding(2);
             this.txtTelefono.Multiline = true;
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(233, 19);
@@ -312,7 +312,7 @@
             // 
             this.txtMaterno.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtMaterno.Location = new System.Drawing.Point(22, 206);
-            this.txtMaterno.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMaterno.Margin = new System.Windows.Forms.Padding(2);
             this.txtMaterno.Multiline = true;
             this.txtMaterno.Name = "txtMaterno";
             this.txtMaterno.Size = new System.Drawing.Size(233, 19);
@@ -336,7 +336,7 @@
             // 
             this.txtPaterno.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtPaterno.Location = new System.Drawing.Point(22, 150);
-            this.txtPaterno.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPaterno.Margin = new System.Windows.Forms.Padding(2);
             this.txtPaterno.Multiline = true;
             this.txtPaterno.Name = "txtPaterno";
             this.txtPaterno.Size = new System.Drawing.Size(233, 19);
@@ -360,7 +360,7 @@
             // 
             this.txtNombre.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtNombre.Location = new System.Drawing.Point(22, 94);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombre.Multiline = true;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(233, 19);
@@ -375,9 +375,9 @@
             this.groupBox1.BackgroundImage = global::ConsultorioMedico.Properties.Resources.Green_Abstract_Webpage_Background_Graphics_3073334_1;
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Location = new System.Drawing.Point(9, 10);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(517, 61);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
@@ -404,7 +404,7 @@
             this.ClientSize = new System.Drawing.Size(535, 609);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmRegistrarPaciente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RegistrarPaciente";
@@ -425,27 +425,27 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label lblNombre;
-        private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label lblEdad;
         private System.Windows.Forms.Label lblMaterno;
-        private System.Windows.Forms.TextBox txtMaterno;
         private System.Windows.Forms.Label lblPaterno;
-        private System.Windows.Forms.TextBox txtPaterno;
         private System.Windows.Forms.Label lblSexo;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label lblCorreo;
-        private System.Windows.Forms.TextBox txtCorreo;
         private System.Windows.Forms.Label lblDireccion;
-        private System.Windows.Forms.TextBox txtDireccion;
         private System.Windows.Forms.Label lblTelefono;
-        private System.Windows.Forms.TextBox txtTelefono;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.PictureBox picPaciente;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.ComboBox cboSexo;
-        private System.Windows.Forms.NumericUpDown nudEdad;
         private System.Windows.Forms.Label lblID;
-        private System.Windows.Forms.TextBox txtID;
+        public System.Windows.Forms.TextBox txtNombre;
+        public System.Windows.Forms.TextBox txtMaterno;
+        public System.Windows.Forms.TextBox txtPaterno;
+        public System.Windows.Forms.TextBox txtCorreo;
+        public System.Windows.Forms.TextBox txtDireccion;
+        public System.Windows.Forms.TextBox txtTelefono;
+        public System.Windows.Forms.PictureBox picPaciente;
+        public System.Windows.Forms.ComboBox cboSexo;
+        public System.Windows.Forms.NumericUpDown nudEdad;
+        public System.Windows.Forms.TextBox txtID;
     }
 }

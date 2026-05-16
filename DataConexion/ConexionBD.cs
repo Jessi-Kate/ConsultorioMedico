@@ -14,7 +14,7 @@ namespace DataConexion
         //Constructor 
         public ConexionBD() : base("ConexionSQL") { }
 
-        //Creamos la interfaz 
+        //Creamos la interfaz de cada clase
         ITable<TblDetalleCitas> Citas { get; set; }
         ITable<TblDetalleMedico> Medicos { get; set; }
         ITable<TblDetallesPaciente> Pacientes { get; set; }

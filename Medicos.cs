@@ -84,17 +84,38 @@ namespace ConsultorioMedico
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            if (dgvMedicos.SelectedRows.Count > 0)
-            {
-                // Obtenemos el ID de la celda correspondiente (ajusta el nombre de la columna)
-                string idSeleccionado = dgvMedicos.CurrentRow.Cells["IDMedico"].Value.ToString();
+            logicaMedico._id = dgvMedicos.CurrentRow.Cells[0].Value.ToString();
+            logicaMedico.EliminarRegistro();
+        }
 
-                // Llamamos al método pasándole el ID
-                logicaMedico.EliminarRegistro(idSeleccionado);
-            }
-            else
+        private void dgvMedicos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
             {
-                MessageBox.Show("Por favor, seleccione una fila de la tabla.");
+
+                //Instanciamos el formulario de registro de medicos y le pasamos los textbox para llenar los datos del medico seleccionado
+                frmRegistrarMedico frmEditar = new frmRegistrarMedico(this);
+
+                //Establecemos los valores de los textbox del formulario de registro de medicos con los valores de la fila seleccionada en el DataGridView
+                frmEditar.txtID.Text = dgvMedicos.CurrentRow.Cells[0].Value.ToString();
+                frmEditar.txtNombre.Text = dgvMedicos.CurrentRow.Cells[1].Value.ToString();
+                frmEditar.txtPaterno.Text = dgvMedicos.CurrentRow.Cells[2].Value.ToString();
+                frmEditar.txtMaterno.Text = dgvMedicos.CurrentRow.Cells[3].Value.ToString();
+                frmEditar.nudEdad.Value = Convert.ToDecimal(dgvMedicos.CurrentRow.Cells[4].Value);
+                frmEditar.cboSexo.Text = dgvMedicos.CurrentRow.Cells[5].Value.ToString();
+                frmEditar.txtTelefono.Text = dgvMedicos.CurrentRow.Cells[6].Value.ToString();
+                frmEditar.txtCorreo.Text = dgvMedicos.CurrentRow.Cells[7].Value.ToString();
+                frmEditar.cboEspecialidad.Text = dgvMedicos.CurrentRow.Cells[8].Value.ToString();
+                frmEditar.cboHorario.Text = dgvMedicos.CurrentRow.Cells[9].Value.ToString();
+
+                //Establecer la imagen del medico seleccionado en el picture box del formulario de registro de medicos
+                frmEditar.picMedico.Image = (Image)dgvMedicos.CurrentRow.Cells[10].Value;
+
+                //Establecer el ID del medico seleccionado en la variable de la logicaMedico para que se pueda usar en el metodo de actualizacion de datos en la base de datos y establecer la accion a update para que se ejecute el metodo de actualizacion de datos en la base de datos
+                frmEditar.logicaMedico._id = dgvMedicos.CurrentRow.Cells[0].Value.ToString();
+                frmEditar.logicaMedico._accion = "update";
+                frmEditar.ShowDialog();
+
             }
         }
     }
