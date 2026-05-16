@@ -114,25 +114,8 @@ namespace BisnesLogic
                                             else
                                             {
 
-                                                var ImgToByte = subirImagen.ImageAByte(pictureBox.Image);
-                                                MessageBox.Show("Datos Validados!", "Registro Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                                                 
-
-                                                conexion.Insert(new TblDetallesPaciente
-                                                {
-                                                    IDPaciente = listaTextBoxPaciente[0].Text,
-                                                    Nombre = listaTextBoxPaciente[1].Text,
-                                                    ApellidoPaterno = listaTextBoxPaciente[2].Text,
-                                                    ApellidoMaterno = listaTextBoxPaciente[3].Text,
-                                                    Edad = int.Parse(listaNumericPaciente[0].Text),
-                                                    Sexo = listaComboBoxPaciente[0].Text,
-                                                    Telefono = listaTextBoxPaciente[4].Text,
-                                                    Direccion = listaTextBoxPaciente[5].Text,
-                                                    Correo = listaTextBoxPaciente[6].Text,
-                                                    Imagen = ImgToByte
-                                                });
-
                                             }
                                         }
                                     }
@@ -148,8 +131,6 @@ namespace BisnesLogic
         public void ListarPaciente()
         {
             //instanciar la clase xonexion
-
-            
 
             var listaPaciente = conexion.GetTable<TblDetallesPaciente>().Select(e => new
             {

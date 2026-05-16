@@ -155,8 +155,6 @@ namespace ConsultorioMedico
             insercionDatos.InsercionContacto(paciente);
             frmPacientes.InsercionDGV(paciente);*/
 
-                logicaPaciente.ValidarCamposPaciente();
-        }
 
         private void KeyPressID(object sender, KeyPressEventArgs e)
         {

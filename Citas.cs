@@ -89,8 +89,6 @@ namespace ConsultorioMedico
                 // Obtenemos el ID de la celda correspondiente (ajusta el nombre de la columna)
                 string idSeleccionado = dgvCitas.CurrentRow.Cells["IDCita"].Value.ToString();
 
-                // Llamamos al método pasándole el ID
-                logicaCita.EliminarRegistro(idSeleccionado);
             }
             else
             {

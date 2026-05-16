@@ -123,25 +123,6 @@ namespace BisnesLogic.cs
                                                     var ImgToByte = subirImagen.ImageAByte(pictureBox.Image);
 
                                                    
-
-                                                    conexion.Insert(new TblDetalleMedico
-                                                    {
-                                                        IDMedico = listaTexBoxMedico[0].Text,
-                                                        Nombre = listaTexBoxMedico[1].Text,
-                                                        ApellidoPaterno = listaTexBoxMedico[2].Text,
-                                                        ApellidoMaterno = listaTexBoxMedico[3].Text,
-                                                        Edad = int.Parse(listaNumericMedico[0].Text),
-                                                        Sexo = listaComboBoxMedico[0].Text,
-                                                        Telefono = listaTexBoxMedico[4].Text,
-                                                        Correo = listaTexBoxMedico[5].Text,
-                                                        Especialidad = listaComboBoxMedico[1].Text,
-                                                        Horario = listaComboBoxMedico[2].Text,
-                                                        Imagen = ImgToByte
-                                                    });
-
-                                                    MessageBox.Show("Datos Validados!", "Registro Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                                    
-
                                                 }
                                             }
                                         }
