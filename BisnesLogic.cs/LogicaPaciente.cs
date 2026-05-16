@@ -120,6 +120,22 @@ namespace BisnesLogic
 
                                                 guardarEditar();
 
+                                                
+
+                                                conexion.Insert(new TblDetallesPaciente
+                                                {
+                                                    IDPaciente = listaTextBoxPaciente[0].Text,
+                                                    Nombre = listaTextBoxPaciente[1].Text,
+                                                    ApellidoPaterno = listaTextBoxPaciente[2].Text,
+                                                    ApellidoMaterno = listaTextBoxPaciente[3].Text,
+                                                    Edad = int.Parse(listaNumericPaciente[0].Text),
+                                                    Sexo = listaComboBoxPaciente[0].Text,
+                                                    Telefono = listaTextBoxPaciente[4].Text,
+                                                    Direccion = listaTextBoxPaciente[5].Text,
+                                                    Correo = listaTextBoxPaciente[6].Text,
+                                                    Imagen = ImgToByte
+                                                });
+
                                             }
                                         }
                                     }
