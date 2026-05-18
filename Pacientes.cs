@@ -82,7 +82,9 @@ namespace ConsultorioMedico
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            logicaPaciente.ListarPaciente();
+            logicaPaciente.BuscarString(txtBuscar.Text);
+
+            
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -116,6 +118,11 @@ namespace ConsultorioMedico
                 frmEditar.ShowDialog();
 
             }
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            logicaPaciente.ListarPaciente();
         }
     }
 }

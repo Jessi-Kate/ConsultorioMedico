@@ -172,6 +172,7 @@ namespace ConsultorioMedico
             this.btnEditar.Size = new System.Drawing.Size(62, 50);
             this.btnEditar.TabIndex = 0;
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // groupBox2
             // 

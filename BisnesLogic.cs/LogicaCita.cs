@@ -178,16 +178,16 @@ namespace BisnesLogic.cs
             }
         }
 
-        public void LimpiarFormulario()
+       /* public void LimpiarFormulario()
         {
             _accion = "insert";
-            for (int i = 0; i <= 4; i++)
+            for (int i = 0; i <= 5; i++)
             {
                 if (listaTextBoxCita[i] != null) listaTextBoxCita[i].Text = "";
                 if (listaLabelCita[i] != null) listaLabelCita[i].ForeColor = Color.Black;
 
             }
-        }
+        }*/
 
         public void EliminarRegistro()
         {
@@ -211,6 +211,30 @@ namespace BisnesLogic.cs
             else
             {
                 MessageBox.Show("No se encontró el registro");
+            }
+        }
+
+        public void BuscarID(string Idcitaaa)
+        {
+            // Buscamos en la tabla de Detalles de Citas
+            var cita = conexion.GetTable<TblDetalleCitas>().FirstOrDefault(e => e.IDCita == Idcitaaa);
+
+            if (cita != null)
+            {
+                _accion = "Update";
+                IDcita = Idcitaaa;
+
+                // Asignamos los datos reales de la cita a tu lista de TextBox/Labels
+                listaTextBoxCita[0].Text = cita.IDCita;
+                listaTextBoxCita[1].Text = cita.NombrePaciente;
+                listaTextBoxCita[2].Text = cita.NombreMedico;
+                listaTextBoxCita[3].Text = cita.Fecha;
+                listaTextBoxCita[4].Text = cita.Hora;
+                listaTextBoxCita[5].Text = cita.Motivo;
+            }
+            else
+            {
+                MessageBox.Show("No se encontró la Cita Médica");
             }
         }
     }

@@ -79,7 +79,7 @@ namespace ConsultorioMedico
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            logicaCita.ListarCitas();
+            logicaCita.BuscarString(txtBuscar.Text); 
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -90,7 +90,7 @@ namespace ConsultorioMedico
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-
+            logicaCita.ListarCitas();
         }
 
         private void dgvCitas_CellDoubleClick(object sender, DataGridViewCellEventArgs e)

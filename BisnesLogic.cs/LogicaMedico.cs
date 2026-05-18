@@ -250,6 +250,33 @@ namespace BisnesLogic.cs
             }
         }
 
+        public void BuscarString(string BuscarNombre)
+        {
+            var Medico = conexion.GetTable<TblDetalleMedico>()
+            .Where(e => e.Nombre.Contains(BuscarNombre))
+            .Select(e => new
+            {
+                e.IDMedico,
+                e.Nombre,
+                e.ApellidoPaterno,
+                e.ApellidoMaterno,
+                e.Edad,
+                e.Sexo,
+                e.Telefono,
+                e.Correo,
+                e.Especialidad,
+                e.Horario,
+                Image = ArrayToImagen(e.Imagen)
+            }).ToList();
+
+            dgvMedico.DataSource = Medico;
+
+            if (Medico.Count == 0)
+            {
+                MessageBox.Show("No hay alumnos con el nombre: " + BuscarNombre);
+            }
+        }
+
     }
 }
 
