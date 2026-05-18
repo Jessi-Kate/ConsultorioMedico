@@ -216,24 +216,26 @@ namespace BisnesLogic.cs
 
         public void BuscarID(string Idcitaaa)
         {
-            // Buscamos en la tabla de Detalles de Citas
-            var cita = conexion.GetTable<TblDetalleCitas>().FirstOrDefault(e => e.IDCita == Idcitaaa);
+            // Buscamos en la tabla de Detalles de Citas filtrando por el ID
+            var listaCitas = conexion.GetTable<TblDetalleCitas>()
+                                     .Where(e => e.IDCita == Idcitaaa)
+                                     .ToList();
 
-            if (cita != null)
+            // Verificamos si la lista contiene elementos
+            if (listaCitas.Count > 0)
             {
                 _accion = "Update";
-                IDcita = Idcitaaa;
+                _id = Idcitaaa;
 
-                // Asignamos los datos reales de la cita a tu lista de TextBox/Labels
-                listaTextBoxCita[0].Text = cita.IDCita;
-                listaTextBoxCita[1].Text = cita.NombrePaciente;
-                listaTextBoxCita[2].Text = cita.NombreMedico;
-                listaTextBoxCita[3].Text = cita.Fecha;
-                listaTextBoxCita[4].Text = cita.Hora;
-                listaTextBoxCita[5].Text = cita.Motivo;
+                // Asignamos la lista directamente al DataGridView de Citas
+                // NOTA: Asegúrate de cambiar 'dgvCita' por el nombre real de tu DataGridView
+                dgvCitas.DataSource = listaCitas;
             }
             else
             {
+                // Limpiamos el DataGridView si no se encuentra nada para no mostrar datos viejos
+                dgvCitas.DataSource = null;
+
                 MessageBox.Show("No se encontró la Cita Médica");
             }
         }

@@ -79,7 +79,8 @@ namespace ConsultorioMedico
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            logicaCita.BuscarString(txtBuscar.Text); 
+            logicaCita._id = dgvCitas.CurrentRow.Cells[0].Value.ToString();
+            logicaCita.BuscarID(txtBuscar.Text); 
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
